@@ -1,0 +1,34 @@
+version 23.04.2020
+
+Berke, alper
+•    GPS class with its listeners and views
+o    Get location
+o    Get distance
+o    isLocationReached
+o    setTarget
+•    QR class
+o    getQuest
+o    setQuestAsked
+•    Language class which Accesses all the labels 
+o    setTextTurkish
+o    setTextEnglish
+•    Achievements class and its view
+o    setAchievement
+o    getachievement
+•    Quest class integrated with qr and building class
+o    SetAnswer
+o    isAnswerTrue
+
+•    Player/user class
+
+Efe mert arda 
+•    Map class and integration of gps
+•    Building map class which extends map class
+•    Food and misc class
+o    getInfo
+o    getMenu
+•    Buildings classes
+•    Settings class
+
+•    Buttonscontrol class for every page
+•    Panel classes
