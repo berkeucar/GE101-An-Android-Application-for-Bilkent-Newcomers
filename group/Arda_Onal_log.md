@@ -10,7 +10,10 @@ This week I learn xyz and worked out...
 This week I helped abc brainstorm ideas for...
 
 ### ~ 24/04/2020 ~
-Today we have decided on the work distributions. We have decided who is going to do what in terms of coding. I was assigned to building the map.
+Today we have decided on the work distributions and what skills are required to solve the problems. We have decided who is going to do what in terms of coding. I was assigned to building the map.
+
+### ~ 25/04/2020 ~
+Today I have watched tutorials about Android Studio, how to make map applications using java and I learnt how to implement them.
 
 ### ~ 27/04/2020 ~
 This week we started the coding of our project. I learnt how to use Google Maps API, how to add buttons to goole maps activity, how to restrict the map and so on.
