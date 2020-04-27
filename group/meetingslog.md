@@ -3,7 +3,7 @@
 Below is a record of our project group meetings. This page will be submitted together with the rest of the repository, in partial fulfillment of the CS102 course requirements.
 
 ****
-### Meeting ~ (24/04/2020)
+### Meeting ~ (24/04/2020, 2 hours)
 ****
 **Present:** Arda, Alper, Berke, Efe, Mert   _**Absent:**_ -
 
@@ -43,9 +43,13 @@ o    getMenu
 •    Panel classes
 
 ****
-### Meeting ~ (date, duration)
+### Meeting ~ (27.04.2020, 1 hour)
 ****
-This week I helped abc brainstorm ideas for...
+**Present:** Arda, Alper, Berke, Efe, Mert   _**Absent:**_ -
+
+**Discussion:** 
+We have completed the github logs assignment together and discussed on the progress of the project. We also looked at some of the code on restricting the maps size, adding buttons and so on.
+
 
 ****
 ### Meeting ~ (date, duration)
