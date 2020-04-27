@@ -1,12 +1,30 @@
-ï»¿# cs102project GE101 by g3A
- 2019 Spring CS102 project of the Scheming Quixotics
- # Group Members
- Berke UÃ§ar 21902238
+# CS102 ~ Design Project ~ Spring 2019/20
+[Computer Engineering Department, Bilkent University](http://w3.cs.bilkent.edu.tr/en/).  
+The information and code in this repository are submitted in partial fulfillment of the CS102 Semester Design Project. Except where explicitly stated, the work is that of the group members listed below (who are expected to follow ethical academic & professional practice).
+****
+## g3A ~~ GE101 ~~
+****
+### ~ The Scheming Quixotics ~
 
- Arda Ã–nal 21903350
- 
- Efe BeydoÄŸan 21901548
+## Project Description
+GE101, which is an application where you can go around Bilkent’s main campus and learn about the layout of the buildings while also answering general questions about Bilkent University, thus also learning about the university’s history. The app will also present the locations of all the cafeterias, labs, places to study and the bus schedules. Our app will combine all of these together in one place to save the students the hassle of finding all of these from different places. Our program will be an android app, for mobile phones.
 
- Mehmet Alper Ã‡etin 21902324
+## Project Status
++ **Group/project Selection:** completed (19.02.2020)
++ **Requirements:** completed (28.02.2020)
++ **UI Design:** completed (08.03.2020)
++ **Detailed Design:** in progress
++ **Implementation:** not started!
++ **Reflections:** not yet!
 
- Mert BarkÄ±n Er 21901645
+[Group Meetings Log](group/meetingslog.md)
+#### Group Members
+- [Mehmet_Alper_Çetin](group/Mehmet_Alper_Çetin_log.md)
+- [Efe_Beydoðan](group/Efe_Beydoðan_log.md)
+- [Mert_Barkýn](group/Mert_Barkýn_log.md)
+- [Arda_Önal](group/Arda_Önal_log.md)
+- [Berke_Uçar](group/Berke_Uçar_log.md)
+
+****
+**Instructor:** _(David Davenport)_   **TA:**  _(Khushbakht Ali Qamar)_
+****
