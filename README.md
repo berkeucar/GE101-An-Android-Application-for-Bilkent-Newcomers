@@ -19,11 +19,11 @@ GE101, which is an application where you can go around Bilkent’s main campus and
 
 [Group Meetings Log](group/meetingslog.md)
 #### Group Members
-- [Mehmet_Alper_Çetin](group/Mehmet_Alper_Çetin_log.md)
-- [Efe_Beydoðan](group/Efe_Beydoðan_log.md)
-- [Mert_Barkýn](group/Mert_Barkýn_log.md)
-- [Arda_Önal](group/Arda_Önal_log.md)
-- [Berke_Uçar](group/Berke_Uçar_log.md)
+- [Mehmet_Alper_Cetin](group/Mehmet_Alper_Cetin_log.md)
+- [Efe_Beydogan](group/Efe_Beydogan_log.md)
+- [Mert_Barkin_Er](group/Mert_Barkin_Er_log.md)
+- [Arda_Onal](group/Arda_Onal_log.md)
+- [Berke_Ucar](group/Berke_Ucar_log.md)
 
 ****
 **Instructor:** _(David Davenport)_   **TA:**  _(Khushbakht Ali Qamar)_
