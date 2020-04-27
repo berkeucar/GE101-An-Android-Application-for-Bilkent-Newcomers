@@ -12,6 +12,6 @@ Today we had a distribution of workload, I was assigned to drawing map and using
 From 24st until today, I looked at how I can implement those things, and found about the ways I can implement the google API to draw a map into the application itself
 
 ### ~ 27.04.2020 ~
-blah, blah, blah...
+Today we did the github assignment.
 
 ****
