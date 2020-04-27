@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GE101</string>
+    <string name="ad">Adınız</string>
+    <string name="soyad">Soyadınız</string>
+    <string name="zoom_in">Zoom In</string>
+    <string name="zoom_out">Zoom Out</string>
+</resources>
