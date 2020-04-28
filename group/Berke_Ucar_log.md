@@ -9,6 +9,8 @@ On this page I will keep a weekly record of what I have done for the CS102 group
 Today we decided that who will work on what. I am in the same subgroup with Alper and we will work on GPS and QR Systems.
 
 ### ~ 26/04/2020 and 27/04/2020 ~ 
-Today I have refresh my mind about GPS technology and started getting knowledge about AndroidStudio. I also studied on what location system should we use in order to get efficient location. I have tried to check how the GUI things work. I have setted up virtual devices and implemented a little tutorial myself.
+Today I have refreshed my mind about GPS technology and started getting knowledge about AndroidStudio. I also studied on what location system should we use in order to get efficient location. I have tried to check how the GUI things work. I have setted up virtual devices and implemented a little tutorial myself.
  
+### ~ 28/04/2020 ~
+Today I have looked up to map settings and how to use maps in Android Studio. Actually it is not my subgroup's responsibility but since we will use techs coordinately we must know basic things about maps. 
 ****
