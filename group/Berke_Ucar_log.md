@@ -5,6 +5,9 @@
 
 On this page I will keep a weekly record of what I have done for the CS102 group project. This page will be submitted together with the rest of the repository, in partial fulfillment of the CS102 course requirements.
 
+### ~ 04/04/2020 ~
+Today I have studied on location providers, Location, LocationListener, LocationManager Classes and their methods, how to use etc.
+
 ### ~ 24/04/2020 ~ 
 Today we decided that who will work on what. I am in the same subgroup with Alper and we will work on GPS and QR Systems.
 
