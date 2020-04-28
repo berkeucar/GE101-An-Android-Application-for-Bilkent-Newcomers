@@ -8,7 +8,7 @@ On this page I will keep a weekly record of what I have done for the CS102 group
 ### ~ 26.04.2020 ~
 Today I learned how to implement Google Maps in Android Studio and how to restrict the map to a certain location because in our app we aim to show the users only the Bilkent University vicinity.
 ### ~ 28.04.2020 ~
-Added the introduction screen, sorted out asking permissions from the user for using the app and made some other changes
+Added the introduction screen, sorted out asking permissions from the user for receiving location and implemented methods to lock on user location when the app is opened
 
 ### ~ date ~
 
