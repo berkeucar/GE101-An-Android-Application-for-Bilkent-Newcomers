@@ -18,4 +18,6 @@ Today I have watched tutorials about Android Studio, how to make map application
 ### ~ 27/04/2020 ~
 This week we started the coding of our project. I learnt how to use Google Maps API, how to add buttons to goole maps activity, how to restrict the map and so on.
 
+### ~ 29/04/2020 ~
+Today I looked at searching in google maps using our own address array and discussed with Efe.
 ****
