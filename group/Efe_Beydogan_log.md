@@ -12,7 +12,9 @@ Added the introduction screen, sorted out asking permissions from the user for r
 
 Added search bar on top of the map
 
-### ~ date ~
+### ~ 29.04.2020 ~
+Looked more at how to implement the map for our project
 
+### ~ ~
 
 ****
