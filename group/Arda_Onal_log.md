@@ -20,4 +20,7 @@ This week we started the coding of our project. I learnt how to use Google Maps 
 
 ### ~ 29/04/2020 ~
 Today I looked at searching in google maps using our own address array and discussed with Efe.
+
+### ~ 01/05/2020 ~
+Today we worked on the main screen buttons. We built them and added menus to them.
 ****
