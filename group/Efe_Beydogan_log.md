@@ -15,6 +15,7 @@ Added search bar on top of the map
 ### ~ 29.04.2020 ~
 Looked more at how to implement the map for our project
 
-### ~ ~
+### ~ 01.05.2020 ~
+Added main menu buttons
 
 ****
