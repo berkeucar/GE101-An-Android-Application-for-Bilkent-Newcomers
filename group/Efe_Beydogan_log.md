@@ -18,4 +18,5 @@ Looked more at how to implement the map for our project
 ### ~ 01.05.2020 ~
 Added main menu buttons
 
+### ~ 02.05.2020 ~
 ****
