@@ -23,4 +23,7 @@ Today I looked at searching in google maps using our own address array and discu
 
 ### ~ 01/05/2020 ~
 Today we worked on the main screen buttons. We built them and added menus to them.
+
+### ~ 02/05/2020 ~
+Today we worked on the search bar. We added AutoCompleteTextView object to the searchbar that displays the possible searches from incompelete strings.
 ****
