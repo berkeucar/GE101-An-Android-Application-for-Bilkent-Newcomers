@@ -19,6 +19,21 @@
         android:layout_height="700dp"
         android:orientation="horizontal">
 
+
+        <AutoCompleteTextView
+            android:id="@+id/activity_chooser_view_content"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:completionHint="Select One"
+            android:completionThreshold="1"
+            android:hint="Enter address, City, or Zip Code"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.427" />
+
         <Button
             android:id="@+id/zoomIn"
             style="?android:attr/buttonBarButtonStyle"
@@ -60,13 +75,13 @@
         android:background="@drawable/white_border"
         android:id="@+id/relLayout1" >
 
-    <ImageView
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        android:id="@+id/ic_magnify"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="10dp"
-        android:src="@drawable/ic_magnify" />
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:id="@+id/ic_magnify"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_magnify" />
 
         <EditText
             android:layout_width="match_parent"
