@@ -62,14 +62,14 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
 
     // widgets
-    private EditText mSearchText;
+    //private EditText mSearchText;
     private ImageView mGps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mSearchText = (EditText) findViewById(R.id.input_search);
+        //mSearchText = (EditText) findViewById(R.id.input_search);
         mGps = (ImageView) findViewById(R.id.ic_gps);
         getLocationPermission();
 
@@ -87,19 +87,19 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private void init() {
         Log.d(TAG, "init: initializing");
 
-        mSearchText.setOnEditorActionListener( new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
-                if (actionId == EditorInfo.IME_ACTION_SEARCH
-                        || actionId == EditorInfo.IME_ACTION_DONE
-                        || keyEvent.getAction() == KeyEvent.ACTION_DOWN
-                        || keyEvent.getAction() == KeyEvent.KEYCODE_ENTER) {
+        //mSearchText.setOnEditorActionListener( new TextView.OnEditorActionListener() {
+          //  @Override
+           // public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
+             //  if (actionId == EditorInfo.IME_ACTION_SEARCH
+               //         || actionId == EditorInfo.IME_ACTION_DONE
+                 //       || keyEvent.getAction() == KeyEvent.ACTION_DOWN
+                   //     || keyEvent.getAction() == KeyEvent.KEYCODE_ENTER) {
                     // execute our method for searching
-                    geoLocate();
-                }
-                return false;
-            }
-        });
+                    //geoLocate();
+                //}
+                //return false;
+            //}
+        //});
 
         mGps.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,29 +112,29 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         hideSoftKeyboard();
     }
 
-    private void geoLocate() {
-        Log.d( TAG, "geoLocate: geolocating");
+    //private void geoLocate() {
+      //  Log.d( TAG, "geoLocate: geolocating");
 
-        String searchString = mSearchText.getText().toString();
+       // String searchString = mSearchText.getText().toString();
 
-        Geocoder geocoder = new Geocoder(MainActivity.this);
-        List<Address> list = new ArrayList<>();
-        try {
-          list = geocoder.getFromLocationName( searchString, 1);
-        }
-        catch (IOException e) {
-            Log.e(TAG, "geoLocate: IOException " + e.getMessage());
-        }
+        //Geocoder geocoder = new Geocoder(MainActivity.this);
+        //List<Address> list = new ArrayList<>();
+        //try {
+          //list = geocoder.getFromLocationName( searchString, 1);
+        //}
+        //catch (IOException e) {
+          //  Log.e(TAG, "geoLocate: IOException " + e.getMessage());
+        //}
 
-        if ( list.size() > 0) {
-            Address address = list.get(0);
+        //if ( list.size() > 0) {
+          //  Address address = list.get(0);
 
-            Log.d( TAG, "geoLocate: found a location " + address.toString() );
+            //Log.d( TAG, "geoLocate: found a location " + address.toString() );
             // Toast.makeText( this, address.toString(), Toast.LENGTH_SHORT).show();
 
-            moveCamera( new LatLng( address.getLatitude(), address.getLongitude()), DEFAULT_ZOOM, address.getAddressLine(0));
-        }
-    }
+            //moveCamera( new LatLng( address.getLatitude(), address.getLongitude()), DEFAULT_ZOOM, address.getAddressLine(0));
+        //}
+    //}
 
     private void initMap() {
         Log.d( TAG, "initMap: initializing map");
