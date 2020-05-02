@@ -20,6 +20,7 @@ Added main menu buttons
 
 ### ~ 02.05.2020 ~
 We customized the search bar so it would autosuggest when something is searched. (It took us about 4-5 hrs.)
+Added splash screen
 
 ### ~ ~
 
