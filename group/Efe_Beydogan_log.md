@@ -23,7 +23,10 @@ We customized the search bar so it would autosuggest when something is searched.
 
 Added splash screen
 
-### ~ ~
+### ~ 04.05.2020 ~
+Added tabs to bus schedule page
+Added bus schedule button on the map
+Fixed a minor bug that caused multiple pages to be opened when a button is clicked more than once
 
 ### ~ ~
 
