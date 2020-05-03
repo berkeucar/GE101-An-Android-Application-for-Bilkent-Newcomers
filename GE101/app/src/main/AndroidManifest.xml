@@ -15,6 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".busSchedule.BusScheduleTab"></activity>
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,10 +24,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainScreen" />
-        <activity
-            android:name=".BusSchedule"
-            android:label="@string/title_activity_bus_schedule"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".settings_screen"
             android:label="@string/title_activity_settings_screen"
