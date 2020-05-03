@@ -9,13 +9,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class BusSchedule extends AppCompatActivity {
+
+    private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bus_schedule);
+        webView = (WebView) findViewById( R.id.webView);
+        webView.setWebViewClient( new WebViewClient());
+        webView.loadUrl("http://www.bilkent.edu.tr/bilkent/admin-unit/transport/merkez_cizelge.htm");
     }
 }

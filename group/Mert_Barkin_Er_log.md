@@ -14,4 +14,6 @@ From 24st until today, I looked at how I can implement those things, and found a
 ### ~ 27.04.2020 ~
 Today we did the github assignment.
 
+### ~ 3.05.2020 ~
+
 ****
