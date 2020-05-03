@@ -16,4 +16,12 @@ Today I have refreshed my mind about GPS technology and started getting knowledg
  
 ### ~ 28/04/2020 ~
 Today I have looked up to map settings and how to use maps in Android Studio. Actually it is not my subgroup's responsibility but since we will use techs coordinately we must know basic things about maps. 
+
+
+### ~ 30-31/04/2020 ~
+I checked about how to use QR in android studio.
+
+### ~ 02/04/2020 ~
+Today we discussed about AutoCompleteTextView with Arda, Efe and Barkın and added.
+
 ****
