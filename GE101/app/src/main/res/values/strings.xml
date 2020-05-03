@@ -15,4 +15,7 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_bus_schedule">BusSchedule</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="title_activity_bus_schedule_tab">BusScheduleTab</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 </resources>
