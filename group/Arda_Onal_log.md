@@ -26,4 +26,7 @@ Today we worked on the main screen buttons. We built them and added menus to the
 
 ### ~ 02/05/2020 ~
 Today we worked on the search bar. We added AutoCompleteTextView object to the searchbar that displays the possible searches from incompelete strings.
+
+### ~ 03/05/2020 ~
+Splash screen intro image display bug fixed.
 ****
