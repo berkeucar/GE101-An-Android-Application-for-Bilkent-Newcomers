@@ -13,6 +13,7 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -60,6 +61,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private FusedLocationProviderClient mFusedLocationProviderClient;
     private static final float DEFAULT_ZOOM = 15f;
     private ImageView busSchedule;
+    private long mLastClickTime = 0;
 
     private static final String[] COUNTRIES = new String[] { "B binası", "bull", "best"};
 
@@ -109,6 +111,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "onClick: clicked gps icon");
+                // Preventing multiple clicks, using threshold of 1 second
                 getDeviceLocation();
             }
         });
@@ -196,6 +199,11 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         busSchedule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Preventing multiple clicks, using threshold of 1 second
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
                 Intent intent = new Intent(MainActivity.this, BusScheduleTab.class);
                 startActivity(intent);
             }
