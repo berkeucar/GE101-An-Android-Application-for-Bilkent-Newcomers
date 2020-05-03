@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.ge101.busSchedule.BusScheduleTab;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 
@@ -69,7 +70,7 @@ public class MainScreen extends AppCompatActivity {
     }
 
     public void openBusSchedule() {
-        Intent intent = new Intent(this, BusSchedule.class);
+        Intent intent = new Intent(this, BusScheduleTab.class);
         startActivity(intent);
     }
 
