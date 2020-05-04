@@ -24,4 +24,7 @@ I checked about how to use QR in android studio.
 ### ~ 02/04/2020 ~
 Today we discussed about AutoCompleteTextView with Arda, Efe and Barkın and added.
 
+### ~ 04/04/2020 ~
+The main menu of eating places is added. Furthermore the campus cafeteria's food menu added. A major bug is fixed with Efe, Arda and Mert.
+
 ****
