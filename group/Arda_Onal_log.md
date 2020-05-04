@@ -30,4 +30,7 @@ Today we worked on the search bar. We added AutoCompleteTextView object to the s
 ### ~ 03/05/2020 ~
 Splash screen intro image display bug fixed.
 Worked on bus schedule tab and bus schedule button.
+
+### ~ 04/05/2020 ~
+Helped berke to solve the bug with Android Manifest
 ****
