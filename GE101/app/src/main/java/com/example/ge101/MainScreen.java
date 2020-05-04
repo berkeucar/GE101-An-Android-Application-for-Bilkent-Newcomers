@@ -6,12 +6,14 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.ge101.busSchedule.BusScheduleTab;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 
@@ -25,6 +27,7 @@ public class MainScreen extends AppCompatActivity {
     private ImageView startButton;
     private ImageView settingsButton;
     private ImageView busButton;
+    private long mLastClickTime = 0;
 
 
     @Override
@@ -36,6 +39,11 @@ public class MainScreen extends AppCompatActivity {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Preventing multiple clicks, using threshold of 1 second
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
                 openMainActivity();
             }
         });
@@ -44,6 +52,11 @@ public class MainScreen extends AppCompatActivity {
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Preventing multiple clicks, using threshold of 1 second
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
                 openSettings();
             }
         });
@@ -52,6 +65,11 @@ public class MainScreen extends AppCompatActivity {
         busButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Preventing multiple clicks, using threshold of 1 second
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
                 openBusSchedule();
             }
         });
@@ -69,7 +87,7 @@ public class MainScreen extends AppCompatActivity {
     }
 
     public void openBusSchedule() {
-        Intent intent = new Intent(this, BusSchedule.class);
+        Intent intent = new Intent(this, BusScheduleTab.class);
         startActivity(intent);
     }
 

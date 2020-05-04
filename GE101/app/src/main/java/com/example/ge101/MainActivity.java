@@ -7,11 +7,13 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -25,6 +27,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ge101.adapter.PlaceAutoSuggestAdapter;
+import com.example.ge101.busSchedule.BusScheduleTab;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -57,6 +60,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;
     private FusedLocationProviderClient mFusedLocationProviderClient;
     private static final float DEFAULT_ZOOM = 15f;
+    private ImageView busSchedule;
+    private long mLastClickTime = 0;
 
     private static final String[] COUNTRIES = new String[] { "B binası", "bull", "best"};
 
@@ -76,6 +81,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         AutoCompleteTextView editText = (AutoCompleteTextView) findViewById(R.id.activity_chooser_view_content);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, COUNTRIES );
         editText.setAdapter(adapter);
+
 
 
 
@@ -105,9 +111,12 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "onClick: clicked gps icon");
+                // Preventing multiple clicks, using threshold of 1 second
                 getDeviceLocation();
             }
         });
+
+        setBusSchedule();
 
         hideSoftKeyboard();
     }
@@ -184,6 +193,23 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             map.animateCamera(CameraUpdateFactory.zoomOut());
         }
     }
+
+    public void setBusSchedule() {
+        busSchedule = (ImageView) findViewById(R.id.busSchedule);
+        busSchedule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Preventing multiple clicks, using threshold of 1 second
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
+                Intent intent = new Intent(MainActivity.this, BusScheduleTab.class);
+                startActivity(intent);
+            }
+        });
+    }
+
 
     private void getLocationPermission() {
         Log.d(TAG, "getLocationPermission: getting location permissions");
