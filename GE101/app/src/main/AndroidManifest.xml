@@ -15,7 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".busSchedule.BusScheduleTab"></activity>
+        <activity
+            android:name=".eatingPlaces.EatingPlaces"
+            android:label="@string/title_activity_eating_places"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".busSchedule.BusScheduleTab" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,6 +41,7 @@
             android:value="@string/map_key" />
 
         <activity android:name=".MainActivity" />
+        <activity android:name=".eatingPlaces.schoolCafeteria" />
     </application>
 
 </manifest>

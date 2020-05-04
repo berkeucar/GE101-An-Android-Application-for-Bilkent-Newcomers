@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".eatingPlaces.EatingPlaces">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/main_of_eatings"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:src="@drawable/bilkenteatings"></ImageView>
+
+            <Button
+                android:id="@+id/school_cafeteria"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="@string/school_cafeteria_name"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:textStyle="bold"></Button>
+
+            <Button
+                android:id="@+id/coffee_break"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="@string/coffee_break_name"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:textStyle="bold"></Button>
+
+            <Button
+                android:id="@+id/mozart_cafe"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="@string/mozart_cafe_name"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:textStyle="bold"></Button>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
