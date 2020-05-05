@@ -30,7 +30,12 @@ Added bus schedule button on the map
 
 Fixed a minor bug that caused multiple pages to be opened when a button is clicked more than once
 
-### ~ ~
+### ~ 05.05.2020 ~
+Added custom markers
+
+Improved the search bar so when a suggestion is clicked you are taken to that location
+
+Changed the map style to a dark theme
 
 ### ~  ~
 
