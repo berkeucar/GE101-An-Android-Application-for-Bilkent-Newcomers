@@ -37,7 +37,6 @@
             android:layout_height="70dp"
             android:src="@drawable/buslogoblack" />
 
-
     </LinearLayout>
 
 
