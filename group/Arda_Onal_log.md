@@ -33,4 +33,8 @@ Worked on bus schedule tab and bus schedule button.
 
 ### ~ 04/05/2020 ~
 Helped berke to solve the bug with Android Manifest
+
+### ~ 05/05/2020 ~
+Worked on moving the camera to custom marker locations using the search bar.
+Worked on styling the map. Colors were changed and labels were removed.
 ****
