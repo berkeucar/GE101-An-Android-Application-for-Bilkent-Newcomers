@@ -19,6 +19,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
@@ -49,7 +50,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainActivity extends FragmentActivity implements OnMapReadyCallback {
+import customMarkers.CustomInfoWindowAdapter;
+
+public class MainActivity extends FragmentActivity implements OnMapReadyCallback, AdapterView.OnItemClickListener {
 
     // properties
     private GoogleMap map;
@@ -75,12 +78,14 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //mSearchText = (EditText) findViewById(R.id.input_search);
+        // Initialize the GPS button that locks on user location when pressed
         mGps = (ImageView) findViewById(R.id.ic_gps);
         getLocationPermission();
 
         AutoCompleteTextView editText = (AutoCompleteTextView) findViewById(R.id.activity_chooser_view_content);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, COUNTRIES );
         editText.setAdapter(adapter);
+        editText.setOnItemClickListener( this);
 
 
 
@@ -106,12 +111,11 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 //return false;
             //}
         //});
-
+        // Add a click listener on gps button for it to function
         mGps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "onClick: clicked gps icon");
-                // Preventing multiple clicks, using threshold of 1 second
                 getDeviceLocation();
             }
         });
@@ -186,16 +190,20 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void onZoom( View view) {
+        // Set the zoom in button so when it is pressed it zooms in
         if(view.getId() == R.id.zoomIn) {
             map.animateCamera(CameraUpdateFactory.zoomIn());
         }
+        // Set the zoom out button so when it is pressed it zooms out
         if ( view.getId() == R.id.zoomOut) {
             map.animateCamera(CameraUpdateFactory.zoomOut());
         }
     }
 
     public void setBusSchedule() {
+        // Initialize the bus schedule button
         busSchedule = (ImageView) findViewById(R.id.busSchedule);
+        // Add a click listener so the button opens the bus schedule page
         busSchedule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -204,6 +212,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                     return;
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
+                // Start bus schedule page when the button is pressed
                 Intent intent = new Intent(MainActivity.this, BusScheduleTab.class);
                 startActivity(intent);
             }
@@ -286,8 +295,12 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     private void moveCamera( LatLng latLng, float zoom, String title) {
         Log.d( TAG, "moveCamera: moving the camera to: lat: " + latLng.latitude + ", lng: " + latLng.longitude);
+        // Move the cursor to the user's location
         map.moveCamera( CameraUpdateFactory.newLatLngZoom( latLng, zoom) );
 
+        map.setInfoWindowAdapter( new CustomInfoWindowAdapter( MainActivity.this));
+
+        // Add a marker to the map when a location is clicked from the list
         if ( !title.equals( "My Location")) {
             MarkerOptions options = new MarkerOptions().position( latLng).title( title);
             map.addMarker( options);
@@ -298,5 +311,21 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     private void hideSoftKeyboard() {
         this.getWindow().setSoftInputMode( WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+    }
+
+    /*
+       ----------------------------------------------------------------------------------------------
+     */
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+    {
+        // fetch the user selected value
+        String item = parent.getItemAtPosition(position).toString();
+
+        // move the camera to the selected building
+        if ( item.equals( "B binası")) {
+            moveCamera(new LatLng(40, 30), DEFAULT_ZOOM, "Bilkent");
+        }
     }
 }
