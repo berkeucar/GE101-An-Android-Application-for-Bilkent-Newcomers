@@ -116,4 +116,6 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="east_campus_eatings">East Campus Eatings</string>
+    <string name="main_campus_eatings">Main Campus Eatings</string>
 </resources>
