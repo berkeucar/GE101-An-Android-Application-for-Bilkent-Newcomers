@@ -14,7 +14,7 @@ GE101, is an application where you can go around Bilkent’s main campus and lea
 + **Requirements:** completed (28.02.2020)
 + **UI Design:** completed (08.03.2020)
 + **Detailed Design:** in progress
-+ **Implementation:** not started!
++ **Implementation:** in progress since (28.04.2020)
 + **Reflections:** not yet!
 
 [Group Meetings Log](group/meetingslog.md)
