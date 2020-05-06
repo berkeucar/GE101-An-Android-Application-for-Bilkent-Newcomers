@@ -22,6 +22,7 @@ public class MainCampusEatings extends Fragment {
 
     // properties
     private Button schoolCafeteria;
+    private Button coffeeBreakMain;
     private long mLastClickTime = 0;
 
     // constructor
@@ -63,6 +64,54 @@ public class MainCampusEatings extends Fragment {
 
                 // creates intent (action) and opens it (for this condition school cafeteria's menu)
                 Intent intent = new Intent(getActivity(), SchoolCafeteria.class);
+                startActivity(intent);
+            }
+        });
+
+        // Button for school cafeteria
+        schoolCafeteria = (Button) v.findViewById(R.id.school_cafeteria);
+        schoolCafeteria.setOnClickListener(new View.OnClickListener()
+        {
+            /**
+             * the method that makes button to open the school cafeteria's menu when clicked
+             * @param v
+             */
+            @Override
+            public void onClick(View v)
+            {
+                // Preventing multiple clicks, using threshold of 1 second
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000)
+                {
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
+
+                // creates intent (action) and opens it (for this condition school cafeteria's menu)
+                Intent intent = new Intent(getActivity(), SchoolCafeteria.class);
+                startActivity(intent);
+            }
+        });
+
+        // Button for coffee break
+        coffeeBreakMain = (Button) v.findViewById(R.id.coffee_break);
+        coffeeBreakMain.setOnClickListener(new View.OnClickListener()
+        {
+            /**
+             * the method that makes button to open the school cafeteria's menu when clicked
+             * @param v
+             */
+            @Override
+            public void onClick(View v)
+            {
+                // Preventing multiple clicks, using threshold of 1 second
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000)
+                {
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
+
+                // creates intent (action) and opens it (for this condition school cafeteria's menu)
+                Intent intent = new Intent(getActivity(), CoffeeBreakMain.class);
                 startActivity(intent);
             }
         });
