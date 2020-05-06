@@ -17,21 +17,23 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 
 /**
- * This is the main screen of the app, it allows the user to view the map, eating places,
- * and bus schedules
+ * This is the main screen of the app, it allows the user to view the map, eating places, and bus schedules
+ * @author Efe Beydoğan, Arda Önal, Mert Barkın Er, Berke Uçar, Mehmet Alper Çetin
+ * @version 06.05.2020
  */
+
 public class MainScreen extends AppCompatActivity {
 
+    // properties
     private static final String TAG = "MainScreen";
-
     private static final int ERROR_DIALOG_REQUEST = 9901;
-
-
     private ImageView startButton;
     private ImageView settingsButton;
     private ImageView busButton;
     private ImageView foodButton;
     private long mLastClickTime = 0;
+
+    // methods
 
     /**
      * Creates the main screen and shows it to the user

@@ -7,8 +7,11 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 /**
  * the adapter class for bus schedule main menu's tab {@link FragmentPagerAdapter}
+ * @author Efe Beydoğan, Arda Önal, Mert Barkın Er, Berke Uçar, Mehmet Alper Çetin
+ * @version 06.05.2020
  */
 public class PageAdapter extends FragmentPagerAdapter {
+
     // properties
     private int numberOfTabs;
 
@@ -17,6 +20,8 @@ public class PageAdapter extends FragmentPagerAdapter {
         super(fm);
         this.numberOfTabs = numberOfTabs;
     }
+
+    // methods
 
     /**
      * basic method that returns the fragment that we want to provide in the tab

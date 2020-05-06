@@ -8,9 +8,12 @@ import android.os.Handler;
 
 /**
  * This is the splash screen that shows up when the user opens the app initially
+ * @author Efe Beydoğan, Arda Önal, Mert Barkın Er, Berke Uçar, Mehmet Alper Çetin
+ * @version 06.05.2020
  */
 public class SplashScreen extends AppCompatActivity {
 
+    // methods
     /**
      * Creates and shows the splash screen for the app
      * @param savedInstanceState is the Bundle of this class

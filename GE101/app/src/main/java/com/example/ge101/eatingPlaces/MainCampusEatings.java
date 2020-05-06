@@ -17,6 +17,8 @@ import com.example.ge101.R;
 
 /**
  * A simple {@link Fragment} subclass.
+ * @author Efe Beydoğan, Arda Önal, Mert Barkın Er, Berke Uçar, Mehmet Alper Çetin
+ * @version 06.05.2020
  */
 public class MainCampusEatings extends Fragment {
 
@@ -24,7 +26,7 @@ public class MainCampusEatings extends Fragment {
     private Button schoolCafeteria;
     private long mLastClickTime = 0;
 
-    // constructor
+    // constructors
     public MainCampusEatings() {
         // Required empty public constructor
     }

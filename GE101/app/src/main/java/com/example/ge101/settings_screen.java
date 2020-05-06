@@ -10,6 +10,11 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 
+/**
+ * Settings screen class
+ * @author Efe Beydoğan, Arda Önal, Mert Barkın Er, Berke Uçar, Mehmet Alper Çetin
+ * @version 06.05.2020
+ */
 public class settings_screen extends AppCompatActivity {
 
     @Override

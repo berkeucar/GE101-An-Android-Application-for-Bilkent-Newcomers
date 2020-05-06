@@ -7,8 +7,12 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 /**
  * the adapter class for eating places main menu's tab {@link FragmentPagerAdapter}
+ * @author Efe Beydoğan, Arda Önal, Mert Barkın Er, Berke Uçar, Mehmet Alper Çetin
+ * @version 06.05.2020
  */
+
 public class PageAdapterEatings extends FragmentPagerAdapter {
+
     //properties
     private int numberOfTabs;
 

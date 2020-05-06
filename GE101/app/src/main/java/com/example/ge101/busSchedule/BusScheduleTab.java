@@ -11,15 +11,19 @@ import com.google.android.material.tabs.TabLayout;
 
 /**
  * BusScheduleTab allows the user to go between the main campus bus schedule and east campus
- * bus schedule tabs
+ * @author Efe Beydoğan, Arda Önal, Mert Barkın Er, Berke Uçar, Mehmet Alper Çetin
+ * @version 06.05.2020
  */
 public class BusScheduleTab extends AppCompatActivity {
 
+    // properties
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private TabItem mainCamp, eastCamp;
     public PageAdapter pagerAdapter;
 
+
+    // methods
 
     /**
      * creates two tabs to go between
