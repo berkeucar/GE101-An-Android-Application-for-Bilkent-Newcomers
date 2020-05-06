@@ -192,7 +192,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 // in a raw resource file.
                 boolean success = googleMap.setMapStyle(
                         MapStyleOptions.loadRawResourceStyle(
-                                this, R.raw.mapstyle));
+                                this, R.raw.custommap));
                 if (!success) {
                     Log.e(TAG, "Style parsing failed.");
                 }
