@@ -21,8 +21,12 @@ import android.widget.Button;
 
 /**
  * the class that contains the eating places main screen's display {@link AppCompatActivity}
+ * @author Efe Beydoğan, Arda Önal, Mert Barkın Er, Berke Uçar, Mehmet Alper Çetin
+ * @version 06.05.2020
  */
+
 public class EatingPlaces extends AppCompatActivity {
+
     // properties
     private TabLayout tabLayout;
     private ViewPager viewPager;

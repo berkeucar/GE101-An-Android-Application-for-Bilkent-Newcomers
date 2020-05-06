@@ -13,8 +13,9 @@ import android.webkit.WebViewClient;
 import com.example.ge101.R;
 
 /**
- * A simple {@link Fragment} subclass.
  * EastCamp contains the bus schedule for the east campus and shows it to the user
+ * @author Efe Beydoğan, Arda Önal, Mert Barkın Er, Berke Uçar, Mehmet Alper Çetin
+ * @version 06.05.2020
  */
 public class eastCamp extends Fragment {
     final int ZOOM_LEVEL = 150;

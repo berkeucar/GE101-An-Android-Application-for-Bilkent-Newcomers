@@ -1,7 +1,6 @@
 package com.example.ge101;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
@@ -10,49 +9,38 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
-import android.location.Address;
-import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
-import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.ge101.adapter.PlaceAutoSuggestAdapter;
 import com.example.ge101.busSchedule.BusScheduleTab;
-import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MapStyleOptions;
-import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 import customMarkers.CustomInfoWindowAdapter;
+
+/**
+ * This is the map class
+ * @author Efe Beydoğan, Arda Önal, Mert Barkın Er, Berke Uçar, Mehmet Alper Çetin
+ * @version 06.05.2020
+ */
 
 public class MainActivity extends FragmentActivity implements OnMapReadyCallback, AdapterView.OnItemClickListener {
 
@@ -75,6 +63,12 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     //private EditText mSearchText;
     private ImageView mGps;
 
+    // methods
+
+    /**
+     * Fixed method that initializes variables and gets permissions
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,24 +76,27 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         //mSearchText = (EditText) findViewById(R.id.input_search);
         // Initialize the GPS button that locks on user location when pressed
         mGps = (ImageView) findViewById(R.id.ic_gps);
+        // Get the permission from user to receive location information
         getLocationPermission();
 
+        // This is the search bar that has autocomplete text view
         AutoCompleteTextView editText = (AutoCompleteTextView) findViewById(R.id.activity_chooser_view_content);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, COUNTRIES );
         editText.setAdapter(adapter);
         editText.setOnItemClickListener( this);
-
-
-
 
         //AutoCompleteTextView.setAdapter(new PlaceAutoSuggestAdapter( MainActivity.this, android.R.layout.simple_list_item_1));
 
 
     }
 
+    /**
+     * The method that initializes the buttons on the map
+     */
     private void init() {
         Log.d(TAG, "init: initializing");
 
+        // Not using these for now
         //mSearchText.setOnEditorActionListener( new TextView.OnEditorActionListener() {
           //  @Override
            // public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
@@ -121,12 +118,15 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 getDeviceLocation();
             }
         });
-
+        // Sets the bus schedule
         setBusSchedule();
-
+        // This is useless for now
         hideSoftKeyboard();
     }
 
+    /**
+     * The method to find a location from search bar but not being used right now because it crashes the app
+     */
     //private void geoLocate() {
       //  Log.d( TAG, "geoLocate: geolocating");
 
@@ -151,6 +151,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         //}
     //}
 
+    /**
+     * The method that initializes the map
+     */
     private void initMap() {
         Log.d( TAG, "initMap: initializing map");
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
@@ -158,6 +161,10 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync( this);
     }
 
+    /**
+     * The method to get the user location and initialize the map and moves the camera, sets the map styling
+     * @param googleMap
+     */
     @Override
     public void onMapReady( GoogleMap googleMap) {
         Toast.makeText( this, "Map is ready", Toast.LENGTH_SHORT).show();
@@ -176,6 +183,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         // LatLngBounds Bilkent = new LatLngBounds( new LatLng(39.8656549,32.7426828), new LatLng(39.8739347,32.7643047));
         // map.setLatLngBoundsForCameraTarget(Bilkent);
 
+        // If the user granted permission, receive the location
         if( mLocationPermissionsGranted) {
             getDeviceLocation();
 
@@ -184,6 +192,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                     Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 return;
             }
+            // Show the user location on the map
             map.setMyLocationEnabled( true);
             map.getUiSettings().setMyLocationButtonEnabled(false);
 
@@ -199,11 +208,16 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             } catch (Resources.NotFoundException e) {
                 Log.e(TAG, "Can't find style. Error: ", e);
             }
+            // Initialize the map
             init();
 
         }
     }
 
+    /**
+     * Sets the zoom buttons
+     * @param view
+     */
     public void onZoom( View view) {
         // Set the zoom in button so when it is pressed it zooms in
         if(view.getId() == R.id.zoomIn) {
@@ -215,6 +229,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
+    /**
+     * Sets the bus schedule button that leads to bus schedule page
+     */
     public void setBusSchedule() {
         // Initialize the bus schedule button
         busSchedule = (ImageView) findViewById(R.id.busSchedule);
@@ -234,7 +251,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         });
     }
 
-
+    /**
+     * Gets the location permission from the user
+     */
     private void getLocationPermission() {
         Log.d(TAG, "getLocationPermission: getting location permissions");
         String[] permissions = {Manifest.permission.ACCESS_FINE_LOCATION,
@@ -254,6 +273,12 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
+    /**
+     * Checks is necessary permissions are granted and initializes the map
+     * @param requestCode
+     * @param permissions
+     * @param grantResults
+     */
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         Log.d( TAG, "onRequestPermissionResult: called.");
@@ -278,6 +303,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
+    /**
+     * Gets the device location if permission is granted
+     */
     private void getDeviceLocation() {
         Log.d( TAG, "getDeviceLocation: getting the device's current location");
 
@@ -308,12 +336,18 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
+    /**
+     * Moves camera to a specific latitude and longitude
+     * @param latLng
+     * @param zoom
+     * @param title
+     */
     private void moveCamera( LatLng latLng, float zoom, String title) {
         Log.d( TAG, "moveCamera: moving the camera to: lat: " + latLng.latitude + ", lng: " + latLng.longitude);
         // Move the cursor to the user's location
         map.moveCamera( CameraUpdateFactory.newLatLngZoom( latLng, zoom) );
 
-        // map.setInfoWindowAdapter( new CustomInfoWindowAdapter( MainActivity.this));
+        map.setInfoWindowAdapter( new CustomInfoWindowAdapter( MainActivity.this));
 
         // Add a marker to the map when a location is clicked from the list
         if ( !title.equals( "My Location")) {
@@ -323,15 +357,21 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         hideSoftKeyboard();
     }
 
-
+    /**
+     * Hides the keyboard when enter is clicked but doesn't work right now
+     */
     private void hideSoftKeyboard() {
         this.getWindow().setSoftInputMode( WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
 
-    /*
-       ----------------------------------------------------------------------------------------------
-     */
 
+    /**
+     * Moves the camera to a selected building from the list
+     * @param parent
+     * @param view
+     * @param position
+     * @param id
+     */
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id)
     {

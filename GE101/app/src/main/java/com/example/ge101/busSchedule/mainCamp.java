@@ -13,14 +13,22 @@ import android.webkit.WebViewClient;
 import com.example.ge101.R;
 
 /**
- * A simple {@link Fragment} subclass.
  * MainCamp contains the bus schedule for the main campus and shows it to the user
+ * @author Efe Beydoğan, Arda Önal, Mert Barkın Er, Berke Uçar, Mehmet Alper Çetin
+ * @version 06.05.2020
  */
+
 public class mainCamp extends Fragment {
+
+    // properties
     final int ZOOM_LEVEL = 150;
+
+    // constructors
     public mainCamp() {
         // Required empty public constructor
     }
+
+    // methods
 
     /**
      * Creates and shows the main campus bus schedule to the user in the app itself instead of

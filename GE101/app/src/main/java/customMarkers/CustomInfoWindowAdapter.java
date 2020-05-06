@@ -11,8 +11,18 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 import com.example.ge101.R;
+<<<<<<< HEAD
+=======
+import com.example.ge101.eatingPlaces.SchoolCafeteria;
+>>>>>>> fc4b9f04a7da3a456cc5ef96614a571c171173f6
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.Marker;
+
+/**
+ * A class to display information on buildings
+ * @author Efe Beydoğan, Arda Önal, Mert Barkın Er, Berke Uçar, Mehmet Alper Çetin
+ * @version 06.05.2020
+ */
 
 public class CustomInfoWindowAdapter extends Fragment implements GoogleMap.InfoWindowAdapter {
 
@@ -53,6 +63,4 @@ public class CustomInfoWindowAdapter extends Fragment implements GoogleMap.InfoW
         renderWindowText( marker, mWindow);
         return mWindow;
     }
-
-
 }

@@ -7,8 +7,11 @@ import com.example.ge101.R;
 
 /**
  * the class that contains the school cafeteria's menu's display {@link AppCompatActivity}
+ * @author Efe Beydoğan, Arda Önal, Mert Barkın Er, Berke Uçar, Mehmet Alper Çetin
+ * @version 06.05.2020
  */
 public class SchoolCafeteria extends AppCompatActivity {
+
     // constants
     final int ZOOM_LEVEL = 150;
 
