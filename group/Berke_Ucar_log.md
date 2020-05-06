@@ -27,4 +27,12 @@ Today we discussed about AutoCompleteTextView with Arda, Efe and Barkın and add
 ### ~ 04/04/2020 ~
 The main menu of eating places is added. Furthermore the campus cafeteria's food menu added. A major bug is fixed with Efe, Arda and Mert.
 
+### ~ 05/04/2020 ~
+Tab of eating places added and east campus places designed.
+Map changes and markers discussed with Efe and Arda.
+
+### ~ 06/04/2020 ~
+Custom map designed and added as a light theme. 
+I got into the custom changes but, as far as I imagine, GoogleMaps does not provide that much details because of our location, Turkey. I will check if we have another choice.
+
 ****
