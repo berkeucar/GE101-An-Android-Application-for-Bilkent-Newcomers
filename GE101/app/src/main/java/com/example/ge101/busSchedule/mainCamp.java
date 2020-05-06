@@ -14,6 +14,7 @@ import com.example.ge101.R;
 
 /**
  * A simple {@link Fragment} subclass.
+ * MainCamp contains the bus schedule for the main campus and shows it to the user
  */
 public class mainCamp extends Fragment {
     final int ZOOM_LEVEL = 150;
@@ -21,7 +22,14 @@ public class mainCamp extends Fragment {
         // Required empty public constructor
     }
 
-
+    /**
+     * Creates and shows the main campus bus schedule to the user in the app itself instead of
+     * a remote browser
+     * @param inflater is the LayoutInflater for this class
+     * @param container is the ViewGroup for this class
+     * @param savedInstanceState  is the Bundle for this class
+     * @return view v
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -29,10 +37,10 @@ public class mainCamp extends Fragment {
         View v = inflater.inflate(R.layout.fragment_main_camp, container, false);
         WebView webView = (WebView) v.findViewById(R.id.webView);
         webView.getSettings().setJavaScriptEnabled( true);
-        webView.setWebViewClient( new WebViewClient());
-        webView.setInitialScale( ZOOM_LEVEL);
-        webView.getSettings().setDisplayZoomControls(false);
-        webView.getSettings().setBuiltInZoomControls(true);
+        webView.setWebViewClient( new WebViewClient()); // this opens the browser inside the app
+        webView.setInitialScale( ZOOM_LEVEL);  // makes it so that it is zoomed out initially
+        webView.getSettings().setDisplayZoomControls(false); // disables zoom in/out buttons
+        webView.getSettings().setBuiltInZoomControls(true); // allows zooming in and out
         webView.loadUrl("http://www.bilkent.edu.tr/bilkent/admin-unit/transport/merkez_cizelge.htm");
         return v;
     }

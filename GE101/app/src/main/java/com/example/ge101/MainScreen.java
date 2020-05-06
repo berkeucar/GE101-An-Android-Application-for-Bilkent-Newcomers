@@ -16,6 +16,10 @@ import com.example.ge101.eatingPlaces.EatingPlaces;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 
+/**
+ * This is the main screen of the app, it allows the user to view the map, eating places,
+ * and bus schedules
+ */
 public class MainScreen extends AppCompatActivity {
 
     private static final String TAG = "MainScreen";
@@ -29,12 +33,16 @@ public class MainScreen extends AppCompatActivity {
     private ImageView foodButton;
     private long mLastClickTime = 0;
 
-
+    /**
+     * Creates the main screen and shows it to the user
+     * @param savedInstanceState is the Bundle for this class
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
 
+        // this is the map button, sends the user to the map screen
         startButton = (ImageView) findViewById(R.id.startButton);
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +56,7 @@ public class MainScreen extends AppCompatActivity {
             }
         });
 
+        // this is the settings button, sends the user to the settings screen
         settingsButton = (ImageView) findViewById(R.id.settingsButton);
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +70,7 @@ public class MainScreen extends AppCompatActivity {
             }
         });
 
+        // this is the bus button, sends the user to the bus schedules tabs
         busButton = (ImageView) findViewById(R.id.busButton);
         busButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,6 +84,7 @@ public class MainScreen extends AppCompatActivity {
             }
         });
 
+        // this is the food button, sends the user to the food places tabs
         foodButton = (ImageView) findViewById(R.id.foodButton);
         foodButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -88,27 +99,42 @@ public class MainScreen extends AppCompatActivity {
         });
     }
 
+    /**
+     * Opens the main activity, which is the map
+     */
     public void openMainActivity() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * Opens the settings menu
+     */
     public void openSettings() {
         Intent intent = new Intent(this, settings_screen.class);
         startActivity(intent);
     }
 
+    /**
+     * Opens the bus schedules tabs
+     */
     public void openBusSchedule() {
         Intent intent = new Intent(this, BusScheduleTab.class);
         startActivity(intent);
     }
 
+    /**
+     * Opens the eating places tabs
+     */
     public void openEatingPlaces(){
         Intent intent = new Intent(this, EatingPlaces.class);
         startActivity(intent);
     }
 
-
+    /**
+     * Checks if the user can use google services
+     * @return true or false depending on if the user can use google services
+     */
     public boolean isServicesOK() {
         Log.d(TAG, "isServicesOK: checking google services version");
 
