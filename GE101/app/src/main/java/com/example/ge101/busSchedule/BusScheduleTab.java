@@ -9,6 +9,10 @@ import com.example.ge101.R;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
+/**
+ * BusScheduleTab allows the user to go between the main campus bus schedule and east campus
+ * bus schedule tabs
+ */
 public class BusScheduleTab extends AppCompatActivity {
 
     private TabLayout tabLayout;
@@ -17,8 +21,10 @@ public class BusScheduleTab extends AppCompatActivity {
     public PageAdapter pagerAdapter;
 
 
-
-
+    /**
+     * creates two tabs to go between
+     * @param savedInstanceState is the Bundle for this class
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
