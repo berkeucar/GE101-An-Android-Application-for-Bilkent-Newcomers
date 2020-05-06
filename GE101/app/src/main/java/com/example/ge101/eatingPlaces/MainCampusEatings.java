@@ -29,16 +29,28 @@ public class MainCampusEatings extends Fragment {
         // Required empty public constructor
     }
 
-
+    // methods
+    /**
+     * the method that provides the button actions and opens the main campus fragment
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return View v
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_main_campus_eating_places, container, false);
 
+        // Button for school cafeteria
         schoolCafeteria = (Button) v.findViewById(R.id.school_cafeteria);
         schoolCafeteria.setOnClickListener(new View.OnClickListener()
         {
+            /**
+             * the method that makes button to open the school cafeteria's menu when clicked
+             * @param v
+             */
             @Override
             public void onClick(View v)
             {
@@ -48,7 +60,9 @@ public class MainCampusEatings extends Fragment {
                     return;
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
-                Intent intent = new Intent(getActivity(), schoolCafeteria.class);
+
+                // creates intent (action) and opens it (for this condition school cafeteria's menu)
+                Intent intent = new Intent(getActivity(), SchoolCafeteria.class);
                 startActivity(intent);
             }
         });

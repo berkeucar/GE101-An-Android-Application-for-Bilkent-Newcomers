@@ -41,7 +41,7 @@
             android:value="@string/map_key" />
 
         <activity android:name=".MainActivity" />
-        <activity android:name=".eatingPlaces.schoolCafeteria" />
+        <activity android:name=".eatingPlaces.SchoolCafeteria" />
     </application>
 
 </manifest>

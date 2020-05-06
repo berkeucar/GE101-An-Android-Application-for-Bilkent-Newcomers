@@ -5,21 +5,30 @@ import android.webkit.WebViewClient;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.ge101.R;
 
-public class schoolCafeteria extends AppCompatActivity {
+/**
+ * the class that contains the school cafeteria's menu's display {@link AppCompatActivity}
+ */
+public class SchoolCafeteria extends AppCompatActivity {
     // constants
     final int ZOOM_LEVEL = 150;
 
     // variables
 
     //methods
+    /**
+     * basic method that opens the school cafeteria's menu from  the internet link
+     * @return void
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.school_cafeteria_menu);
 
+        // creates the webView that opens the school cafeteria's internet page
         WebView webView = (WebView) findViewById(R.id.school_cafeteria_menu_View);
         webView.getSettings().setJavaScriptEnabled( true);
         webView.setWebViewClient( new WebViewClient());
+        // arranges the zoom level and set its settings
         webView.setInitialScale( ZOOM_LEVEL);
         webView.getSettings().setDisplayZoomControls(false);
         webView.getSettings().setBuiltInZoomControls(true);

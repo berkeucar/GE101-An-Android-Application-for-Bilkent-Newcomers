@@ -29,13 +29,21 @@ public class EastCampusEatings extends Fragment {
         // Required empty public constructor
     }
 
-
+    //methods
+    /**
+     * the method that opens the east campus tab
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_east_campus_eating_places, container, false);
 
+        // Button for school cafeteria
         schoolCafeteria = (Button) v.findViewById(R.id.school_cafeteria_east);
         schoolCafeteria.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +53,9 @@ public class EastCampusEatings extends Fragment {
                     return;
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
-                Intent intent = new Intent(getActivity(), schoolCafeteria.class);
+
+                // creates intent (action) and opens it (for this condition school cafeteria's menu)
+                Intent intent = new Intent(getActivity(), SchoolCafeteria.class);
                 startActivity(intent);
             }
         });
