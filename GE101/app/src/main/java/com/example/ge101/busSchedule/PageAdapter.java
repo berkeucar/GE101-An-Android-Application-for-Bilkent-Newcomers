@@ -5,24 +5,32 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+/**
+ * the adapter class for bus schedule main menu's tab {@link FragmentPagerAdapter}
+ */
 public class PageAdapter extends FragmentPagerAdapter {
-
+    // properties
     private int numberOfTabs;
 
-
+    // constructors
     public PageAdapter( FragmentManager fm, int numberOfTabs) {
         super(fm);
         this.numberOfTabs = numberOfTabs;
     }
 
+    /**
+     * basic method that returns the fragment that we want to provide in the tab
+     * @param position
+     * @return Fragment
+     */
     @NonNull
     @Override
     public Fragment getItem(int position) {
         switch ( position) {
             case 0:
-                return new mainCamp();
+                return new mainCamp(); // opens the bus schedule menu for main campus (main campus tab)
             case 1:
-                return new eastCamp();
+                return new eastCamp(); // opens the bus schedule menu for east campus (east campus tab)
             default:
                 return null;
         }

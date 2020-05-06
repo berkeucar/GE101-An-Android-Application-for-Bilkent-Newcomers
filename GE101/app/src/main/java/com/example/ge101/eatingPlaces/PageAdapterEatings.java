@@ -21,6 +21,7 @@ public class PageAdapterEatings extends FragmentPagerAdapter {
     // methods
     /**
      * basic method that returns the fragment that we want to provide in the tab
+     * @param position
      * @return Fragment MainCampusEatings or EastCampusEatings
      */
     @NonNull
