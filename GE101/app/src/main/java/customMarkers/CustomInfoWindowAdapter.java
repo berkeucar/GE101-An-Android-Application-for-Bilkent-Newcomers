@@ -11,10 +11,6 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 import com.example.ge101.R;
-<<<<<<< HEAD
-=======
-
->>>>>>> 3749e2b67c56f10c23d991988c7cc0773b43f7cc
 import com.example.ge101.eatingPlaces.SchoolCafeteria;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.Marker;

@@ -12,9 +12,6 @@ public class PlaceInfo
 
     // constructors
 
-
-
-
     public PlaceInfo(String name, String description, LatLng latLng, int imageResource) {
         this.name = name;
         this.latLng = latLng;
