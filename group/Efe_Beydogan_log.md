@@ -37,8 +37,10 @@ Improved the search bar so when a suggestion is clicked you are taken to that lo
 
 Changed the map style to a dark theme
 
-### ~  ~
+### ~ 06.05.2020 ~
+Looked at how to implement custom markers
 
-### ~  ~
+### ~ 07.05.2020 ~
+Figured out how to display custom markes that show information about specific buildings
 
 ****

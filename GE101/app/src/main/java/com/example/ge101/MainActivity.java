@@ -30,11 +30,16 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
+import java.util.ArrayList;
+
 import customMarkers.CustomInfoWindowAdapter;
+import locations.PlaceInfo;
+import locations.Places;
 
 /**
  * This is the map class
@@ -55,9 +60,10 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private static final float DEFAULT_ZOOM = 15f;
     private ImageView busSchedule;
     private long mLastClickTime = 0;
+    private Marker marker;
 
-    private static final String[] COUNTRIES = new String[] { "B binası", "bull", "best"};
-
+    private ArrayList<String> buildings;
+    private Places places;
 
     // widgets
     //private EditText mSearchText;
@@ -79,15 +85,20 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         // Get the permission from user to receive location information
         getLocationPermission();
 
+        places = new Places();
+        buildings = new ArrayList<String>();
+        // Add the names of every building to an ArrayList for the search bar
+        for ( int i = 0; i < places.getPlaces().size(); i++) {
+            buildings.add( places.getPlaces().get(i).getName());
+        }
+
         // This is the search bar that has autocomplete text view
         AutoCompleteTextView editText = (AutoCompleteTextView) findViewById(R.id.activity_chooser_view_content);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, COUNTRIES );
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, buildings );
         editText.setAdapter(adapter);
         editText.setOnItemClickListener( this);
 
         //AutoCompleteTextView.setAdapter(new PlaceAutoSuggestAdapter( MainActivity.this, android.R.layout.simple_list_item_1));
-
-
     }
 
     /**
@@ -96,20 +107,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private void init() {
         Log.d(TAG, "init: initializing");
 
-        // Not using these for now
-        //mSearchText.setOnEditorActionListener( new TextView.OnEditorActionListener() {
-          //  @Override
-           // public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
-             //  if (actionId == EditorInfo.IME_ACTION_SEARCH
-               //         || actionId == EditorInfo.IME_ACTION_DONE
-                 //       || keyEvent.getAction() == KeyEvent.ACTION_DOWN
-                   //     || keyEvent.getAction() == KeyEvent.KEYCODE_ENTER) {
-                    // execute our method for searching
-                    //geoLocate();
-                //}
-                //return false;
-            //}
-        //});
         // Add a click listener on gps button for it to function
         mGps.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,32 +121,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         hideSoftKeyboard();
     }
 
-    /**
-     * The method to find a location from search bar but not being used right now because it crashes the app
-     */
-    //private void geoLocate() {
-      //  Log.d( TAG, "geoLocate: geolocating");
-
-       // String searchString = mSearchText.getText().toString();
-
-        //Geocoder geocoder = new Geocoder(MainActivity.this);
-        //List<Address> list = new ArrayList<>();
-        //try {
-          //list = geocoder.getFromLocationName( searchString, 1);
-        //}
-        //catch (IOException e) {
-          //  Log.e(TAG, "geoLocate: IOException " + e.getMessage());
-        //}
-
-        //if ( list.size() > 0) {
-          //  Address address = list.get(0);
-
-            //Log.d( TAG, "geoLocate: found a location " + address.toString() );
-            // Toast.makeText( this, address.toString(), Toast.LENGTH_SHORT).show();
-
-            //moveCamera( new LatLng( address.getLatitude(), address.getLongitude()), DEFAULT_ZOOM, address.getAddressLine(0));
-        //}
-    //}
 
     /**
      * The method that initializes the map
@@ -347,7 +318,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         // Move the cursor to the user's location
         map.moveCamera( CameraUpdateFactory.newLatLngZoom( latLng, zoom) );
 
-        map.setInfoWindowAdapter( new CustomInfoWindowAdapter( MainActivity.this));
+
 
         // Add a marker to the map when a location is clicked from the list
         if ( !title.equals( "My Location")) {
@@ -356,6 +327,43 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         }
         hideSoftKeyboard();
     }
+
+    /**
+     * Moves camera to a specific latitude and longitude with PlaceInfo
+     * @param zoom
+     * @param placeInfo
+     */
+    private void moveCamera( float zoom, PlaceInfo placeInfo) {
+        Log.d( TAG, "moveCamera: moving the camera to: lat: " + placeInfo.getLatLng().latitude + ", lng: " + placeInfo.getLatLng().longitude);
+        // Move the cursor to the user's location
+        map.moveCamera( CameraUpdateFactory.newLatLngZoom( placeInfo.getLatLng(), zoom) );
+
+        map.clear();
+
+        if ( placeInfo != null) {
+            try {
+                String snippet = "Name: " + placeInfo.getName();
+
+                MarkerOptions markerOptions = new MarkerOptions().position(placeInfo.getLatLng()).title(placeInfo.getName()).snippet(snippet);
+
+                marker = map.addMarker(markerOptions);
+
+                map.setInfoWindowAdapter( new CustomInfoWindowAdapter( MainActivity.this, placeInfo));
+
+            } catch (NullPointerException e) {
+                Log.e(TAG, "moveCamera: NullPointerException: " + e.getMessage());
+            }
+        }
+        else {
+
+            map.addMarker( new MarkerOptions().position(placeInfo.getLatLng()));
+        }
+
+
+        hideSoftKeyboard();
+    }
+
+
 
     /**
      * Hides the keyboard when enter is clicked but doesn't work right now
@@ -378,9 +386,13 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         // fetch the user selected value
         String item = parent.getItemAtPosition(position).toString();
 
+
         // move the camera to the selected building
-        if ( item.equals( "B binası")) {
-            moveCamera(new LatLng(40, 30), DEFAULT_ZOOM, "Bilkent");
+        for ( int i = 0; i < places.getPlaces().size(); i++)
+        {
+            if (item.equals(places.getPlaces().get(i).getName())) {
+                moveCamera(DEFAULT_ZOOM, places.getPlaces().get(i));
+            }
         }
     }
 }
