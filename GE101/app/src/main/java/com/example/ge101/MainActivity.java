@@ -30,11 +30,13 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
 import customMarkers.CustomInfoWindowAdapter;
+import locations.PlaceInfo;
 
 /**
  * This is the map class
@@ -55,8 +57,10 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private static final float DEFAULT_ZOOM = 15f;
     private ImageView busSchedule;
     private long mLastClickTime = 0;
+    private Marker marker;
 
     private static final String[] COUNTRIES = new String[] { "B binası", "bull", "best"};
+    private static final PlaceInfo[] PLACES = new PlaceInfo[] {new PlaceInfo( "B binası", "B building is very nice \nh\nh\nh\nh\nh\nh\nh", new LatLng(39.868653, 32.748112), R.drawable.bilkenteatings) };
 
 
     // widgets
@@ -347,7 +351,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         // Move the cursor to the user's location
         map.moveCamera( CameraUpdateFactory.newLatLngZoom( latLng, zoom) );
 
-        map.setInfoWindowAdapter( new CustomInfoWindowAdapter( MainActivity.this));
+
 
         // Add a marker to the map when a location is clicked from the list
         if ( !title.equals( "My Location")) {
@@ -356,6 +360,38 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         }
         hideSoftKeyboard();
     }
+
+    private void moveCamera( float zoom, PlaceInfo placeInfo) {
+        Log.d( TAG, "moveCamera: moving the camera to: lat: " + placeInfo.getLatLng().latitude + ", lng: " + placeInfo.getLatLng().longitude);
+        // Move the cursor to the user's location
+        map.moveCamera( CameraUpdateFactory.newLatLngZoom( placeInfo.getLatLng(), zoom) );
+
+        map.clear();
+
+        if ( placeInfo != null) {
+            try {
+                String snippet = "Name: " + placeInfo.getName();
+
+                MarkerOptions markerOptions = new MarkerOptions().position(placeInfo.getLatLng()).title(placeInfo.getName()).snippet(snippet);
+
+                marker = map.addMarker(markerOptions);
+
+                map.setInfoWindowAdapter( new CustomInfoWindowAdapter( MainActivity.this, placeInfo));
+
+            } catch (NullPointerException e) {
+                Log.e(TAG, "moveCamera: NullPointerException: " + e.getMessage());
+            }
+        }
+        else {
+
+            map.addMarker( new MarkerOptions().position(placeInfo.getLatLng()));
+        }
+
+
+        hideSoftKeyboard();
+    }
+
+
 
     /**
      * Hides the keyboard when enter is clicked but doesn't work right now
@@ -378,9 +414,13 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         // fetch the user selected value
         String item = parent.getItemAtPosition(position).toString();
 
+
         // move the camera to the selected building
-        if ( item.equals( "B binası")) {
-            moveCamera(new LatLng(40, 30), DEFAULT_ZOOM, "Bilkent");
+        for ( int i = 0; i < PLACES.length; i++)
+        {
+            if (item.equals(PLACES[i].getName())) {
+                moveCamera(DEFAULT_ZOOM, PLACES[i]);
+            }
         }
     }
 }

@@ -11,9 +11,18 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 import com.example.ge101.R;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3749e2b67c56f10c23d991988c7cc0773b43f7cc
 import com.example.ge101.eatingPlaces.SchoolCafeteria;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.Marker;
+
+import locations.PlaceInfo;
+
+import static com.example.ge101.R.drawable.bus;
+import static com.example.ge101.R.drawable.logo;
 
 /**
  * A class to display information on buildings
@@ -26,12 +35,15 @@ public class CustomInfoWindowAdapter extends Fragment implements GoogleMap.InfoW
     // properties
     private final View mWindow;
     private Context mContext;
+    private PlaceInfo placeInfo;
 
 
     // constructors
 
-    public CustomInfoWindowAdapter(Context mContext) {
+    public CustomInfoWindowAdapter(Context mContext, PlaceInfo placeInfo)
+    {
         this.mContext = mContext;
+        this.placeInfo = placeInfo;
         mWindow = LayoutInflater.from( mContext).inflate( R.layout.custom_info_window, null);
     }
 
@@ -42,11 +54,15 @@ public class CustomInfoWindowAdapter extends Fragment implements GoogleMap.InfoW
 
         TextView tvTitle = (TextView) view.findViewById( R.id.custom_marker_title);
 
-        tvTitle.setText( "B building");
+        tvTitle.setText( placeInfo.getName());
 
         TextView tvSnippet = (TextView) view.findViewById( R.id.custom_marker_snippet);
 
-        tvSnippet.setText( "B building has labs inside");
+        tvSnippet.setText( placeInfo.getDescription());
+
+        ImageView imageView = (ImageView) view.findViewById(R.id.busLogoTest);
+
+        imageView.setImageResource( placeInfo.getImageResource());
     }
 
     @Override
