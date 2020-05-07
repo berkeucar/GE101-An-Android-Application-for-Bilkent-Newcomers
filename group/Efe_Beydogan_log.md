@@ -41,6 +41,6 @@ Changed the map style to a dark theme
 Looked at how to implement custom markers
 
 ### ~ 07.05.2020 ~
-Figured out how to display custom markes that display information about specific buildings
+Figured out how to display custom markes that show information about specific buildings
 
 ****
