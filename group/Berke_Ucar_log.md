@@ -34,5 +34,9 @@ Map changes and markers discussed with Efe and Arda.
 ### ~ 06/04/2020 ~
 Custom map designed and added as a light theme. 
 I got into the custom changes but, as far as I imagine, GoogleMaps does not provide that much details because of our location, Turkey. I will check if we have another choice.
+Cafe interface added but there is a minor bug.
 
+### ~ 07/04/2020 ~
+Custom building infos added and classes provided and discussed with Arda and Efe. 
+Workload distrubuted about building informations.
 ****
