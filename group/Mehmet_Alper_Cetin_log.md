@@ -11,7 +11,7 @@ Today we discussed what skills we need to learn, we disturbed the classes. I giv
 ### ~ 27.04.2020 ~
 This week I helped by doing logs, chaning personal logs.
 
-### ~ date ~
-blah, blah, blah...
+### ~ 07.05.2020 ~
+I look into QR code, how to create and use them. Found out that it is very diffucult to create a class by yourself for QR code. Although there is an open code in github called ZXing and one provided by google.
 
 ****
