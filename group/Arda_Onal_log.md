@@ -37,4 +37,10 @@ Helped berke to solve the bug with Android Manifest
 ### ~ 05/05/2020 ~
 Worked on moving the camera to custom marker locations using the search bar.
 Worked on styling the map. Colors were changed and labels were removed.
+
+### ~ 06/05/2020 ~
+Disscussion on PlaceInfo class and CustomInfoWindow classes
+
+### ~ 07/05/2020 ~
+Worked on PlaceInfo class and CustomInfoWindow classes. Implemented them with OOP and distributed every place to a member of group.
 ****
