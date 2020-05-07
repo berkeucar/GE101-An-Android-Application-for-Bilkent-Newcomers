@@ -17,11 +17,9 @@ import com.example.ge101.R;
 import com.example.ge101.eatingPlaces.SchoolCafeteria;
 
 
-import com.example.ge101.eatingPlaces.SchoolCafeteria;
 
 
-import com.example.ge101.eatingPlaces.SchoolCafeteria;
-import com.example.ge101.eatingPlaces.SchoolCafeteria;
+
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.Marker;
