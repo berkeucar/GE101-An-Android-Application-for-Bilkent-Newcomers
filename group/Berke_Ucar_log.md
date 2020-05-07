@@ -21,22 +21,22 @@ Today I have looked up to map settings and how to use maps in Android Studio. Ac
 ### ~ 30/04/2020 ~
 I checked about how to use QR in android studio.
 
-### ~ 02/04/2020 ~
+### ~ 02/05/2020 ~
 Today we discussed about AutoCompleteTextView with Arda, Efe and Barkın and added.
 
-### ~ 04/04/2020 ~
+### ~ 04/05/2020 ~
 The main menu of eating places is added. Furthermore the campus cafeteria's food menu added. A major bug is fixed with Efe, Arda and Mert.
 
-### ~ 05/04/2020 ~
+### ~ 05/05/2020 ~
 Tab of eating places added and east campus places designed.
 Map changes and markers discussed with Efe and Arda.
 
-### ~ 06/04/2020 ~
+### ~ 06/05/2020 ~
 Custom map designed and added as a light theme. 
 I got into the custom changes but, as far as I imagine, GoogleMaps does not provide that much details because of our location, Turkey. I will check if we have another choice.
 Cafe interface added but there is a minor bug.
 
-### ~ 07/04/2020 ~
+### ~ 07/05/2020 ~
 Custom building infos added and classes provided and discussed with Arda and Efe. 
 Workload distrubuted about building informations.
 ****
