@@ -6,15 +6,18 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.renderscript.ScriptGroup;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -61,9 +64,11 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private ImageView busSchedule;
     private long mLastClickTime = 0;
     private Marker marker;
+    private ImageView clearButton;
 
     private ArrayList<String> buildings;
     private Places places;
+    private AutoCompleteTextView editText;
 
     // widgets
     //private EditText mSearchText;
@@ -89,15 +94,25 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         buildings = new ArrayList<String>();
 
         // Add the names of every building to an ArrayList for the search bar
-        for ( int i = 0; i < places.getPlaces().size(); i++) {
-            buildings.add( places.getPlaces().get(i).getName());
+        for (int i = 0; i < places.getPlaces().size(); i++) {
+            buildings.add(places.getPlaces().get(i).getName());
         }
 
+        clearButton = (ImageView) findViewById(R.id.ic_clear);
+
+
         // This is the search bar that has autocomplete text view
-        AutoCompleteTextView editText = (AutoCompleteTextView) findViewById(R.id.activity_chooser_view_content);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, buildings );
+        editText = (AutoCompleteTextView) findViewById(R.id.activity_chooser_view_content);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, buildings);
         editText.setAdapter(adapter);
-        editText.setOnItemClickListener( this);
+        editText.setOnItemClickListener(this);
+
+        clearButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editText.setText("");
+            }
+        });
 
         //AutoCompleteTextView.setAdapter(new PlaceAutoSuggestAdapter( MainActivity.this, android.R.layout.simple_list_item_1));
     }
@@ -118,7 +133,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         });
         // Sets the bus schedule
         setBusSchedule();
-        // This is useless for now
         hideSoftKeyboard();
     }
 
@@ -367,10 +381,14 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
 
     /**
-     * Hides the keyboard when enter is clicked but doesn't work right now
+     * Hides the keyboard when enter is clicked
      */
     private void hideSoftKeyboard() {
-        this.getWindow().setSoftInputMode( WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        View view = this.getCurrentFocus();
+        if ( view != null) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow( view.getWindowToken(), 0);
+        }
     }
 
 
