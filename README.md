@@ -7,7 +7,7 @@ The information and code in this repository are submitted in partial fulfillment
 ### ~ The Scheming Quixotics ~
 
 ## Project Description
-GE101 i an application where you can go around Bilkent’s main campus and learn about the layout of the buildings. The app will also present the locations of all the cafeterias, labs, places to study and the bus schedules. Our app will combine all of these together in one place to save the students the hassle of finding all of these from different places. Our program will be an android app, for mobile phones.
+GE101 is an application where you can go around Bilkent’s main campus and learn about the layout of the buildings. The app will also present the locations of all the cafeterias, labs, places to study and the bus schedules. Our app will combine all of these together in one place to save the students the hassle of finding all of these from different places. Our program will be an android app, for mobile phones.
 
 ## Project Status
 + **Group/project Selection:** completed (19.02.2020)
