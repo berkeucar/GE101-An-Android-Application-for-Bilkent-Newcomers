@@ -87,6 +87,12 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
         places = new Places();
         buildings = new ArrayList<String>();
+
+        // adds the names of the buildings to the search bar suggestions
+        for ( int i = 0; i < places.getPlaces().size(); i ++ ) {
+            buildings.add(places.getPlaces().get(i).getName());
+        }
+
         // Add the names of every building to an ArrayList for the search bar
         for ( int i = 0; i < places.getPlaces().size(); i++) {
             buildings.add( places.getPlaces().get(i).getName());
