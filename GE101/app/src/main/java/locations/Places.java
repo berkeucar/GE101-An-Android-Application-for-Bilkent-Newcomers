@@ -206,6 +206,14 @@ public class Places {
 
 
         //ALPER
+        places.add( new PlaceInfo("EA Building", "to be written" , new LatLng(39.871533, 32.749699), R.drawable.ea ) );
+        places.add( new PlaceInfo("H Building", "to be written" , new LatLng(39.868029, 32.749538), R.drawable.h) );
+        places.add( new PlaceInfo("P building", "to be written" , new LatLng(39.8692297,32.7548412), R.drawable.p) );
+        places.add( new PlaceInfo("ODN Building", "to be written" , new LatLng(39.875497, 32.751987), R.drawable.odn) );
+        places.add( new PlaceInfo("Registrar's Office", "to be written" , new LatLng(39.8644819,32.7441678), R.drawable.registrar_s_office) );
+        places.add( new PlaceInfo("Psychological Counseling and Development Center", "to be written" , new LatLng(39.8755254,32.7511509), R.drawable.pdgm) );
+
+
 
 
 
