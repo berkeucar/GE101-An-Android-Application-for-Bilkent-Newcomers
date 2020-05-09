@@ -213,6 +213,17 @@ public class Places {
         places.add( new PlaceInfo("ODN Building", "to be written" , new LatLng(39.875497, 32.751987), R.drawable.odn) );
         places.add( new PlaceInfo("Registrar's Office", "to be written" , new LatLng(39.8644819,32.7441678), R.drawable.registrar_s_office) );
         places.add( new PlaceInfo("Psychological Counseling and Development Center", "to be written" , new LatLng(39.8755254,32.7511509), R.drawable.pdgm) );
+        places.add( new PlaceInfo("Health Center", "to be written" , new LatLng(39.871120, 32.764683), R.drawable.c) );
+        places.add( new PlaceInfo("Mozart Cafe", "to be written" , new LatLng(39.868760, 32.748059), R.drawable.mozart_cafe) );
+        places.add( new PlaceInfo("Coffe Break (Building T)", "to be written" , new LatLng(39.868424, 32.749213), R.drawable.coffe_break) );
+        places.add( new PlaceInfo("Bilintur Catering Centre", "to be written" , new LatLng(39.874296, 32.746289), R.drawable.bilintur) );
+        places.add( new PlaceInfo("Starbucks Coffe", "to be written" , new LatLng(39.865912, 32.748888), R.drawable.starbucks_coffe) );
+        places.add( new PlaceInfo("Main Sports Hall", "to be written" , new LatLng(39.866757, 32.748512), R.drawable.main_sports_hall) );
+        places.add( new PlaceInfo("Dormitory 69", "to be written" , new LatLng(39.864568, 32.749128), R.drawable.d_69) );
+        places.add( new PlaceInfo("Dormitory 70", "to be written" , new LatLng(39.864065, 32.749165), R.drawable.d_70) );
+        places.add( new PlaceInfo("Meteksan Bookstore", "to be written" , new LatLng(39.866355, 32.748627), R.drawable.meteksan_bookstore) );
+        places.add( new PlaceInfo("PTT", "to be written" , new LatLng(39.864448, 32.744608), R.drawable.noimageavailable) );
+        places.add( new PlaceInfo("Bilkent Center", "to be written" , new LatLng(39.884095, 32.758720), R.drawable.bilkent_center) );
 
 
 
