@@ -39,4 +39,8 @@ Cafe interface added but there is a minor bug.
 ### ~ 07/05/2020 ~
 Custom building infos added and classes provided and discussed with Arda and Efe. 
 Workload distrubuted about building informations.
+
+### ~ 08/05/2020 ~
+Places objects added 
+
 ****
