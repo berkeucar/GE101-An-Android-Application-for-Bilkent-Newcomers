@@ -46,6 +46,6 @@ Figured out how to display custom markes that show information about specific bu
 ### ~ 09.05.2020 ~
 Added buildings to the map so they show up when searched
 
-Added clear button to the AutoCompleteTextView so it is easier delete what you've written on the search bar
+Added clear button to the AutoCompleteTextView so it is easier to delete what you've written on the search bar
 
 ****
