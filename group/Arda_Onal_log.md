@@ -43,4 +43,7 @@ Disscussion on PlaceInfo class and CustomInfoWindow classes
 
 ### ~ 07/05/2020 ~
 Worked on PlaceInfo class and CustomInfoWindow classes. Implemented them with OOP and distributed every place to a member of group.
+
+### ~ 09/05/2020 ~
+Added the buildings that were assigned to me to the app. I didn't write their descriptions.
 ****
