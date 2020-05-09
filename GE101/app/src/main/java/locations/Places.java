@@ -21,24 +21,24 @@ public class Places {
         places = new ArrayList<PlaceInfo>();
 
         // ARDA
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        places.add(new PlaceInfo("C - School of English Language", "Description C", new LatLng(39.870564, 32.764916), R.drawable.c));
+        places.add(new PlaceInfo("F - Faculty of Art, Design and Architecture", "Description F", new LatLng(39.866846, 32.749273), R.drawable.f));
+        places.add(new PlaceInfo("M - Faculty of Business Administration", "Description M", new LatLng(39.867473, 32.750309), R.drawable.m));
+        places.add(new PlaceInfo("V - Lecture Halls", "Description V", new LatLng(39.867073, 32.750264), R.drawable.v));
+        places.add(new PlaceInfo("Dormitories Management", "çok uzak aq", new LatLng(39.863249, 32.749570), R.drawable.noimageavailable));
+        places.add(new PlaceInfo("Health Center (Main Campus)", "health center", new LatLng(39.868244, 32.749063), R.drawable.healthcenter));
+        places.add(new PlaceInfo("T Building", "audi tt", new LatLng(39.867339, 32.749430), R.drawable.t));
+        places.add(new PlaceInfo("Express Cafe (Behind G)", "cafe", new LatLng(39.868626, 32.750389), R.drawable.noimageavailable));
+        places.add(new PlaceInfo("Sofa Cafe and Restaurant", "cafe", new LatLng(39.864279, 32.749192), R.drawable.sofa));
+        places.add(new PlaceInfo("Mozart Cafe East Campus", "cafe", new LatLng(39.871206, 32.764030), R.drawable.mozarteast));
+        places.add(new PlaceInfo("90th Dorm Cafeteria", "cafe", new LatLng(39.868464, 32.763710), R.drawable.ninetiethcafeteria));
+        places.add(new PlaceInfo("75th Dorm Canteen", "cafe", new LatLng(39.864171, 32.747722), R.drawable.seventyfifthdormcanteen));
+        places.add(new PlaceInfo("Fiero Cafe", "inside a building", new LatLng(39.867969, 32.749448), R.drawable.fierocafe));
+        places.add(new PlaceInfo("Sports Fields (East Campus)", "spor", new LatLng(39.870995, 32.762870), R.drawable.eastsportfields));
+        places.add(new PlaceInfo("54th Dormitory", "dorm", new LatLng(39.864476, 32.749738), R.drawable.fiftyfourthdorm));
+        places.add(new PlaceInfo("55th Dormitory", "dorm", new LatLng(39.864331, 32.749946), R.drawable.fiftyfithdorm));
+        places.add(new PlaceInfo("Yapı Kredi Bank", "dorm", new LatLng(39.871380, 32.750170), R.drawable.noimageavailable));
+        places.add(new PlaceInfo("Sports International", "expensive", new LatLng(39.883306, 32.762309), R.drawable.sportsinternational));
 
 
 
@@ -62,31 +62,32 @@ public class Places {
 
 
         //EFE
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        places.add( new PlaceInfo( "A Building - Faculty of Economics, \n Administrative, and Social Sciences", "A description", new LatLng(39.867904, 32.749493), R.drawable.abuilding));
+        places.add( new PlaceInfo( "EB - Mithat Çoruh Auditorium and Classrooms", "EB description", new LatLng( 39.871752, 32.749718), R.drawable.mithatcoruh));
+        places.add( new PlaceInfo( "KM - Library (Main Campus)", "Library description", new LatLng(39.870276, 32.749426), R.drawable.mainlibrary));
+        places.add( new PlaceInfo( "Vocational School of Tourism \n and Hotel Services (Blocks A-B-C-D-E)", "desc", new LatLng( 39.874622, 32.761752), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "School of Applied Technology \n and Management (Blocks A-B-C-D-E)", "desc", new LatLng( 39.874625, 32.761876), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "Office of Int. Students and Exchange Prog.", "desc", new LatLng( 39.864563, 32.744490), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "Career Center", "desc", new LatLng( 39.872362, 32.750753), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "Table d'hôte Cafeteria and \n A la Carte Restaurant", "", new LatLng( 39.870585, 32.750547), R.drawable.cafeteria));
+        places.add( new PlaceInfo( "Food Court Speed-Kıraç (Main Campus)", "desc", new LatLng( 39.865943, 32.748387), R.drawable.speed));
+        places.add( new PlaceInfo( "Mozart Cafe (Middle Campus)", "desc", new LatLng( 39.869365, 32.755092), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "Coffee Break (East Campus)", "desc", new LatLng( 39.874201, 32.761962), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "FMPA Table d'hôte Cafe. (Middle Campus)", "desc", new LatLng( 39.869176, 32.754952), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "East Campus Housing Kiosk - Buffet", "desc", new LatLng( 39.868507, 32.763916), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "Sports Center (East Campus)", "desc", new LatLng( 39.869947, 32.764970), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "Taxi", "desc", new LatLng( 39.867739, 32.756612), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "Dormitory 71", "desc", new LatLng( 39.864179, 32.748628), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "Dormitory 72", "desc", new LatLng( 39.864025, 32.748588), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "Dormitory 73", "desc", new LatLng( 39.863825, 32.748510), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "Dormitory 74", "desc", new LatLng( 39.863625, 32.748516), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "Dormitory 75", "desc", new LatLng( 39.864157, 32.747880), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "Dormitory 76", "desc", new LatLng( 39.864463, 32.747566), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "Dormitory 77", "desc", new LatLng( 39.864367, 32.746592), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "Dormitory 78", "desc", new LatLng( 39.865024, 32.746074), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "Mescit - Masjid", "desc", new LatLng( 39.867407, 32.750792), R.drawable.mescit));
+        places.add( new PlaceInfo( "Mescit - Masjid (East Campus)", "desc", new LatLng( 39.871503, 32.764656), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "Ankuva", "", new LatLng( 39.883461, 32.756107), R.drawable.ankuva));
 
 
 
