@@ -54,7 +54,6 @@ We have completed the github logs assignment together and discussed on the progr
 ****
 ### Meeting ~ (date, duration)
 ****
-blah, blah, blah...
 
 ****
 ****
