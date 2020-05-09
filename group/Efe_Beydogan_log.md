@@ -43,4 +43,9 @@ Looked at how to implement custom markers
 ### ~ 07.05.2020 ~
 Figured out how to display custom markes that show information about specific buildings
 
+### ~ 09.05.2020 ~
+Added buildings to the map so they show up when searched
+
+Added clear button to the AutoCompleteTextView so it is easier delete what you've written on the search bar
+
 ****
