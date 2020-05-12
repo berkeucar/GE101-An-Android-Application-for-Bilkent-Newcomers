@@ -10,9 +10,9 @@ import java.util.ArrayList;
 public class Question implements Answerable
 {
     // constants
-    public final int NOT_ANSWERED = 0;
-    public final int ANSWERED_CORRECTLY = 1;
-    public final int ANSWERED_WRONGLY = -1;
+    public static final int NOT_ANSWERED = 0;
+    public static final int ANSWERED_CORRECTLY = 1;
+    public static final int ANSWERED_WRONGLY = -1;
 
     // properties
     private String question;
@@ -40,7 +40,7 @@ public class Question implements Answerable
      */
     public boolean answerQuestion( Answer answer)
     {
-        if (answer == rightAnswer)
+        if (answer.equals(rightAnswer) )
         {
             questionStatus = ANSWERED_CORRECTLY;
             return true;
@@ -60,7 +60,7 @@ public class Question implements Answerable
      */
     public boolean answerQuestion( String answerName)
     {
-        if ( answerName == rightAnswer.getName() )
+        if ( answerName.equals( rightAnswer.getName() ) )
         {
             questionStatus = ANSWERED_CORRECTLY;
             return true;
@@ -107,5 +107,9 @@ public class Question implements Answerable
     public void addAnswer( ArrayList<Answer> l)
     {
         answers.addAll( l);
+    }
+
+    public String getName() {
+        return name;
     }
 }

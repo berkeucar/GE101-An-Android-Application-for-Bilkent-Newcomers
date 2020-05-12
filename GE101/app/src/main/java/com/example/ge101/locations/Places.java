@@ -1,6 +1,9 @@
 package com.example.ge101.locations;
 
 import com.example.ge101.R;
+import com.example.ge101.achievement.Achievable;
+import com.example.ge101.achievement.AchievableBag;
+import com.example.ge101.achievement.Question;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;
@@ -10,7 +13,7 @@ import java.util.ArrayList;
  * @author Efe Beydoğan, Arda Önal, Berke Uçar, Mert Barkın Er, Mehmet Alper Çetin
  * @version 07.05.2020
  */
-public class Places {
+public class Places implements AchievableBag {
 
     // properties
     private ArrayList<PlaceInfo> places;
@@ -281,4 +284,66 @@ public class Places {
     public ArrayList<PlaceInfo> getPlaces() {
         return places;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+    /**
+     * finds the achievable with given name
+     * @param name name of the Achievable
+     * @return Achievable with given name, return null if DNE
+     */
+    public Achievable findByName(String name)
+    {
+        for( int i = 0; i < places.size(); i++)
+        {
+            if( places.get( i ).getName().equals( name) )
+                return places.get( i);
+        }
+        return null;
+    }
+
+    /**
+     *  find the Achievable by question name that it contains
+     * @param questionName the question's name that Achievable contains
+     * @return
+     */
+    public Achievable findByQuestion( String questionName)
+    {
+        for ( int i = 0; i < places.size(); i++)
+        {
+            if( places.get( i).findQuestion( questionName ) != null)
+                return places.get( i);
+        }
+        return null;
+    }
+
+    /**
+     * find the Achievable by Question given
+     * @param q the question that Achievable contains
+     * @return the Achievable that contains question, return null if DNE
+     */
+    public Achievable findByQuestion( Question q )
+    {
+        for ( int i = 0; i < places.size(); i++)
+        {
+            if( places.get( i).exists( q))
+                return places.get( i);
+        }
+        return null;
+    }
+
+    public ArrayList getAchievables()
+    {
+        return places;
+    }
+
 }
