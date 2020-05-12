@@ -103,7 +103,7 @@ public class PlaceInfo implements Achievable
     {
         return 0 <= getNumQuestions() - getNumCorrectQuestions();
     }
-    
+
     /**
      * Gives number of the wrongly answered  questions in the bag
      * @return number of answered correctly questions

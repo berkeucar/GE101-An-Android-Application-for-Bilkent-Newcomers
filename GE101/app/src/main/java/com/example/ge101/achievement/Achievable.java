@@ -14,4 +14,5 @@ public interface Achievable
     public void AddQuestion( Question q);
     public void AddQuestion( ArrayList<Question> l);
     public int getNumWrongQuestions();
+    public String getName();
 }

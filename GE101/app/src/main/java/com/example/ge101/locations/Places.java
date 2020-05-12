@@ -284,17 +284,6 @@ public class Places implements AchievableBag {
         return places;
     }
 
-
-
-
-
-
-
-
-
-
-
-
     /**
      * finds the achievable with given name
      * @param name name of the Achievable
@@ -344,5 +333,29 @@ public class Places implements AchievableBag {
     {
         return places;
     }
-
+    public int size()
+    {
+        return places.size();
+    }
+    public Achievable get( int i)
+    {
+        return places.get( i);
+    }
+    /**
+     * Creates a ArrayList of strings from given AchievableBag so that it can be use to make a pane
+     * @param a the AchievableBag you want it to get
+     * @return the string of  ArrayList of names of every single element in AchievableBag
+     * with number of correct questions/ number of questions
+     */
+    public static ArrayList<String> makePaneString( AchievableBag a)
+    {
+        Achievable x;
+        ArrayList<String> copy = new ArrayList<String>();
+        for ( int i = 0; i < a.size(); i++)
+        {
+            x = a.get( i);
+            copy.add( x.getName() + " " + x.getNumCorrectQuestions() + "/" + x.getNumQuestions() );
+        }
+        return copy;
+    }
 }
