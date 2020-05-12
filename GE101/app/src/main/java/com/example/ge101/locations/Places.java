@@ -65,10 +65,10 @@ public class Places implements AchievableBag {
 
 
         //EFE
-        places.add( new PlaceInfo( "A Building - Faculty of Economics, \n Administrative, and Social Sciences", "A description", new LatLng(39.867904, 32.749493), R.drawable.abuilding));
+        places.add( new PlaceInfo( "A Building - Faculty of Economics, \n Administrative, and Social Sciences", "A description", new LatLng(39.867804, 32.749493), R.drawable.abuilding));
         places.add( new PlaceInfo( "EB - Mithat Çoruh Auditorium and Classrooms", "EB description", new LatLng( 39.871752, 32.749718), R.drawable.mithatcoruh));
         places.add( new PlaceInfo( "KM - Library (Main Campus)", "Library description", new LatLng(39.870276, 32.749426), R.drawable.mainlibrary));
-        places.add( new PlaceInfo( "Vocational School of Tourism \n and Hotel Services (Blocks A-B-C-D-E)", "desc", new LatLng( 39.874622, 32.761752), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "Vocational School of Tourism \n and Hotel Services (Blocks A-B-C-D-E)", "desc", new LatLng( 39.874522, 32.761752), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "School of Applied Technology \n and Management (Blocks A-B-C-D-E)", "desc", new LatLng( 39.874625, 32.761876), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Office of Int. Students and Exchange Prog.", "desc", new LatLng( 39.864563, 32.744490), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Career Center", "desc", new LatLng( 39.872362, 32.750753), R.drawable.noimageavailable));
@@ -84,11 +84,11 @@ public class Places implements AchievableBag {
         places.add( new PlaceInfo( "Dormitory 72", "desc", new LatLng( 39.864025, 32.748588), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Dormitory 73", "desc", new LatLng( 39.863825, 32.748510), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Dormitory 74", "desc", new LatLng( 39.863625, 32.748516), R.drawable.noimageavailable));
-        places.add( new PlaceInfo( "Dormitory 75", "desc", new LatLng( 39.864157, 32.747880), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "Dormitory 75", "desc", new LatLng( 39.864057, 32.747880), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Dormitory 76", "desc", new LatLng( 39.864463, 32.747566), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Dormitory 77", "desc", new LatLng( 39.864367, 32.746592), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Dormitory 78", "desc", new LatLng( 39.865024, 32.746074), R.drawable.noimageavailable));
-        places.add( new PlaceInfo( "Mescit - Masjid", "desc", new LatLng( 39.867407, 32.750792), R.drawable.mescit));
+        places.add( new PlaceInfo( "Mescit - Masjid", "desc", new LatLng( 39.867307, 32.750792), R.drawable.mescit));
         places.add( new PlaceInfo( "Mescit - Masjid (East Campus)", "desc", new LatLng( 39.871503, 32.764656), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Ankuva", "", new LatLng( 39.883461, 32.756107), R.drawable.ankuva));
 
