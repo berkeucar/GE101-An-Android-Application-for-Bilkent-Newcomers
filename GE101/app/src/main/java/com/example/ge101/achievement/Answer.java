@@ -20,4 +20,10 @@ public class Answer
     public String getName() {
         return name;
     }
+
+
+    public boolean equals( Answer a)
+    {
+        return answer.equals( a.answer );
+    }
 }
