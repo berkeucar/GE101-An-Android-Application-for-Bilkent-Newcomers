@@ -21,6 +21,7 @@ public class Places {
         places = new ArrayList<PlaceInfo>();
 
         // ARDA
+        // arda çok uzak aq yazmışın la düzeltem onu ahfahıfhafpıaf
         places.add(new PlaceInfo("C - School of English Language", "Description C", new LatLng(39.870564, 32.764916), R.drawable.c));
         places.add(new PlaceInfo("F - Faculty of Art, Design and Architecture", "Description F", new LatLng(39.866846, 32.749273), R.drawable.f));
         places.add(new PlaceInfo("M - Faculty of Business Administration", "Description M", new LatLng(39.867473, 32.750309), R.drawable.m));
