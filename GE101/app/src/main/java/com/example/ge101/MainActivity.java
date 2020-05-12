@@ -23,13 +23,17 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.ge101.busSchedule.BusScheduleTab;
+import com.example.ge101.customlabels.CustomLabels;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -58,7 +62,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private Boolean mLocationPermissionsGranted = false;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;
     private FusedLocationProviderClient mFusedLocationProviderClient;
-    private static final float DEFAULT_ZOOM = 15f;
+    private static final float DEFAULT_ZOOM = 17f;
     private ImageView busSchedule;
     private long mLastClickTime = 0;
     private Marker marker;
@@ -67,6 +71,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private ArrayList<String> buildings;
     private Places places;
     private AutoCompleteTextView editText;
+    private CustomLabels customLabels;
 
     // widgets
     //private EditText mSearchText;
@@ -90,6 +95,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
         places = new Places();
         buildings = new ArrayList<String>();
+        customLabels = new CustomLabels();
 
         // Add the names of every building to an ArrayList for the search bar
         for (int i = 0; i < places.getPlaces().size(); i++) {
@@ -111,6 +117,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 editText.setText("");
             }
         });
+
 
         //AutoCompleteTextView.setAdapter(new PlaceAutoSuggestAdapter( MainActivity.this, android.R.layout.simple_list_item_1));
     }
@@ -139,11 +146,13 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
      * The method that initializes the map
      */
     private void initMap() {
-        Log.d( TAG, "initMap: initializing map");
+        Log.d(TAG, "initMap: initializing map");
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
 
-        mapFragment.getMapAsync( this);
+        mapFragment.getMapAsync(this);
+
     }
+
 
     /**
      * The method to get the user location and initialize the map and moves the camera, sets the map styling
@@ -162,10 +171,16 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         float zoomLevel = (float) 19.0;
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(BilkentUni, zoomLevel));
 
+
+        // Add all the custom labels from the CustomLabels class on the map
+
+        for ( int i = 0; i < customLabels.getLabels().size(); i++ ) {
+            map.addGroundOverlay( customLabels.getLabels().get( i));
+        }
+
         // Restrict the map to only Bilkent University
-        // Commenting these out for now
-        // LatLngBounds Bilkent = new LatLngBounds( new LatLng(39.8656549,32.7426828), new LatLng(39.8739347,32.7643047));
-        // map.setLatLngBoundsForCameraTarget(Bilkent);
+        LatLngBounds Bilkent = new LatLngBounds( new LatLng(39.8656549,32.7426828), new LatLng(39.8739347,32.7643047));
+        map.setLatLngBoundsForCameraTarget(Bilkent);
 
         // If the user granted permission, receive the location
         if( mLocationPermissionsGranted) {
@@ -328,7 +343,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
      */
     private void moveCamera( LatLng latLng, float zoom, String title) {
         Log.d( TAG, "moveCamera: moving the camera to: lat: " + latLng.latitude + ", lng: " + latLng.longitude);
-        // Move the cursor to the user's location
+        // Move the cursor to the location
         map.moveCamera( CameraUpdateFactory.newLatLngZoom( latLng, zoom) );
 
 
@@ -348,16 +363,15 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
      */
     private void moveCamera( float zoom, PlaceInfo placeInfo) {
         Log.d( TAG, "moveCamera: moving the camera to: lat: " + placeInfo.getLatLng().latitude + ", lng: " + placeInfo.getLatLng().longitude);
-        // Move the cursor to the user's location
+        // Move the cursor to the location
         map.moveCamera( CameraUpdateFactory.newLatLngZoom( placeInfo.getLatLng(), zoom) );
 
         map.clear();
 
         if ( placeInfo != null) {
             try {
-                String snippet = "Name: " + placeInfo.getName();
 
-                MarkerOptions markerOptions = new MarkerOptions().position(placeInfo.getLatLng()).title(placeInfo.getName()).snippet(snippet);
+                MarkerOptions markerOptions = new MarkerOptions().position(placeInfo.getLatLng()).title(placeInfo.getName());
 
                 marker = map.addMarker(markerOptions);
 
@@ -369,7 +383,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         }
         else {
 
-            map.addMarker( new MarkerOptions().position(placeInfo.getLatLng()));
+            map.addMarker( new MarkerOptions().position( placeInfo.getLatLng()));
         }
 
 
@@ -403,11 +417,10 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         // fetch the user selected value
         String item = parent.getItemAtPosition(position).toString();
 
-
         // move the camera to the selected building
         for ( int i = 0; i < places.getPlaces().size(); i++)
         {
-            if (item.equals(places.getPlaces().get(i).getName())) {
+            if ( item.equals(places.getPlaces().get(i).getName())) {
                 moveCamera(DEFAULT_ZOOM, places.getPlaces().get(i));
             }
         }

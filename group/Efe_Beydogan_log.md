@@ -48,4 +48,7 @@ Added buildings to the map so they show up when searched
 
 Added clear button to the AutoCompleteTextView so it is easier to delete what you've written on the search bar
 
+### ~ 12.05.2020 ~
+Added place names on the map
+
 ****

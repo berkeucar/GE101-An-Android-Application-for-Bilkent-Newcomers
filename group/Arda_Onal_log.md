@@ -43,4 +43,7 @@ Worked on PlaceInfo class and CustomInfoWindow classes. Implemented them with OO
 ### ~ 09/05/2020 ~
 Added the buildings that were assigned to me to the app. I didn't write their descriptions.
 Added clear button on the search bar.
+
+### ~ 11/05/2020 ~
+Decided on the way that we are going to add the custom labels to the map.
 ****
