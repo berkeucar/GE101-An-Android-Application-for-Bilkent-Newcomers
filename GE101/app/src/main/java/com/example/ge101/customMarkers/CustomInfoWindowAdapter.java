@@ -1,10 +1,8 @@
-package customMarkers;
+package com.example.ge101.customMarkers;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,21 +11,10 @@ import androidx.fragment.app.Fragment;
 import com.example.ge101.R;
 
 
-
-import com.example.ge101.eatingPlaces.SchoolCafeteria;
-
-
-
-
-
-
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.Marker;
 
-import locations.PlaceInfo;
-
-import static com.example.ge101.R.drawable.bus;
-import static com.example.ge101.R.drawable.logo;
+import com.example.ge101.locations.PlaceInfo;
 
 /**
  * A class to display information on buildings

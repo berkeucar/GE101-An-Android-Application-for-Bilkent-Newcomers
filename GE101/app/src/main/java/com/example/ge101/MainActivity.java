@@ -13,10 +13,8 @@ import android.content.res.Resources;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.SystemClock;
-import android.renderscript.ScriptGroup;
 import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -32,8 +30,6 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MapStyleOptions;
@@ -44,9 +40,9 @@ import com.google.android.gms.tasks.Task;
 
 import java.util.ArrayList;
 
-import customMarkers.CustomInfoWindowAdapter;
-import locations.PlaceInfo;
-import locations.Places;
+import com.example.ge101.customMarkers.CustomInfoWindowAdapter;
+import com.example.ge101.locations.PlaceInfo;
+import com.example.ge101.locations.Places;
 
 /**
  * This is the map class
@@ -169,7 +165,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         // Set Bilkent's coordinates
         LatLng BilkentUni = new LatLng( 39.8685839,32.7494154);
         // Add a marker on Bilkent University
-        map.addMarker( new MarkerOptions().position(BilkentUni).title( "Bilkent University"));
+        //  map.addMarker( new MarkerOptions().position(BilkentUni).title( "Bilkent University"));
         float zoomLevel = (float) 19.0;
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(BilkentUni, zoomLevel));
 
@@ -368,7 +364,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         // Move the cursor to the location
         map.moveCamera( CameraUpdateFactory.newLatLngZoom( placeInfo.getLatLng(), zoom) );
 
-        map.clear();
+        if ( marker != null) {
+            marker.remove();
+        }
 
         if ( placeInfo != null) {
             try {
@@ -387,7 +385,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
             map.addMarker( new MarkerOptions().position( placeInfo.getLatLng()));
         }
-
 
         hideSoftKeyboard();
     }
