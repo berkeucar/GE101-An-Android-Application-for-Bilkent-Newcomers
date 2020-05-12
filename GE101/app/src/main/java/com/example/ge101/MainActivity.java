@@ -13,10 +13,8 @@ import android.content.res.Resources;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.SystemClock;
-import android.renderscript.ScriptGroup;
 import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -40,9 +38,9 @@ import com.google.android.gms.tasks.Task;
 
 import java.util.ArrayList;
 
-import customMarkers.CustomInfoWindowAdapter;
-import locations.PlaceInfo;
-import locations.Places;
+import com.example.ge101.customMarkers.CustomInfoWindowAdapter;
+import com.example.ge101.locations.PlaceInfo;
+import com.example.ge101.locations.Places;
 
 /**
  * This is the map class

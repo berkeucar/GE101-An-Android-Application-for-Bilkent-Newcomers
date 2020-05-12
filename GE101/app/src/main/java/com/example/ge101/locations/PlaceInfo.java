@@ -1,4 +1,4 @@
-package locations;
+package com.example.ge101.locations;
 
 import com.google.android.gms.maps.model.LatLng;
 
