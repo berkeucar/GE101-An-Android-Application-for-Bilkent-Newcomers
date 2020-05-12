@@ -78,11 +78,32 @@ public class CustomLabels {
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.mesciteastmap)).position( places.getPlaces().get(42).getLatLng(), WIDTH, HEIGHT));
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.ankuvamap)).position( places.getPlaces().get(43).getLatLng(), WIDTH, HEIGHT));
 
-
-
-
-
         // BERKE
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.blabel)).position( places.getPlaces().get(44).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.eelabel)).position( places.getPlaces().get(45).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.llabel)).position( places.getPlaces().get(46).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.salabel)).position( places.getPlaces().get(47).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.sblabel)).position( places.getPlaces().get(48).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.intcenterlabel)).position( places.getPlaces().get(49).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.seccivillabel)).position( places.getPlaces().get(50).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.cafeinlabel)).position( places.getPlaces().get(51).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.expresslabel)).position( places.getPlaces().get(52).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.lepimentlabel)).position( places.getPlaces().get(53).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.mozarteastlabel)).position( places.getPlaces().get(54).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.cblibrarylabel)).position( places.getPlaces().get(55).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.cblbuildinglabel)).position( places.getPlaces().get(56).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.stadiumlabel)).position( places.getPlaces().get(57).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.dormfiftylabel)).position( places.getPlaces().get(58).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.dormfiftyonelabel)).position( places.getPlaces().get(59).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.dormfiftytwolabel)).position( places.getPlaces().get(60).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.dormninetylabel)).position( places.getPlaces().get(61).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.dormninetyonelabel)).position( places.getPlaces().get(62).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.dormitoryninetytwolabel)).position( places.getPlaces().get(63).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.dormninetythreelabel)).position( places.getPlaces().get(64).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.cyberalabel)).position( places.getPlaces().get(65).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.cyberblabel)).position( places.getPlaces().get(66).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.cyberclabel)).position( places.getPlaces().get(67).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.cyberdlabel)).position( places.getPlaces().get(68).getLatLng(), WIDTH, HEIGHT));
 
 
 
