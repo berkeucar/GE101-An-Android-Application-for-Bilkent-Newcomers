@@ -23,9 +23,9 @@ public class CustomLabels {
 
     // constructors
 
-    public CustomLabels() {
+    public CustomLabels( Places places) {
         labels = new ArrayList<GroundOverlayOptions>();
-        places = new Places();
+        this.places = places;
 
 
         // ARDA

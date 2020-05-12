@@ -93,7 +93,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
         places = new Places();
         buildings = new ArrayList<String>();
-        customLabels = new CustomLabels();
+        customLabels = new CustomLabels( places);
 
         // Add the names of every building to an ArrayList for the search bar
         for (int i = 0; i < places.getPlaces().size(); i++) {
