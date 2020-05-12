@@ -1,6 +1,9 @@
 package com.example.ge101.locations;
 
 import com.example.ge101.R;
+import com.example.ge101.achievement.Achievable;
+import com.example.ge101.achievement.AchievableBag;
+import com.example.ge101.achievement.Question;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;
@@ -10,7 +13,7 @@ import java.util.ArrayList;
  * @author Efe Beydoğan, Arda Önal, Berke Uçar, Mert Barkın Er, Mehmet Alper Çetin
  * @version 07.05.2020
  */
-public class Places {
+public class Places implements AchievableBag {
 
     // properties
     private ArrayList<PlaceInfo> places;
@@ -21,16 +24,15 @@ public class Places {
         places = new ArrayList<PlaceInfo>();
 
         // ARDA
-        // arda çok uzak aq yazmışın la düzeltem onu ahfahıfhafpıaf
         places.add(new PlaceInfo("C - School of English Language", "Description C", new LatLng(39.870564, 32.764916), R.drawable.c));
         places.add(new PlaceInfo("F - Faculty of Art, Design and Architecture", "Description F", new LatLng(39.866846, 32.749273), R.drawable.f));
         places.add(new PlaceInfo("M - Faculty of Business Administration", "Description M", new LatLng(39.867473, 32.750309), R.drawable.m));
         places.add(new PlaceInfo("V - Lecture Halls", "Description V", new LatLng(39.867073, 32.750264), R.drawable.v));
-        places.add(new PlaceInfo("Dormitories Management", "çok uzak aq", new LatLng(39.863249, 32.749570), R.drawable.noimageavailable));
+        places.add(new PlaceInfo("Dormitories Management", "çok uzak ", new LatLng(39.863249, 32.749570), R.drawable.noimageavailable));
         places.add(new PlaceInfo("Health Center (Main Campus)", "health center", new LatLng(39.868244, 32.749063), R.drawable.healthcenter));
         places.add(new PlaceInfo("T Building", "audi tt", new LatLng(39.867339, 32.749430), R.drawable.t));
         places.add(new PlaceInfo("Express Cafe (Behind G)", "cafe", new LatLng(39.868626, 32.750389), R.drawable.noimageavailable));
-        places.add(new PlaceInfo("Sofa Cafe and Restaurant", "cafe", new LatLng(39.864279, 32.749192), R.drawable.sofa));
+        places.add(new PlaceInfo("Sofa Cafe and Restaurant", "cafe", new LatLng(39.864279, 32.749192), R.drawable.sofalabel));
         places.add(new PlaceInfo("Mozart Cafe East Campus", "cafe", new LatLng(39.871206, 32.764030), R.drawable.mozarteast));
         places.add(new PlaceInfo("90th Dorm Cafeteria", "cafe", new LatLng(39.868464, 32.763710), R.drawable.ninetiethcafeteria));
         places.add(new PlaceInfo("75th Dorm Canteen", "cafe", new LatLng(39.864171, 32.747722), R.drawable.seventyfifthdormcanteen));
@@ -63,10 +65,10 @@ public class Places {
 
 
         //EFE
-        places.add( new PlaceInfo( "A Building - Faculty of Economics, \n Administrative, and Social Sciences", "A description", new LatLng(39.867904, 32.749493), R.drawable.abuilding));
+        places.add( new PlaceInfo( "A Building - Faculty of Economics, \n Administrative, and Social Sciences", "A description", new LatLng(39.867804, 32.749493), R.drawable.abuilding));
         places.add( new PlaceInfo( "EB - Mithat Çoruh Auditorium and Classrooms", "EB description", new LatLng( 39.871752, 32.749718), R.drawable.mithatcoruh));
         places.add( new PlaceInfo( "KM - Library (Main Campus)", "Library description", new LatLng(39.870276, 32.749426), R.drawable.mainlibrary));
-        places.add( new PlaceInfo( "Vocational School of Tourism \n and Hotel Services (Blocks A-B-C-D-E)", "desc", new LatLng( 39.874622, 32.761752), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "Vocational School of Tourism \n and Hotel Services (Blocks A-B-C-D-E)", "desc", new LatLng( 39.874522, 32.761752), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "School of Applied Technology \n and Management (Blocks A-B-C-D-E)", "desc", new LatLng( 39.874625, 32.761876), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Office of Int. Students and Exchange Prog.", "desc", new LatLng( 39.864563, 32.744490), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Career Center", "desc", new LatLng( 39.872362, 32.750753), R.drawable.noimageavailable));
@@ -82,11 +84,11 @@ public class Places {
         places.add( new PlaceInfo( "Dormitory 72", "desc", new LatLng( 39.864025, 32.748588), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Dormitory 73", "desc", new LatLng( 39.863825, 32.748510), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Dormitory 74", "desc", new LatLng( 39.863625, 32.748516), R.drawable.noimageavailable));
-        places.add( new PlaceInfo( "Dormitory 75", "desc", new LatLng( 39.864157, 32.747880), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "Dormitory 75", "desc", new LatLng( 39.864057, 32.747880), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Dormitory 76", "desc", new LatLng( 39.864463, 32.747566), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Dormitory 77", "desc", new LatLng( 39.864367, 32.746592), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Dormitory 78", "desc", new LatLng( 39.865024, 32.746074), R.drawable.noimageavailable));
-        places.add( new PlaceInfo( "Mescit - Masjid", "desc", new LatLng( 39.867407, 32.750792), R.drawable.mescit));
+        places.add( new PlaceInfo( "Mescit - Masjid", "desc", new LatLng( 39.867307, 32.750792), R.drawable.mescit));
         places.add( new PlaceInfo( "Mescit - Masjid (East Campus)", "desc", new LatLng( 39.871503, 32.764656), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Ankuva", "", new LatLng( 39.883461, 32.756107), R.drawable.ankuva));
 
@@ -285,4 +287,66 @@ public class Places {
     public ArrayList<PlaceInfo> getPlaces() {
         return places;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+    /**
+     * finds the achievable with given name
+     * @param name name of the Achievable
+     * @return Achievable with given name, return null if DNE
+     */
+    public Achievable findByName(String name)
+    {
+        for( int i = 0; i < places.size(); i++)
+        {
+            if( places.get( i ).getName().equals( name) )
+                return places.get( i);
+        }
+        return null;
+    }
+
+    /**
+     *  find the Achievable by question name that it contains
+     * @param questionName the question's name that Achievable contains
+     * @return
+     */
+    public Achievable findByQuestion( String questionName)
+    {
+        for ( int i = 0; i < places.size(); i++)
+        {
+            if( places.get( i).findQuestion( questionName ) != null)
+                return places.get( i);
+        }
+        return null;
+    }
+
+    /**
+     * find the Achievable by Question given
+     * @param q the question that Achievable contains
+     * @return the Achievable that contains question, return null if DNE
+     */
+    public Achievable findByQuestion( Question q )
+    {
+        for ( int i = 0; i < places.size(); i++)
+        {
+            if( places.get( i).exists( q))
+                return places.get( i);
+        }
+        return null;
+    }
+
+    public ArrayList getAchievables()
+    {
+        return places;
+    }
+
 }
