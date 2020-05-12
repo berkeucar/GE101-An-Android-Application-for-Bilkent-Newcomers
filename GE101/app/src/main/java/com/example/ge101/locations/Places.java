@@ -231,6 +231,10 @@ public class Places implements AchievableBag {
         places.add( new PlaceInfo("Meteksan Bookstore", "to be written" , new LatLng(39.866355, 32.748627), R.drawable.meteksan_bookstore) );
         places.add( new PlaceInfo("PTT", "to be written" , new LatLng(39.864448, 32.744608), R.drawable.noimageavailable) );
         places.add( new PlaceInfo("Bilkent Center", "to be written" , new LatLng(39.884095, 32.758720), R.drawable.bilkent_center) );
+        places.add( new PlaceInfo( "Bus Stop 1 (East Campus)", "to be written", new LatLng(39.871632, 32.762936), R.drawable.buslogoblack));
+        places.add( new PlaceInfo( "Bus Stop 2 (East Campus)", "to be written", new LatLng(39.870405, 32.765114), R.drawable.buslogoblack));
+        places.add( new PlaceInfo( "Bus Stop Buffet", "to be written", new LatLng(39.869587, 32.746941), R.drawable.noimageavailable));
+
 
 
 

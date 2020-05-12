@@ -159,10 +159,12 @@ public class CustomLabels {
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.alp2__15_)).position( places.getPlaces().get( counting).getLatLng(), WIDTH, HEIGHT));
         counting++;
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.alp2__16_)).position( places.getPlaces().get( counting).getLatLng(), WIDTH, HEIGHT));
-
-
-
-
+        counting++;
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.bustop)).position( places.getPlaces().get( counting).getLatLng(), WIDTH, HEIGHT));
+        counting++;
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.bustop)).position( places.getPlaces().get( counting).getLatLng(), WIDTH, HEIGHT));
+        counting++;
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.bus_stop_buffet)).position( places.getPlaces().get( counting).getLatLng(), WIDTH, HEIGHT));
 
 
 
