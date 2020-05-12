@@ -11,4 +11,6 @@ public interface AchievableBag
     public Achievable findByQuestion( String questionName);
     public Achievable findByQuestion( Question q);
     public ArrayList getAchievables();
+    public int size();
+    public Achievable get( int i);
 }
