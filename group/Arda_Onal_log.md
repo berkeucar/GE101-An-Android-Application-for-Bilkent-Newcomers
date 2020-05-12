@@ -49,4 +49,6 @@ Decided on the way that we are going to add the custom labels to the map.
 
 ### ~ 12/05/2020 ~
 Worked on Detailed Design Report.
+Added buildings labels that were assigned to me.
+
 ****
