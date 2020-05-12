@@ -223,7 +223,7 @@ public class Places implements AchievableBag {
         places.add( new PlaceInfo("Health Center", "to be written" , new LatLng(39.871120, 32.764683), R.drawable.c) );
         places.add( new PlaceInfo("Mozart Cafe", "to be written" , new LatLng(39.868760, 32.748059), R.drawable.mozart_cafe) );
         places.add( new PlaceInfo("Coffe Break (Building T)", "to be written" , new LatLng(39.868424, 32.749213), R.drawable.coffe_break) );
-        places.add( new PlaceInfo("Bilintur Catering Centre", "to be written" , new LatLng(39.874296, 32.746289), R.drawable.bilintur) );
+        places.add( new PlaceInfo("Bilintur Catering Centre", "to be written" , new LatLng(39.872140, 32.764232), R.drawable.bilintur) );
         places.add( new PlaceInfo("Starbucks Coffe", "to be written" , new LatLng(39.865912, 32.748888), R.drawable.starbucks_coffe) );
         places.add( new PlaceInfo("Main Sports Hall", "to be written" , new LatLng(39.866757, 32.748512), R.drawable.main_sports_hall) );
         places.add( new PlaceInfo("Dormitory 69", "to be written" , new LatLng(39.864568, 32.749128), R.drawable.d_69) );
