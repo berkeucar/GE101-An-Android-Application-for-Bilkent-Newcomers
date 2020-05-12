@@ -46,4 +46,7 @@ Added clear button on the search bar.
 
 ### ~ 11/05/2020 ~
 Decided on the way that we are going to add the custom labels to the map.
+
+### ~ 12/05/2020 ~
+Worked on Detailed Design Report.
 ****
