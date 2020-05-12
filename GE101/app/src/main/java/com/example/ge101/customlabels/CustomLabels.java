@@ -4,7 +4,6 @@ import com.example.ge101.R;
 import com.example.ge101.locations.Places;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.GroundOverlayOptions;
-import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;
 
@@ -38,7 +37,7 @@ public class CustomLabels {
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.healthcentermainlabel)).position( places.getPlaces().get(5).getLatLng(), WIDTH, HEIGHT));
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.tlabel)).position( places.getPlaces().get(6).getLatLng(), WIDTH, HEIGHT));
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.expresslabel)).position( places.getPlaces().get(7).getLatLng(), WIDTH, HEIGHT));
-        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.sofa)).position( places.getPlaces().get(8).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.sofalabel)).position( places.getPlaces().get(8).getLatLng(), WIDTH, HEIGHT));
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.mozartlabel)).position( places.getPlaces().get(9).getLatLng(), WIDTH, HEIGHT));
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.nintiethdormcafelabel)).position( places.getPlaces().get(10).getLatLng(), WIDTH, HEIGHT));
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.seventyfifthdormcanteenlabel)).position( places.getPlaces().get(11).getLatLng(), WIDTH, HEIGHT));
@@ -53,11 +52,42 @@ public class CustomLabels {
 
         // EFE
 
+
+
+
+
+
+
+
+
+
+
+
+
+
         // BERKE
+
+
+
+
+
+
+
+
+
 
         // MERT
 
+
+
+
+
+
+
+
         // ALPER
+
+
     }
 
     // methods
