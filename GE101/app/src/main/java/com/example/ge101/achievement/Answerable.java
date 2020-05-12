@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 /**
  * an interface to show that object is answerable
+ * @author Efe Beydoğan, Arda Önal, Berke Uçar, Mert Barkın Er, Mehmet Alper Çetin
+ * @version 12.05.2020
  */
 public interface Answerable
 {

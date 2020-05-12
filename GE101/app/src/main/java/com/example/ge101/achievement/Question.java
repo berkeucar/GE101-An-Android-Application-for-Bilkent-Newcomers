@@ -6,6 +6,8 @@ import java.util.ArrayList;
  * A class question that implements Answerable. It is the question for Achievements that you can
  * use to create a question. When initialized question status is set to NOT_ANSWERED and if the user
  * enters null as ArrayList it is set to an empty ArrayList due to bug fix
+ * @author Efe Beydoğan, Arda Önal, Berke Uçar, Mert Barkın Er, Mehmet Alper Çetin
+ * @version 12.05.2020
  */
 public class Question implements Answerable
 {

@@ -17,4 +17,7 @@ I look into QR code, how to create and use them. Found out that it is very diffu
 ### ~ 09.05.2020 ~
 Writing places for data to show on map.
 
+### ~ 12.05.2020 ~
+wrote the codes of achievements and added labels
+
 ****
