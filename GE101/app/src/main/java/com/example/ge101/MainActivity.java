@@ -177,9 +177,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
         // Add all the custom labels from the CustomLabels class on the map
 
-        for (int i = 0; i < customLabels.getLabels().size(); i++) {
+        for ( int i = 0; i < customLabels.getLabels().size(); i++ ) {
             customLabels.getLabels().get(i).clickable(true); // Makes the labels clickable
-            map.addGroundOverlay(customLabels.getLabels().get(i));
+            map.addGroundOverlay( customLabels.getLabels().get(i));
         }
 
         // Adds a listener to the labels.
