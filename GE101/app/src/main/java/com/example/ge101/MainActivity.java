@@ -31,6 +31,8 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.GroundOverlay;
+import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MapStyleOptions;
@@ -51,7 +53,7 @@ import com.example.ge101.locations.Places;
  * @version 06.05.2020
  */
 
-public class MainActivity extends FragmentActivity implements OnMapReadyCallback, AdapterView.OnItemClickListener {
+public class MainActivity extends FragmentActivity implements OnMapReadyCallback, AdapterView.OnItemClickListener, GoogleMap.OnGroundOverlayClickListener {
 
     // properties
     private GoogleMap map;
@@ -174,10 +176,14 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         // Add all the custom labels from the CustomLabels class on the map
-
-        for ( int i = 0; i < customLabels.getLabels().size(); i++ ) {
-            map.addGroundOverlay( customLabels.getLabels().get( i));
+        for ( int i = 0; i < customLabels.getLabels().size(); i++ )
+        {
+            customLabels.getLabels().get(i).clickable(true); // Makes the labels clickable
+            map.addGroundOverlay( customLabels.getLabels().get(i));
         }
+
+        // Adds a listener to the labels.
+        map.setOnGroundOverlayClickListener(this);
 
         // Restrict the map to only Bilkent University
         LatLngBounds Bilkent = new LatLngBounds( new LatLng(39.8656549,32.7426828), new LatLng(39.8739347,32.7643047));
@@ -427,5 +433,27 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 moveCamera(DEFAULT_ZOOM, places.getPlaces().get(i));
             }
         }
+    }
+
+
+    /**
+     * Default click listener for every ground overlay aka label.
+     * @param groundOverlay
+     */
+    @Override
+    public void onGroundOverlayClick(GroundOverlay groundOverlay)
+    {
+        LatLng position = groundOverlay.getPosition();
+        Log.d(TAG, "onGroundOverlayClick: works?");
+
+        for ( int i = 0; i < places.getPlaces().size(); i++)
+        {
+            if ( position.longitude == places.getPlaces().get(i).getLatLng().longitude && position.latitude == places.getPlaces().get(i).getLatLng().latitude)
+            {
+                moveCamera(DEFAULT_ZOOM, places.getPlaces().get(i));
+
+            }
+        }
+
     }
 }
