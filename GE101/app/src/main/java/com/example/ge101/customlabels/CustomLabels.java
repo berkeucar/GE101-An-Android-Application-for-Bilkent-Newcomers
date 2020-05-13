@@ -15,8 +15,8 @@ import java.util.ArrayList;
 public class CustomLabels {
 
     // properties
-    private final float WIDTH = 110f;
-    private final float HEIGHT = 30f;
+    private final float WIDTH = 20f;
+    private final float HEIGHT = 5f;
     private ArrayList<GroundOverlayOptions> labels;
     private Places places;
 
