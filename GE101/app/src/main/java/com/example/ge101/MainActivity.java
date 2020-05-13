@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.location.Location;
+import android.media.Image;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.util.Log;
@@ -136,6 +137,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         });
         // Sets the bus schedule
         setBusSchedule();
+
+
         hideSoftKeyboard();
     }
 
@@ -165,7 +168,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         // Set Bilkent's coordinates
         LatLng BilkentUni = new LatLng( 39.8685839,32.7494154);
         // Add a marker on Bilkent University
-        map.addMarker( new MarkerOptions().position(BilkentUni).title( "Bilkent University"));
+        // map.addMarker( new MarkerOptions().position(BilkentUni).title( "Bilkent University"));
         float zoomLevel = (float) 19.0;
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(BilkentUni, zoomLevel));
 
@@ -177,8 +180,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
         // Restrict the map to only Bilkent University
-        // LatLngBounds Bilkent = new LatLngBounds( new LatLng(39.8656549,32.7426828), new LatLng(39.8739347,32.7643047));
-        // map.setLatLngBoundsForCameraTarget(Bilkent);
+        LatLngBounds Bilkent = new LatLngBounds( new LatLng(39.8656549,32.7426828), new LatLng(39.8739347,32.7643047));
+        map.setLatLngBoundsForCameraTarget(Bilkent);
 
         // If the user granted permission, receive the location
         if( mLocationPermissionsGranted) {
@@ -247,6 +250,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
     }
+
 
     /**
      * Gets the location permission from the user
