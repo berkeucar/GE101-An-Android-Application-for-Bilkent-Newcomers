@@ -156,7 +156,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
 
     /**
-     * The method to get the user location and initialize the map and moves the camera, sets the map styling
+     * The method to get the user location and initialize the map and move the camera, set the map styling
      * @param googleMap
      */
     @Override
@@ -176,7 +176,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         // Add all the custom labels from the CustomLabels class on the map
 
         for ( int i = 0; i < customLabels.getLabels().size(); i++ ) {
-            map.addGroundOverlay( customLabels.getLabels().get( i));
+             map.addGroundOverlay( customLabels.getLabels().get( i));
         }
 
         // Restrict the map to only Bilkent University
