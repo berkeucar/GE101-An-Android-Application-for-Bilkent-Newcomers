@@ -54,4 +54,9 @@ Looked at how to display customized building names on the map
 ### ~ 12.05.2020 ~
 Added place names on the map
 
+### ~ 13.05.2020 ~
+Fixed the map being too laggy
+
+Added listeners on labels so when clicked the marker with custom info window is displayed
+
 ****
