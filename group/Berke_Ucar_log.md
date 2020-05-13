@@ -43,4 +43,7 @@ Workload distrubuted about building informations.
 ### ~ 08/05/2020 ~
 Places objects added 
 
+### ~ 12/05/2020 ~
+Places' labels added.
+
 ****
