@@ -186,6 +186,11 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             map.addGroundOverlay( customLabels.getLabels().get(i));
         }
 
+            for (int i = 0; i < customLabels.getLabels().size(); i++) {
+                customLabels.getLabels().get(i).clickable(true); // Makes the labels clickable
+                map.addGroundOverlay(customLabels.getLabels().get(i));
+            }
+
         // Adds a listener to the labels.
         map.setOnGroundOverlayClickListener(this);
 
