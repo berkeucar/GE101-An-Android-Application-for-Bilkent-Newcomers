@@ -51,4 +51,9 @@ Decided on the way that we are going to add the custom labels to the map.
 Worked on Detailed Design Report.
 Added buildings labels that were assigned to me.
 
+### ~ 13/05/2020 ~
+Today I added listeners to the custom labels so when clicked, it moves the camera to its locations, adds a marker and that marker has the custominfowindow.
+
+### ~ 14/05/2020 ~
+Today I changed the map bounds and added zoom restrictions so that only bilkent is visible in the map. Also worked on making labels more visible by changing their sizes.
 ****

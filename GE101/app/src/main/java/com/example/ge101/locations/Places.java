@@ -31,7 +31,7 @@ public class Places implements AchievableBag {
         places.add(new PlaceInfo("Health Center (Main Campus)", "health center", new LatLng(39.868403, 32.749116), R.drawable.healthcenter));
         places.add(new PlaceInfo("T Building", "audi tt", new LatLng(39.868136, 32.749238), R.drawable.t));
         places.add(new PlaceInfo("Express Cafe (Behind G)", "cafe", new LatLng(39.868626, 32.750389), R.drawable.noimageavailable));
-        places.add(new PlaceInfo("Sofa Cafe and Restaurant", "cafe", new LatLng(39.864279, 32.749192), R.drawable.sofalabel));
+        places.add(new PlaceInfo("Sofa Cafe and Restaurant", "cafe", new LatLng(39.864279, 32.749192), R.drawable.sofa));
         places.add(new PlaceInfo("Mozart Cafe East Campus", "cafe", new LatLng(39.871206, 32.764030), R.drawable.mozarteast));
         places.add(new PlaceInfo("90th Dorm Cafeteria", "cafe", new LatLng(39.868464, 32.763710), R.drawable.ninetiethcafeteria));
         places.add(new PlaceInfo("75th Dorm Canteen", "cafe", new LatLng(39.864171, 32.747722), R.drawable.seventyfifthdormcanteen));
@@ -43,7 +43,7 @@ public class Places implements AchievableBag {
         places.add(new PlaceInfo("Sports International", "expensive", new LatLng(39.883306, 32.762309), R.drawable.sportsinternational));
 
         //EFE
-        places.add( new PlaceInfo( "A Building - Faculty of Economics, \n Administrative, and Social Sciences", "A description", new LatLng(39.867804, 32.749493), R.drawable.abuilding));
+        places.add( new PlaceInfo( "A Building - Faculty of Economics, \n Administrative, and Social Sciences", "A description", new LatLng(39.867608, 32.749413), R.drawable.abuilding));
         places.add( new PlaceInfo( "EB - Mithat Çoruh Auditorium and Classrooms", "EB description", new LatLng( 39.871752, 32.749718), R.drawable.mithatcoruh));
         places.add( new PlaceInfo( "KM - Library (Main Campus)", "Library description", new LatLng(39.870276, 32.749426), R.drawable.mainlibrary));
         places.add( new PlaceInfo( "Vocational School of Tourism \n and Hotel Services (Blocks A-B-C-D-E)", "desc", new LatLng( 39.874522, 32.761752), R.drawable.noimageavailable));
@@ -72,7 +72,7 @@ public class Places implements AchievableBag {
 
         //BERKE
         places.add( new PlaceInfo( "B Building", "Description B", new LatLng(39.868653, 32.748112), R.drawable.bilkenteatings));
-        places.add(new PlaceInfo("EE Building", "Description EE", new LatLng(39.872100, 32.750596), R.drawable.ee));
+        places.add(new PlaceInfo("EE Building", "Description EE", new LatLng(39.872075, 32.750825), R.drawable.ee));
         places.add(new PlaceInfo("L Buildings", "Description LA", new LatLng(39.869204, 32.749873), R.drawable.lebuildings));
         places.add(new PlaceInfo("SA Building", "Description SA", new LatLng(39.867791, 32.748273), R.drawable.saandsb));
         places.add(new PlaceInfo("SB Building", "Description SB", new LatLng(39.868182, 32.748125), R.drawable.saandsb));
@@ -102,34 +102,34 @@ public class Places implements AchievableBag {
         places.add( new PlaceInfo( "G Building", "Faculty of Education", new LatLng( 39.868738, 32.749516), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "N Building", "School of English Language / Library", new LatLng( 39.872877, 32.763123), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Student Activities Center", "Student Activities Center", new LatLng( 39.872676, 32.750325), R.drawable.noimageavailable));
-        places.add(new PlaceInfo("Pharmacy", "Pharmacy in T building", new LatLng(39.867339, 32.749430), R.drawable.t));
-        places.add(new PlaceInfo("Coffee Break ", "Coffee Break in T building", new LatLng(39.868190, 32.749084), R.drawable.t));
-        places.add(new PlaceInfo("Sözeri", "Sözeri Kebab", new LatLng(39.865496, 32.744361), R.drawable.noimageavailable));
-        places.add( new PlaceInfo( "Mozart Cafe", "Mozart Cafe in N building", new LatLng( 39.872877, 32.763123), R.drawable.noimageavailable));
-        places.add(new PlaceInfo("Mozart Cafe", "Mozart Cafe in EE building", new LatLng(39.872100, 32.750596), R.drawable.ee));
+        places.add( new PlaceInfo("Pharmacy", "Pharmacy in T building", new LatLng(39.867339, 32.749430), R.drawable.t));
+        places.add( new PlaceInfo("Coffee Break ", "Coffee Break in T building", new LatLng(39.868190, 32.749084), R.drawable.t));
+        places.add( new PlaceInfo("Sözeri", "Sözeri Kebab", new LatLng(39.865496, 32.744361), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "Mozart Cafe (N Building)", "Mozart Cafe in N building", new LatLng( 39.872877, 32.763123), R.drawable.noimageavailable));
+        places.add( new PlaceInfo("Mozart Cafe (EE Building)", "Mozart Cafe in EE building", new LatLng(39.872100, 32.750596), R.drawable.ee));
         places.add( new PlaceInfo( "76th Dorm Canteen", "76th Dorm Canteen", new LatLng( 39.864463, 32.747566), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Sports Center", "Student Dormitories Sports Center", new LatLng(39.863848, 32.745551), R.drawable.noimageavailable));
-        places.add( new PlaceInfo( "Bus Stop", "414th Bus Stop", new LatLng( 39.865257, 32.748278), R.drawable.noimageavailable));
-        places.add( new PlaceInfo( "Bus Stop", "413th Bus Stop", new LatLng( 39.873220, 32.748966), R.drawable.noimageavailable));
-        places.add( new PlaceInfo( "Bus Stop", "412th Bus Stop", new LatLng( 39.871750, 32.749076), R.drawable.noimageavailable));
-        places.add( new PlaceInfo( "Bus Stop", "411th Bus Stop", new LatLng( 39.869473, 32.747713), R.drawable.noimageavailable));
-        places.add(new PlaceInfo("Dormitory 60", "Dormitory 60", new LatLng(39.864001, 32.749770), R.drawable.noimageavailable));
-        places.add(new PlaceInfo("Dormitory 61", "Dormitory 61", new LatLng(39.863851, 32.749543), R.drawable.noimageavailable));
-        places.add(new PlaceInfo("Dormitory 62", "Dormitory 62", new LatLng(39.863646, 32.749726), R.drawable.noimageavailable));
-        places.add(new PlaceInfo("Dormitory 63", "Dormitory 63", new LatLng(39.863516, 32.749572), R.drawable.noimageavailable));
-        places.add(new PlaceInfo("Dormitory 64", "Dormitory 64", new LatLng(39.863453, 32.749101), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "414th Bus Stop", "414th Bus Stop", new LatLng( 39.865257, 32.748278), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "413th Bus Stop", "413th Bus Stop", new LatLng( 39.873220, 32.748966), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "412th Bus Stop", "412th Bus Stop", new LatLng( 39.871750, 32.749076), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "411th Bus Stop", "411th Bus Stop", new LatLng( 39.869473, 32.747713), R.drawable.noimageavailable));
+        places.add( new PlaceInfo("Dormitory 60", "Dormitory 60", new LatLng(39.864001, 32.749770), R.drawable.noimageavailable));
+        places.add( new PlaceInfo("Dormitory 61", "Dormitory 61", new LatLng(39.863851, 32.749543), R.drawable.noimageavailable));
+        places.add( new PlaceInfo("Dormitory 62", "Dormitory 62", new LatLng(39.863646, 32.749726), R.drawable.noimageavailable));
+        places.add( new PlaceInfo("Dormitory 63", "Dormitory 63", new LatLng(39.863516, 32.749572), R.drawable.noimageavailable));
+        places.add( new PlaceInfo("Dormitory 64", "Dormitory 64", new LatLng(39.863453, 32.749101), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Meteksan Market", "Meteksan Market in Main Campus", new LatLng( 39.873266, 32.750809), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Bilkent Hotel", "Bilkent Hotel", new LatLng( 39.875130, 32.762808), R.drawable.noimageavailable));
 
         //ALPER
-        places.add( new PlaceInfo("EA Building", "to be written" , new LatLng(39.871533, 32.749699), R.drawable.ea ) );
+        places.add( new PlaceInfo("EA Building", "to be written" , new LatLng(39.871064, 32.749939), R.drawable.ea ) );
         places.add( new PlaceInfo("H Building", "to be written" , new LatLng(39.868029, 32.749538), R.drawable.h) );
         places.add( new PlaceInfo("P building", "to be written" , new LatLng(39.8692297,32.7548412), R.drawable.p) );
         places.add( new PlaceInfo("ODN Building", "to be written" , new LatLng(39.875497, 32.751987), R.drawable.odn) );
         places.add( new PlaceInfo("Registrar's Office", "to be written" , new LatLng(39.8645819,32.7443788), R.drawable.registrar_s_office) );
         places.add( new PlaceInfo("Psychological Counseling and Development Center", "to be written" , new LatLng(39.8755254,32.7511509), R.drawable.pdgm) );
         places.add( new PlaceInfo("Health Center", "to be written" , new LatLng(39.871120, 32.764683), R.drawable.c) );
-        places.add( new PlaceInfo("Mozart Cafe", "to be written" , new LatLng(39.868760, 32.748059), R.drawable.mozart_cafe) );
+        places.add( new PlaceInfo("Mozart Cafe (B Building)", "to be written" , new LatLng(39.868760, 32.748059), R.drawable.mozart_cafe) );
         places.add( new PlaceInfo("Coffee Break (Building V)", "to be written" , new LatLng(39.866908, 32.749962), R.drawable.coffe_break) );
         places.add( new PlaceInfo("Bilintur Catering Centre", "to be written" , new LatLng(39.872140, 32.764232), R.drawable.bilintur) );
         places.add( new PlaceInfo("Starbucks Coffee", "to be written" , new LatLng(39.865912, 32.748988), R.drawable.starbucks_coffe) );
