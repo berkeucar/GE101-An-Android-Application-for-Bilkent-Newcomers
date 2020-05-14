@@ -172,7 +172,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         // Set Bilkent's coordinates
         LatLng BilkentUni = new LatLng( 39.8685839,32.7494154);
         // Add a marker on Bilkent University
-        map.addMarker( new MarkerOptions().position(BilkentUni).title( "Bilkent University"));
+        // map.addMarker( new MarkerOptions().position(BilkentUni).title( "Bilkent University"));
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(BilkentUni, DEFAULT_ZOOM));
 
 
