@@ -41,7 +41,7 @@ public class CustomLabels {
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.mozartlabel)).position( places.getPlaces().get(9).getLatLng(), WIDTH, HEIGHT));
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.nintiethdormcafelabel)).position( places.getPlaces().get(10).getLatLng(), WIDTH, HEIGHT));
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.seventyfifthdormcanteenlabel)).position( places.getPlaces().get(11).getLatLng(), WIDTH, HEIGHT));
-        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.fireolabel)).position( places.getPlaces().get(12).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.fireolabel)).position( places.getPlaces().get(12).getLatLng(), 30f, 7f));
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.sportsfieldslabel)).position( places.getPlaces().get(13).getLatLng(), WIDTH, HEIGHT));
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.fiftyfourthdormlabel)).position( places.getPlaces().get(14).getLatLng(), WIDTH, HEIGHT));
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.fiftyfifthdormlabel)).position( places.getPlaces().get(15).getLatLng(), WIDTH, HEIGHT));
@@ -51,8 +51,8 @@ public class CustomLabels {
 
 
         // EFE
-        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.abuildingmap)).position( places.getPlaces().get(18).getLatLng(), WIDTH, HEIGHT));
-        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.ebmap)).position( places.getPlaces().get(19).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.abuildingmap)).position( places.getPlaces().get(18).getLatLng(), 75f, 25f));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.ebmap)).position( places.getPlaces().get(19).getLatLng(), 75f, 15f));
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.kmmap)).position( places.getPlaces().get(20).getLatLng(), WIDTH, HEIGHT));
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.schooloftourismmap)).position( places.getPlaces().get(21).getLatLng(), WIDTH, HEIGHT));
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.appliedtechnologymap)).position( places.getPlaces().get(22).getLatLng(), WIDTH, HEIGHT));
@@ -80,7 +80,7 @@ public class CustomLabels {
 
         // BERKE
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.blabel)).position( places.getPlaces().get(44).getLatLng(), WIDTH, HEIGHT));
-        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.eelabel)).position( places.getPlaces().get(45).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.eelabel)).position( places.getPlaces().get(45).getLatLng(), 75f, 15f));
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.llabel)).position( places.getPlaces().get(46).getLatLng(), WIDTH, HEIGHT));
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.salabel)).position( places.getPlaces().get(47).getLatLng(), WIDTH, HEIGHT));
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.sblabel)).position( places.getPlaces().get(48).getLatLng(), WIDTH, HEIGHT));
@@ -90,7 +90,7 @@ public class CustomLabels {
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.expresslabel)).position( places.getPlaces().get(52).getLatLng(), WIDTH, HEIGHT));
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.lepimentlabel)).position( places.getPlaces().get(53).getLatLng(), WIDTH, HEIGHT));
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.mozarteastlabel)).position( places.getPlaces().get(54).getLatLng(), WIDTH, HEIGHT));
-        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.cblibrarylabel)).position( places.getPlaces().get(55).getLatLng(), WIDTH, HEIGHT));
+        labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.cblibrarylabel)).position( places.getPlaces().get(55).getLatLng(), 30f, 8f));
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.cblbuildinglabel)).position( places.getPlaces().get(56).getLatLng(), WIDTH, HEIGHT));
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.stadiumlabel)).position( places.getPlaces().get(57).getLatLng(), WIDTH, HEIGHT));
         labels.add ( new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.dormfiftylabel)).position( places.getPlaces().get(58).getLatLng(), WIDTH, HEIGHT));
