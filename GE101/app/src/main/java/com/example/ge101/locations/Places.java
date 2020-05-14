@@ -18,7 +18,6 @@ public class Places implements AchievableBag {
     // properties
     private ArrayList<PlaceInfo> places;
 
-
     // constructors
     public Places(){
         places = new ArrayList<PlaceInfo>();
@@ -42,27 +41,6 @@ public class Places implements AchievableBag {
         places.add(new PlaceInfo("55th Dormitory", "dorm", new LatLng(39.864331, 32.749946), R.drawable.fiftyfithdorm));
         places.add(new PlaceInfo("Yapı Kredi Bank", "dorm", new LatLng(39.871280, 32.750170), R.drawable.noimageavailable));
         places.add(new PlaceInfo("Sports International", "expensive", new LatLng(39.883306, 32.762309), R.drawable.sportsinternational));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         //EFE
         places.add( new PlaceInfo( "A Building - Faculty of Economics, \n Administrative, and Social Sciences", "A description", new LatLng(39.867804, 32.749493), R.drawable.abuilding));
@@ -92,20 +70,6 @@ public class Places implements AchievableBag {
         places.add( new PlaceInfo( "Mescit - Masjid (East Campus)", "desc", new LatLng( 39.871503, 32.764656), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Ankuva", "", new LatLng( 39.883461, 32.756107), R.drawable.ankuva));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         //BERKE
         places.add( new PlaceInfo( "B Building", "Description B", new LatLng(39.868653, 32.748112), R.drawable.bilkenteatings));
         places.add(new PlaceInfo("EE Building", "Description EE", new LatLng(39.872100, 32.750596), R.drawable.ee));
@@ -133,41 +97,6 @@ public class Places implements AchievableBag {
         places.add(new PlaceInfo("CyberPark Block C", "Description CyberPark Block C", new LatLng(39.870043, 32.744532), R.drawable.cyberparkc));
         places.add(new PlaceInfo("CyberPark Block D", "Description CyberPark Block D", new LatLng(39.878306, 32.746875), R.drawable.noimageavailable));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         //MERT
         places.add( new PlaceInfo( "D Building", "English Language School", new LatLng( 39.870547, 32.764879), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "G Building", "Faculty of Education", new LatLng( 39.868738, 32.749516), R.drawable.noimageavailable));
@@ -192,27 +121,6 @@ public class Places implements AchievableBag {
         places.add( new PlaceInfo( "Meteksan Market", "Meteksan Market in Main Campus", new LatLng( 39.873266, 32.750809), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Bilkent Hotel", "Bilkent Hotel", new LatLng( 39.875130, 32.762808), R.drawable.noimageavailable));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         //ALPER
         places.add( new PlaceInfo("EA Building", "to be written" , new LatLng(39.871533, 32.749699), R.drawable.ea ) );
         places.add( new PlaceInfo("H Building", "to be written" , new LatLng(39.868029, 32.749538), R.drawable.h) );
@@ -235,52 +143,7 @@ public class Places implements AchievableBag {
         places.add( new PlaceInfo( "Bus Stop 2 (East Campus)", "to be written", new LatLng(39.870405, 32.765114), R.drawable.buslogoblack));
         places.add( new PlaceInfo( "Bus Stop Buffet", "to be written", new LatLng(39.869587, 32.746941), R.drawable.noimageavailable));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
 
     // methods
 

@@ -25,6 +25,7 @@ public class MainCampusEatings extends Fragment {
     // properties
     private Button schoolCafeteria;
     private Button coffeeBreakMain;
+    private Button mozartCafe;
     private long mLastClickTime = 0;
 
     // constructors
@@ -33,8 +34,10 @@ public class MainCampusEatings extends Fragment {
     }
 
     // methods
+
     /**
      * the method that provides the button actions and opens the main campus fragment
+     *
      * @param inflater
      * @param container
      * @param savedInstanceState
@@ -48,18 +51,16 @@ public class MainCampusEatings extends Fragment {
 
         // Button for school cafeteria
         schoolCafeteria = (Button) v.findViewById(R.id.school_cafeteria);
-        schoolCafeteria.setOnClickListener(new View.OnClickListener()
-        {
+        schoolCafeteria.setOnClickListener(new View.OnClickListener() {
             /**
              * the method that makes button to open the school cafeteria's menu when clicked
+             *
              * @param v
              */
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 // Preventing multiple clicks, using threshold of 1 second
-                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000)
-                {
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
                     return;
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
@@ -72,18 +73,16 @@ public class MainCampusEatings extends Fragment {
 
         // Button for school cafeteria
         schoolCafeteria = (Button) v.findViewById(R.id.school_cafeteria);
-        schoolCafeteria.setOnClickListener(new View.OnClickListener()
-        {
+        schoolCafeteria.setOnClickListener(new View.OnClickListener() {
             /**
              * the method that makes button to open the school cafeteria's menu when clicked
+             *
              * @param v
              */
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 // Preventing multiple clicks, using threshold of 1 second
-                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000)
-                {
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
                     return;
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
@@ -96,18 +95,16 @@ public class MainCampusEatings extends Fragment {
 
         // Button for coffee break
         coffeeBreakMain = (Button) v.findViewById(R.id.coffee_break);
-        coffeeBreakMain.setOnClickListener(new View.OnClickListener()
-        {
+        coffeeBreakMain.setOnClickListener(new View.OnClickListener() {
             /**
              * the method that makes button to open the school cafeteria's menu when clicked
+             *
              * @param v
              */
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 // Preventing multiple clicks, using threshold of 1 second
-                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000)
-                {
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
                     return;
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
@@ -117,6 +114,34 @@ public class MainCampusEatings extends Fragment {
                 startActivity(intent);
             }
         });
+
+
+        // Button for Mozart Cafe
+        mozartCafe =(Button) v.findViewById(R.id.mozart_cafe);
+        mozartCafe.setOnClickListener(new View.OnClickListener()
+        {
+            /**
+             * the method that makes button to open the school cafeteria's menu when clicked
+             * @param v
+             */
+            @Override
+            public void onClick (View v)
+            {
+                // Preventing multiple clicks, using threshold of 1 second
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
+
+                // creates intent (action) and opens it (for this condition school cafeteria's menu)
+                Intent intent = new Intent(getActivity(), MozartCafe.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+        // after all buttons it returns v
         return v;
     }
 }
