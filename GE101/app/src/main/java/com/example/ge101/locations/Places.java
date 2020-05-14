@@ -23,7 +23,7 @@ public class Places implements AchievableBag {
         places = new ArrayList<PlaceInfo>();
 
         // ARDA
-        places.add(new PlaceInfo("C - School of English Language", "Description C", new LatLng(39.870564, 32.764916), R.drawable.c));
+        places.add(new PlaceInfo("C - School of English Language", "Description C", new LatLng(39.870664, 32.764916), R.drawable.c));
         places.add(new PlaceInfo("F - Faculty of Art, Design and Architecture", "Description F", new LatLng(39.866846, 32.749273), R.drawable.f));
         places.add(new PlaceInfo("M - Faculty of Business Administration", "Description M", new LatLng(39.867473, 32.750309), R.drawable.m));
         places.add(new PlaceInfo("V - Lecture Halls", "Description V", new LatLng(39.867073, 32.750264), R.drawable.v));
@@ -103,15 +103,15 @@ public class Places implements AchievableBag {
         places.add( new PlaceInfo( "N Building", "School of English Language / Library", new LatLng( 39.872877, 32.763123), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Student Activities Center", "Student Activities Center", new LatLng( 39.872676, 32.750325), R.drawable.noimageavailable));
         places.add( new PlaceInfo("Pharmacy", "Pharmacy in T building", new LatLng(39.867339, 32.749430), R.drawable.t));
-        places.add( new PlaceInfo("Coffee Break ", "Coffee Break in T building", new LatLng(39.868190, 32.749084), R.drawable.t));
+        places.add( new PlaceInfo("Coffee Break ", "Coffee Break in T building", new LatLng(39.868290, 32.749084), R.drawable.t));
         places.add( new PlaceInfo("Sözeri", "Sözeri Kebab", new LatLng(39.865496, 32.744361), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Mozart Cafe (N Building)", "Mozart Cafe in N building", new LatLng( 39.872877, 32.763123), R.drawable.noimageavailable));
-        places.add( new PlaceInfo("Mozart Cafe (EE Building)", "Mozart Cafe in EE building", new LatLng(39.872100, 32.750596), R.drawable.ee));
+        places.add( new PlaceInfo("Mozart Cafe (EE Building)", "Mozart Cafe in EE building", new LatLng(39.872200, 32.750596), R.drawable.ee));
         places.add( new PlaceInfo( "76th Dorm Canteen", "76th Dorm Canteen", new LatLng( 39.864463, 32.747566), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Sports Center", "Student Dormitories Sports Center", new LatLng(39.863848, 32.745551), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "414th Bus Stop", "414th Bus Stop", new LatLng( 39.865257, 32.748278), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "413th Bus Stop", "413th Bus Stop", new LatLng( 39.873220, 32.748966), R.drawable.noimageavailable));
-        places.add( new PlaceInfo( "412th Bus Stop", "412th Bus Stop", new LatLng( 39.871750, 32.749076), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "412th Bus Stop", "412th Bus Stop", new LatLng( 39.871750, 32.748976), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "411th Bus Stop", "411th Bus Stop", new LatLng( 39.869473, 32.747713), R.drawable.noimageavailable));
         places.add( new PlaceInfo("Dormitory 60", "Dormitory 60", new LatLng(39.864001, 32.749770), R.drawable.noimageavailable));
         places.add( new PlaceInfo("Dormitory 61", "Dormitory 61", new LatLng(39.863851, 32.749543), R.drawable.noimageavailable));
