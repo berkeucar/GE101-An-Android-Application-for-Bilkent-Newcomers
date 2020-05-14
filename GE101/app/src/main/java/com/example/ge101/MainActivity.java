@@ -61,9 +61,11 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private static final String FINE_LOCATION = Manifest.permission.ACCESS_FINE_LOCATION;
     private static final String COARSE_LOCATION = Manifest.permission.ACCESS_COARSE_LOCATION;
     private Boolean mLocationPermissionsGranted = false;
+    private LatLngBounds Bounds;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;
     private FusedLocationProviderClient mFusedLocationProviderClient;
     private static final float DEFAULT_ZOOM = 18f;
+    private static final float MIN_ZOOM = 17f;
     private ImageView busSchedule;
     private long mLastClickTime = 0;
     private Marker marker;
@@ -170,9 +172,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         // Set Bilkent's coordinates
         LatLng BilkentUni = new LatLng( 39.8685839,32.7494154);
         // Add a marker on Bilkent University
-        // map.addMarker( new MarkerOptions().position(BilkentUni).title( "Bilkent University"));
-        float zoomLevel = (float) 19.0;
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(BilkentUni, zoomLevel));
+        map.addMarker( new MarkerOptions().position(BilkentUni).title( "Bilkent University"));
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(BilkentUni, DEFAULT_ZOOM));
 
 
         // Add all the custom labels from the CustomLabels class on the map
@@ -186,8 +187,11 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         map.setOnGroundOverlayClickListener(this);
 
         // Restrict the map to only Bilkent University
-        LatLngBounds Bilkent = new LatLngBounds( new LatLng(39.8656549,32.7426828), new LatLng(39.8739347,32.7643047));
-        map.setLatLngBoundsForCameraTarget(Bilkent);
+        Bounds = new LatLngBounds( new LatLng(39.861275, 32.741088), new LatLng(39.885348, 32.764571));
+        map.setLatLngBoundsForCameraTarget(Bounds);
+
+        // Setting minimum zoom level
+        map.setMinZoomPreference( MIN_ZOOM);
 
         // If the user granted permission, receive the location
         if( mLocationPermissionsGranted) {
@@ -324,11 +328,24 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 location.addOnCompleteListener( new OnCompleteListener() {
                     @Override
                     public void onComplete(@NonNull Task task) {
-                        if ( task.isSuccessful()) {
+                        if ( task.isSuccessful())
+                        {
                             Log.d( TAG, "onComplete: found location!");
                             Location currentLocation = (Location) task.getResult();
 
-                            moveCamera( new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude()), DEFAULT_ZOOM,  "My Location");
+                            // If the user is in Bilkent, it moves the camera to current location.
+                            if ( currentLocation.getLatitude() > Bounds.southwest.latitude && currentLocation.getLatitude() < Bounds.northeast.latitude &&
+                                    currentLocation.getLongitude() > Bounds.southwest.longitude && currentLocation.getLongitude() < Bounds.northeast.longitude)
+                            {
+                                Log.d( TAG, "onComplete: User is in Bilkent");
+                                moveCamera(new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude()), DEFAULT_ZOOM, "My Location");
+                            }
+                            else
+                            {
+                                Log.d( TAG, "onComplete: User is not in Bilkent");
+                                Toast.makeText( MainActivity.this, "You are not in Bilkent.", Toast.LENGTH_SHORT).show();
+                            }
+
                         }
                         else {
                             Log.d( TAG, "onComplete: current location is null");
