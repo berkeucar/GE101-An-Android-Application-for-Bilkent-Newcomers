@@ -19,4 +19,10 @@ Today we added custom suggestions to search bar in the map.
 
 ### ~ 3.05.2020 ~
 Today we attempted to add bus schedules to the app. We added the main campus one but we couldn't add tabs to go between east campus bus schedule and main campus bus schedule.
+
+### ~ 13.05.2020 ~
+Added places to the Places file to show up in the search bar.
+
+### ~ 14.05.2020 ~
+Added the labels of the places mentioned previously to the map so a user can see the labels in the map.
 ****
