@@ -113,7 +113,7 @@ public class MainScreen extends AppCompatActivity {
      * Opens the settings menu
      */
     public void openSettings() {
-        Intent intent = new Intent(this, settings_screen.class);
+        Intent intent = new Intent(this, SettingsScreen.class);
         startActivity(intent);
     }
 
