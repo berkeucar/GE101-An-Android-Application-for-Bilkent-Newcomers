@@ -25,4 +25,7 @@ Added places to the Places file to show up in the search bar.
 
 ### ~ 14.05.2020 ~
 Added the labels of the places mentioned previously to the map so a user can see the labels in the map.
+
+### ~ 15.05.2020 ~
+Tried to implement dark and light theme switch in the app, but failed ultimately. Will try again later probably.
 ****
