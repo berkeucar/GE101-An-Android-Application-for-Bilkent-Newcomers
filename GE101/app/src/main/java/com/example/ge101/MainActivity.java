@@ -65,11 +65,12 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;
     private FusedLocationProviderClient mFusedLocationProviderClient;
     private static final float DEFAULT_ZOOM = 18f;
-    private static final float MIN_ZOOM = 17f;
+    private static final float MIN_ZOOM = 16f;
     private ImageView busSchedule;
     private long mLastClickTime = 0;
     private Marker marker;
     private ImageView clearButton;
+    private SettingsScreen settingsScreen;
 
     private ArrayList<String> buildings;
     private Places places;
@@ -205,6 +206,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             // Show the user location on the map
             map.setMyLocationEnabled( true);
             map.getUiSettings().setMyLocationButtonEnabled(false);
+
 
             try {
                 // Customise the styling of the base map using a JSON object defined

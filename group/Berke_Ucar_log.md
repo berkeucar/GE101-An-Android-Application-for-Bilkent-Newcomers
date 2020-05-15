@@ -46,4 +46,12 @@ Places objects added
 ### ~ 12/05/2020 ~
 Places' labels added.
 
+### ~ 14/05/2020 ~
+Coincident labels are fixed.
+Eating places' GUI bug is fixed (possibly).
+New eating place added and menu are added.
+Label sizes are made proper.
+
+### ~ 15/05/2020 ~
+The map style tried to make changed but failed with Efe, Arda and Mert.
 ****

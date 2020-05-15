@@ -59,4 +59,9 @@ Fixed the map being too laggy
 
 Added listeners on labels so when clicked the marker with custom info window is displayed
 
+### ~ 14.05.2020 ~
+Worked more on labels
+
+A message is displayed now when you are not in Bilkent Campus
+
 ****
