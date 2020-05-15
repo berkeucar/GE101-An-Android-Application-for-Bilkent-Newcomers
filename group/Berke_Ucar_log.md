@@ -54,5 +54,5 @@ Label sizes are made proper.
 
 ### ~ 15/05/2020 ~
 The map style tried to make changed but failed with Efe, Arda and Mert.
-Another sextion for eating places added and menu added
+Another section for eating places added and menu added
 ****
