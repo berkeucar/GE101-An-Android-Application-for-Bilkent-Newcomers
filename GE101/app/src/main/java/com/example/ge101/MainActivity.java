@@ -44,7 +44,11 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import com.example.ge101.customMarkers.CustomInfoWindowAdapter;
 import com.example.ge101.locations.PlaceInfo;
@@ -209,8 +213,10 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             map.setMyLocationEnabled( true);
             map.getUiSettings().setMyLocationButtonEnabled(false);
 
+            // Get the state of the switch button from the settings screen
+            SharedPreferences sharedPreferences = getSharedPreferences( "Switch", MODE_PRIVATE);
             // Change the map theme depending on the state of the switch button on the settings screen
-            if ( SettingsScreen.getThemeSwitchChecked()) {
+            if ( sharedPreferences.getBoolean( "Switch" , false)) {
                 try {
                     // Customise the styling of the base map using a JSON object defined
                     // in a raw resource file.

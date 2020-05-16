@@ -1,27 +1,12 @@
 package com.example.ge101;
 
-import android.app.Activity;
 import android.content.SharedPreferences;
-import android.content.res.Resources;
 import android.os.Bundle;
-
-import com.google.android.gms.maps.model.MapStyleOptions;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SwitchCompat;
-import androidx.appcompat.widget.Toolbar;
-
-import android.os.SystemClock;
-import android.preference.PreferenceActivity;
-import android.preference.PreferenceManager;
-import android.util.Log;
-import android.view.View;
 import android.widget.CompoundButton;
-import android.widget.ImageView;
 import android.widget.Switch;
-import android.widget.TextView;
+
+
 
 /**
  * Settings screen class
@@ -33,11 +18,12 @@ public class SettingsScreen extends AppCompatActivity
     // properties
     private Switch themeSwitch;
     private static boolean themeSwitchChecked;
+    private SharedPreferences sharedPreferences;
+    public static final String ex = "Switch";
 
     // constructors
     public SettingsScreen()
     {
-
     }
 
     // methods
@@ -49,29 +35,25 @@ public class SettingsScreen extends AppCompatActivity
         setContentView(R.layout.activity_settings_screen);
         themeSwitch = (Switch) findViewById( R.id.themeSwitch);
 
-        SharedPreferences sharedPreferences = getSharedPreferences( "save", MODE_PRIVATE);
-        themeSwitch.setChecked( sharedPreferences.getBoolean( "value", true));
-
-        // Add a listener to the switch button so the state of the button is saved after the activity is exited
-        themeSwitch.setOnClickListener(new View.OnClickListener() {
+        sharedPreferences = getSharedPreferences( "Switch", MODE_PRIVATE);
+        final SharedPreferences.Editor editor = sharedPreferences.edit();
+        themeSwitch.setChecked( sharedPreferences.getBoolean( ex, false));
+        themeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View v) {
-                if ( themeSwitch.isChecked()) {
-                    SharedPreferences.Editor editor = getSharedPreferences( "save", MODE_PRIVATE).edit();
-                    editor.putBoolean( "value", true);
-                    editor.apply();
-                    themeSwitch.setChecked( true);
-                    themeSwitchChecked = themeSwitch.isChecked();
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if ( isChecked) {
+                    editor.putBoolean( ex, true);
+                    themeSwitchChecked = true;
                 }
                 else {
-                    SharedPreferences.Editor editor = getSharedPreferences( "save", MODE_PRIVATE).edit();
-                    editor.putBoolean( "value", false);
-                    editor.apply();
-                    themeSwitch.setChecked( false);
-                    themeSwitchChecked = themeSwitch.isChecked();
+                    editor.putBoolean( ex, false);
+                    themeSwitchChecked = false;
                 }
+                editor.commit();
             }
         });
+
+
 
     }
 
@@ -82,10 +64,4 @@ public class SettingsScreen extends AppCompatActivity
     public static boolean getThemeSwitchChecked() {
         return themeSwitchChecked;
     }
-
-
-
-
-
-
 }
