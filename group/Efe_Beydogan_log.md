@@ -64,4 +64,6 @@ Worked more on labels
 
 A message is displayed now when you are not in Bilkent Campus
 
+### ~ 16.05.2020 ~
+Added a switch button to the settings screen for switching between light and dark map themes
 ****
