@@ -73,9 +73,6 @@ public class SettingsScreen extends AppCompatActivity
             }
         });
 
-
-
-
     }
 
     /**
