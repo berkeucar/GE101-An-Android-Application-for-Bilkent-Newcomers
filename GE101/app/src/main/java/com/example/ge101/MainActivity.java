@@ -8,12 +8,14 @@ import androidx.fragment.app.FragmentActivity;
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.location.Location;
 import android.media.Image;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -21,6 +23,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import com.example.ge101.busSchedule.BusScheduleTab;
@@ -70,7 +73,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private long mLastClickTime = 0;
     private Marker marker;
     private ImageView clearButton;
-    private SettingsScreen settingsScreen;
 
     private ArrayList<String> buildings;
     private Places places;
@@ -122,7 +124,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
-
+        Log.d( TAG, "onCreate");
         //AutoCompleteTextView.setAdapter(new PlaceAutoSuggestAdapter( MainActivity.this, android.R.layout.simple_list_item_1));
     }
 
@@ -207,18 +209,34 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             map.setMyLocationEnabled( true);
             map.getUiSettings().setMyLocationButtonEnabled(false);
 
-
-            try {
-                // Customise the styling of the base map using a JSON object defined
-                // in a raw resource file.
-                boolean success = googleMap.setMapStyle(
-                        MapStyleOptions.loadRawResourceStyle(
-                                this, R.raw.custommap));
-                if (!success) {
-                    Log.e(TAG, "Style parsing failed.");
+            // Change the map theme depending on the state of the switch button on the settings screen
+            if ( SettingsScreen.getThemeSwitchChecked()) {
+                try {
+                    // Customise the styling of the base map using a JSON object defined
+                    // in a raw resource file.
+                    boolean success = googleMap.setMapStyle(
+                            MapStyleOptions.loadRawResourceStyle(
+                                    this, R.raw.dark_themed_map));
+                    if (!success) {
+                        Log.e(TAG, "Style parsing failed.");
+                    }
+                } catch (Resources.NotFoundException e) {
+                    Log.e(TAG, "Can't find style. Error: ", e);
                 }
-            } catch (Resources.NotFoundException e) {
-                Log.e(TAG, "Can't find style. Error: ", e);
+            }
+            else {
+                try {
+                    // Customise the styling of the base map using a JSON object defined
+                    // in a raw resource file.
+                    boolean success = googleMap.setMapStyle(
+                            MapStyleOptions.loadRawResourceStyle(
+                                    this, R.raw.custommap));
+                    if (!success) {
+                        Log.e(TAG, "Style parsing failed.");
+                    }
+                } catch (Resources.NotFoundException e) {
+                    Log.e(TAG, "Can't find style. Error: ", e);
+                }
             }
             // Initialize the map
             init();
@@ -262,6 +280,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
     }
+
 
 
     /**

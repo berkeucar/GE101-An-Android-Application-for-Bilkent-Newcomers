@@ -53,7 +53,7 @@ public class CustomInfoWindowAdapter extends Fragment implements GoogleMap.InfoW
         tvSnippet.setText( placeInfo.getDescription());
 
         ImageView imageView = (ImageView) view.findViewById(R.id.busLogoTest);
-
+        // Changes the image of every custom info window from PlaceInfo class
         imageView.setImageResource( placeInfo.getImageResource());
     }
 
