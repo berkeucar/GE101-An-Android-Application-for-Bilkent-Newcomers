@@ -48,6 +48,8 @@
         <activity android:name=".eatingPlaces.CoffeeBreakMain" />
         <activity android:name=".eatingPlaces.MozartCafe" />
         <activity android:name=".eatingPlaces.MozartCafeMenu" />
+        <activity android:name=".eatingPlaces.CoffeeBreakEast" />
+        <activity android:name=".eatingPlaces.CoffeeBreakMenu" />
     </application>
 
 </manifest>

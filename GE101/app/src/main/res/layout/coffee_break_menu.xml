@@ -31,7 +31,7 @@
         app:layout_constraintVertical_bias="0.006" />
 
     <ImageView
-        android:id="@+id/menubutton"
+        android:id="@+id/cbmenubutton"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:src="@drawable/menusymbol"

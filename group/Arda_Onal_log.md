@@ -56,4 +56,7 @@ Today I added listeners to the custom labels so when clicked, it moves the camer
 
 ### ~ 14/05/2020 ~
 Today I changed the map bounds and added zoom restrictions so that only bilkent is visible in the map. Also worked on making labels more visible by changing their sizes.
+
+### ~ 15/05/2020 ~
+Attempted to add a "change map theme" button to the settings but couldn't do it.
 ****

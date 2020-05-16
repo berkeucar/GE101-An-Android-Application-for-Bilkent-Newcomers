@@ -28,6 +28,7 @@
     <string name="mozart_cafe_information">MOZART CAFES ARE SOME OF THE OLDEST CAFES OF THE UNIVERSITY. GENERALLY THEY ARE PLACED ON THE MOST CROWDED PLACES</string>
     <string name="menu">MENU</string>
     <string name="mozart_cafe_menu">MOZART CAFE MENU</string>
+    <string name="coffee_break_menu">COFFEE BREAK CAFE MENU</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

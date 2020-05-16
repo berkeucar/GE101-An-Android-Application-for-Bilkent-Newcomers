@@ -3,6 +3,8 @@ package com.example.ge101.eatingPlaces;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.os.SystemClock;
@@ -24,6 +26,7 @@ public class EastCampusEatings extends Fragment {
 
     // properties
     private Button schoolCafeteria;
+    private Button coffeeBreakEast;
     private long mLastClickTime = 0;
 
     // constructor
@@ -61,6 +64,29 @@ public class EastCampusEatings extends Fragment {
                 startActivity(intent);
             }
         });
+
+        // Button for coffee break
+        coffeeBreakEast = (Button) v.findViewById(R.id.coffee_break_east);
+        coffeeBreakEast.setOnClickListener(new View.OnClickListener() {
+            /**
+             * the method that makes button to open the school cafeteria's menu when clicked
+             *
+             * @param v
+             */
+            @Override
+            public void onClick(View v) {
+                // Preventing multiple clicks, using threshold of 1 second
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
+
+                // creates intent (action) and opens it (for this condition school cafeteria's menu)
+                Intent intent = new Intent(getActivity(), CoffeeBreakEast.class);
+                startActivity(intent);
+            }
+        });
+
         return v;
     }
 }
