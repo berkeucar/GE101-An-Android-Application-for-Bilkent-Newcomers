@@ -54,7 +54,7 @@ public class Places implements AchievableBag {
         places.add( new PlaceInfo( "Food Court Speed-Kıraç (Main Campus)", "desc", new LatLng( 39.865943, 32.748387), R.drawable.speed));
         places.add( new PlaceInfo( "Mozart Cafe (Middle Campus)", "desc", new LatLng( 39.869365, 32.755092), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Coffee Break (East Campus)", "desc", new LatLng( 39.874201, 32.761962), R.drawable.noimageavailable));
-        places.add( new PlaceInfo( "FMPA Table d'hôte Cafe. (Middle Campus)", "desc", new LatLng( 39.869176, 32.754952), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "FMPA Table d'hôte Cafe. (Middle Campus)", "desc", new LatLng( 39.868920, 32.755004), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "East Campus Housing Kiosk - Buffet", "desc", new LatLng( 39.868607, 32.763916), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Sports Center (East Campus)", "desc", new LatLng( 39.869947, 32.764970), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Taxi", "desc", new LatLng( 39.867739, 32.756612), R.drawable.noimageavailable));
@@ -81,7 +81,7 @@ public class Places implements AchievableBag {
         places.add(new PlaceInfo("Cafe-In", "Description Cafe-In", new LatLng(39.869930, 32.750604), R.drawable.cafein));
         places.add(new PlaceInfo("Express Cafe", "Description Express Cafe", new LatLng(39.866108, 32.749451), R.drawable.noimageavailable));
         places.add(new PlaceInfo("Le Piment Rouge Restaurant", "Description Le Piment Rouge Restaurant", new LatLng(39.874414, 32.762056), R.drawable.lepiment));
-        places.add(new PlaceInfo("Mozart Cafe (East Campus)", "Description Mozart Cafe (East Campus)", new LatLng(39.870714, 32.764833), R.drawable.mozarteast));
+        places.add(new PlaceInfo("Mozart Cafe (East Campus)", "Description Mozart Cafe (East Campus)", new LatLng(39.870813, 32.764836), R.drawable.mozarteast));
         places.add(new PlaceInfo("Coffee Break (Main Campus Library)", "Description Coffee Break (Main Campus Library)", new LatLng(39.870417, 32.749650), R.drawable.cbmainlibrary));
         places.add(new PlaceInfo("Coffee Break (Main Campus L Buildings)", "Description Coffee Break (Main Campus L Buildings)", new LatLng(39.869301, 32.749901), R.drawable.cblbuilding));
         places.add(new PlaceInfo("Stadium", "Description Stadium", new LatLng(39.864366, 32.743395), R.drawable.stadiium));
@@ -107,7 +107,7 @@ public class Places implements AchievableBag {
         places.add( new PlaceInfo("Sözeri", "Sözeri Kebab", new LatLng(39.865496, 32.744361), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Mozart Cafe (N Building)", "Mozart Cafe in N building", new LatLng( 39.872877, 32.763123), R.drawable.noimageavailable));
         places.add( new PlaceInfo("Mozart Cafe (EE Building)", "Mozart Cafe in EE building", new LatLng(39.872200, 32.750596), R.drawable.ee));
-        places.add( new PlaceInfo( "76th Dorm Canteen", "76th Dorm Canteen", new LatLng( 39.864463, 32.747566), R.drawable.noimageavailable));
+        places.add( new PlaceInfo( "76th Dorm Canteen", "76th Dorm Canteen", new LatLng( 39.864382, 32.747763), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Sports Center", "Student Dormitories Sports Center", new LatLng(39.863848, 32.745551), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "414th Bus Stop", "414th Bus Stop", new LatLng( 39.865257, 32.748278), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "413th Bus Stop", "413th Bus Stop", new LatLng( 39.873220, 32.748966), R.drawable.noimageavailable));
