@@ -19,7 +19,7 @@ import com.example.ge101.locations.PlaceInfo;
 /**
  * A class to display information on buildings
  * @author Efe Beydoğan, Arda Önal, Mert Barkın Er, Berke Uçar, Mehmet Alper Çetin
- * @version 06.05.2020
+ * @version 17.05.2020
  */
 
 public class CustomInfoWindowAdapter extends Fragment implements GoogleMap.InfoWindowAdapter {
@@ -41,15 +41,20 @@ public class CustomInfoWindowAdapter extends Fragment implements GoogleMap.InfoW
 
 
     // methods
-
-    private void renderWindowText( Marker marker, View view) {
+    /**
+     * A class to display information on buildings
+     * @param marker takes a marker parameter because this info window is constructed on markers
+     * @param view
+     */
+    private void renderWindowText( Marker marker, View view)
+    {
 
         TextView tvTitle = (TextView) view.findViewById( R.id.custom_marker_title);
-
+        // Gets the title of the place from PlaceInfo class
         tvTitle.setText( placeInfo.getName());
 
         TextView tvSnippet = (TextView) view.findViewById( R.id.custom_marker_snippet);
-
+        // Gets the description of the place from PlaceInfo class
         tvSnippet.setText( placeInfo.getDescription());
 
         ImageView imageView = (ImageView) view.findViewById(R.id.busLogoTest);
@@ -57,12 +62,24 @@ public class CustomInfoWindowAdapter extends Fragment implements GoogleMap.InfoW
         imageView.setImageResource( placeInfo.getImageResource());
     }
 
+
+    /**
+     * A class to display information on buildings
+     * @param marker takes a marker parameter because this info window is constructed on markers
+     * @return returns the Window created with the renderWindowText method.
+     */
     @Override
-    public View getInfoWindow(Marker marker) {
+    public View getInfoWindow(Marker marker)
+    {
         renderWindowText( marker, mWindow);
         return mWindow;
     }
 
+    /**
+     * A class to display information on buildings
+     * @param marker takes a marker parameter because this info window is constructed on markers
+     * @return returns the info contents.
+     */
     @Override
     public View getInfoContents(Marker marker) {
         renderWindowText( marker, mWindow);
