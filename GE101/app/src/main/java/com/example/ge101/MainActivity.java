@@ -152,6 +152,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         setBusSchedule();
 
 
+
         hideSoftKeyboard();
     }
 
@@ -289,6 +290,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
     }
+
 
 
 
