@@ -5,7 +5,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.widget.CompoundButton;
 import android.widget.Switch;
-
+import android.widget.Toast;
 
 
 /**
@@ -44,10 +44,12 @@ public class SettingsScreen extends AppCompatActivity
                 if ( isChecked) {
                     editor.putBoolean( ex, true);
                     themeSwitchChecked = true;
+                    Toast.makeText(SettingsScreen.this, "DARK THEME ON", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     editor.putBoolean( ex, false);
                     themeSwitchChecked = false;
+                    Toast.makeText(SettingsScreen.this, "LIGHT THEME ON", Toast.LENGTH_SHORT).show();
                 }
                 editor.commit();
             }

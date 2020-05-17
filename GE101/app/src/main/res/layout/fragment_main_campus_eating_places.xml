@@ -29,8 +29,10 @@
                 android:id="@+id/school_cafeteria"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                android:background="@android:color/transparent"
                 android:text="@string/school_cafeteria_name"
                 android:textAllCaps="false"
+                android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold"></Button>
 
@@ -38,8 +40,11 @@
                 android:id="@+id/coffee_break"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                android:background="@android:color/transparent"
+                android:shadowColor="#FFFFFF"
                 android:text="@string/coffee_break_name"
                 android:textAllCaps="false"
+                android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold"></Button>
 
@@ -47,8 +52,10 @@
                 android:id="@+id/mozart_cafe"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                android:background="@android:color/transparent"
                 android:text="@string/mozart_cafe_name"
                 android:textAllCaps="false"
+                android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold"></Button>
         </LinearLayout>
