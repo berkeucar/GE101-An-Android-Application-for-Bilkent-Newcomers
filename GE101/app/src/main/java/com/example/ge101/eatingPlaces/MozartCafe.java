@@ -266,7 +266,7 @@ public class MozartCafe extends FragmentActivity implements OnMapReadyCallback {
                                     currentLocation.getLongitude() > Bounds.southwest.longitude && currentLocation.getLongitude() < Bounds.northeast.longitude)
                             {
                                 Log.d( TAG, "onComplete: User is in Bilkent");
-                                moveCamera(new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude()), DEFAULT_ZOOM, "My Location");
+                                map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(39.868760, 32.748059), DEFAULT_ZOOM));
                             }
                             else
                             {
