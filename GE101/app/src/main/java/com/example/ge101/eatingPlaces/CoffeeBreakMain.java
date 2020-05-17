@@ -273,7 +273,7 @@ public class CoffeeBreakMain extends FragmentActivity implements OnMapReadyCallb
                                         currentLocation.getLongitude() > Bounds.southwest.longitude && currentLocation.getLongitude() < Bounds.northeast.longitude)
                                 {
                                     Log.d( TAG, "onComplete: User is in Bilkent");
-                                    moveCamera(new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude()), DEFAULT_ZOOM, "My Location");
+                                    map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(39.868290, 32.749084), DEFAULT_ZOOM));
                                 }
                                 else
                                 {
