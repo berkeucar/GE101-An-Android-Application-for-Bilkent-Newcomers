@@ -59,4 +59,10 @@ Today I changed the map bounds and added zoom restrictions so that only bilkent 
 
 ### ~ 15/05/2020 ~
 Attempted to add a "change map theme" button to the settings but couldn't do it.
+
+### ~ 16/05/2020 ~
+Worked on change map theme button.
+
+### ~ 17/05/2020 ~
+Worked on making the map prettier.
 ****
