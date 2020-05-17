@@ -14,14 +14,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:tabIndicatorColor="#FFFFFF"
+        app:tabSelectedTextColor="#FAFAFA"
+        app:tabTextAppearance="@style/TextAppearance.AppCompat.Large"
         app:tabTextColor="@android:color/white">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/mainCampusTabEatings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/main_campus_eatings"
-            />
+            android:text="@string/main_campus_eatings" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/eastCampusTabEatings"

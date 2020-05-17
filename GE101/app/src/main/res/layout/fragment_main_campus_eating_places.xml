@@ -34,7 +34,8 @@
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
-                android:textStyle="bold"></Button>
+                android:textStyle="bold"
+                android:fontFamily="@font/cinzel_decorative_bold">></Button>
 
             <Button
                 android:id="@+id/coffee_break"
@@ -46,7 +47,8 @@
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
-                android:textStyle="bold"></Button>
+                android:textStyle="bold"
+                android:fontFamily="@font/cinzel_decorative_bold">></Button>
 
             <Button
                 android:id="@+id/mozart_cafe"
@@ -57,7 +59,8 @@
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
-                android:textStyle="bold"></Button>
+                android:textStyle="bold"
+                android:fontFamily="@font/cinzel_decorative_bold">></Button>
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
