@@ -55,4 +55,8 @@ Label sizes are made proper.
 ### ~ 15/05/2020 ~
 The map style tried to make changed but failed with Efe, Arda and Mert.
 Another section for eating places added and menu added
+
+### ~ 17/05/2020 ~
+Eating Places' map section added and made them show proper position and proper marker.
+Easting Places, Settings and Bus schedule screens' desing renewed.
 ****

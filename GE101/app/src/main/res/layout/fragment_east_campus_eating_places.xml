@@ -29,19 +29,25 @@
                 android:id="@+id/school_cafeteria_east"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                android:background="@android:color/transparent"
                 android:text="@string/school_cafeteria_name"
                 android:textAllCaps="false"
+                android:textColor="@android:color/white"
                 android:textSize="20sp"
-                android:textStyle="bold"></Button>
+                android:textStyle="bold"
+                android:fontFamily="@font/cinzel_decorative_bold"></Button>
 
             <Button
                 android:id="@+id/coffee_break_east"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                android:background="@android:color/transparent"
                 android:text="@string/coffee_break_name"
                 android:textAllCaps="false"
+                android:textColor="@android:color/white"
                 android:textSize="20sp"
-                android:textStyle="bold"></Button>
+                android:textStyle="bold"
+                android:fontFamily="@font/cinzel_decorative_bold">></Button>
 
         </LinearLayout>
     </ScrollView>

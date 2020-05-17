@@ -98,8 +98,10 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //mSearchText = (EditText) findViewById(R.id.input_search);
+
         // Initialize the GPS button that locks on user location when pressed
         mGps = (ImageView) findViewById(R.id.ic_gps);
+
         // Get the permission from user to receive location information
         getLocationPermission();
 
@@ -216,6 +218,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
             // Get the state of the switch button from the settings screen
             SharedPreferences sharedPreferences = getSharedPreferences( "Switch", MODE_PRIVATE);
+
             // Change the map theme depending on the state of the switch button on the settings screen
             if ( sharedPreferences.getBoolean( "Switch" , false)) {
                 try {
@@ -461,7 +464,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     /**
      * Moves the camera to a selected building from the list
-     * @param parent
+     *      * @param parent
      * @param view
      * @param position
      * @param id
