@@ -50,6 +50,13 @@ o    getMenu
 **Discussion:** 
 We have completed the github logs assignment together and discussed on the progress of the project. We also looked at some of the code on restricting the maps size, adding buttons and so on.
 
+### Meeting ~ (18.05.2020, 1 hour)
+****
+**Present:** Arda, Alper, Berke, Efe, Mert   _**Absent:**_ -
+
+**Discussion:** 
+We have discussed on the video demo, what we have done and what remains to be done.
+
 
 ****
 ### Meeting ~ (date, duration)
