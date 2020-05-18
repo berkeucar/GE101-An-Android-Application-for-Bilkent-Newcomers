@@ -1,6 +1,7 @@
 package com.example.ge101;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
@@ -26,6 +27,7 @@ import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import com.example.ge101.achievement.AchievementBoard;
 import com.example.ge101.busSchedule.BusScheduleTab;
 import com.example.ge101.customlabels.CustomLabels;
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -82,6 +84,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private Places places;
     private AutoCompleteTextView editText;
     private CustomLabels customLabels;
+    private ImageView achievementButton;
 
     // widgets
     //private EditText mSearchText;
@@ -101,6 +104,22 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
         // Initialize the GPS button that locks on user location when pressed
         mGps = (ImageView) findViewById(R.id.ic_gps);
+
+        // initialize the achievement button to open the achievement board
+        achievementButton = (ImageView) findViewById( R.id.achievement_button);
+        //// just adding an anonymous class click listener to open the activity
+       // achievementButton.setOnClickListener(new View.OnClickListener() {
+
+         //   @Override
+           // public void onClick(View v) {
+                // Preventing multiple clicks, using threshold of 1 second
+             //   if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
+               //     return;
+                //}
+                //mLastClickTime = SystemClock.elapsedRealtime();
+                //openActivityAchievementBoard();
+            //}
+       // });
 
         // Get the permission from user to receive location information
         getLocationPermission();
@@ -133,6 +152,14 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         Log.d( TAG, "onCreate");
         //AutoCompleteTextView.setAdapter(new PlaceAutoSuggestAdapter( MainActivity.this, android.R.layout.simple_list_item_1));
     }
+    // the openActivityAchievementBoard for opening the achievement board
+    private void openActivityAchievementBoard()
+    {
+        // So apperantly this Intent thing that I need to open a new activity requires a class
+        Intent i;
+        i = new Intent( this, AchievementBoard.class);
+        startActivity( i);
+    }
 
     /**
      * The method that initializes the buttons on the map
@@ -154,6 +181,19 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         hideSoftKeyboard();
+        // just adding an anonymous class click listener to open the activity
+        achievementButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // Preventing multiple clicks, using threshold of 1 second
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
+                openActivityAchievementBoard();
+            }
+        });
     }
 
 

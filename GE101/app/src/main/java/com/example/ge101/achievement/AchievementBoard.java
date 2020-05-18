@@ -11,8 +11,11 @@ import com.example.ge101.locations.Places;
 import java.util.ArrayList;
 
 public class AchievementBoard extends AppCompatActivity {
+    // properties
 
-    protected void onCreate(Bundle savedInstanceState, Places p) {
+
+
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState);
         setContentView(R.layout.activity_achievement_board);
 
@@ -20,9 +23,8 @@ public class AchievementBoard extends AppCompatActivity {
         String total;
         TextView achievementText;
 
-        l = Places.makePaneString( p);
+        l = Places.makePaneString( new Places());
         total = "";
-        super.onCreate( savedInstanceState);
         achievementText = (TextView) findViewById( R.id.achievement_strings);
         // Creates the String for to play it on the board
         for( String s : l )
