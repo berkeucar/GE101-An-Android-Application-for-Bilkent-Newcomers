@@ -15,10 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".achievement.AchievementBoard"></activity>
         <activity
             android:name=".eatingPlaces.EatingPlaces"
             android:label="@string/title_activity_eating_places"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".busSchedule.BusScheduleTab" />
         <activity android:name=".SplashScreen">
             <intent-filter>
