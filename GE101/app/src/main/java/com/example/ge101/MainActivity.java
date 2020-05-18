@@ -59,7 +59,6 @@ import com.example.ge101.locations.Places;
  * @author Efe Beydoğan, Arda Önal, Mert Barkın Er, Berke Uçar, Mehmet Alper Çetin
  * @version 06.05.2020
  */
-
 public class MainActivity extends FragmentActivity implements OnMapReadyCallback, AdapterView.OnItemClickListener, GoogleMap.OnGroundOverlayClickListener {
 
     // properties

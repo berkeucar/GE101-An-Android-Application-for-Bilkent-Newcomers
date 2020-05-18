@@ -31,6 +31,7 @@ public class SchoolCafeteria extends AppCompatActivity {
         WebView webView = (WebView) findViewById(R.id.school_cafeteria_menu_View);
         webView.getSettings().setJavaScriptEnabled( true);
         webView.setWebViewClient( new WebViewClient());
+
         // arranges the zoom level and set its settings
         webView.setInitialScale( ZOOM_LEVEL);
         webView.getSettings().setDisplayZoomControls(false);
