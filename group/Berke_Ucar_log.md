@@ -59,4 +59,8 @@ Another section for eating places added and menu added
 ### ~ 17/05/2020 ~
 Eating Places' map section added and made them show proper position and proper marker.
 Easting Places, Settings and Bus schedule screens' desing renewed.
+
+### ~ 18/05/2020 ~
+Naming conventions fixed.
+Comments added/fixed.
 ****
