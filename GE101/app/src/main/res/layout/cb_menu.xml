@@ -73,6 +73,7 @@
                 android:gravity="center"></TextView>
 
             <TextView
+                android:id="@+id/menu_cb"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TEA - 3 TL"
@@ -88,56 +89,6 @@
                 app:layout_constraintVertical_bias="0.095"
                 android:gravity="center"
                 ></TextView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="LATTE - 9 TL"
-                android:textColor="@android:color/white"
-                android:textSize="20sp"
-                android:visibility="visible"
-                app:fontFamily="sans-serif"
-                app:layout_constraintBottom_toBottomOf="@+id/coffee_break_image"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.426"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.095"
-                android:gravity="center">
-            </TextView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="CHEESECAKE - 15 TL"
-                android:textColor="@android:color/white"
-                android:textSize="20sp"
-                android:visibility="visible"
-                app:fontFamily="sans-serif"
-                app:layout_constraintBottom_toBottomOf="@+id/coffee_break_image"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.426"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.095"
-                android:gravity="center"></TextView>
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="PASTA WITH TOMATO SAUCE - 20 TL"
-                android:textColor="@android:color/white"
-                android:textSize="20sp"
-                android:visibility="visible"
-                app:fontFamily="sans-serif"
-                app:layout_constraintBottom_toBottomOf="@+id/coffee_break_image"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.426"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.095"
-                android:gravity="center"></TextView>
 
         </LinearLayout>
 

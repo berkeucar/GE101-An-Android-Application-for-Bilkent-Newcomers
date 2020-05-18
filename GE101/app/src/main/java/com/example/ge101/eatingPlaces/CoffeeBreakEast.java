@@ -15,7 +15,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
@@ -38,6 +37,11 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
+/**
+ * This is the map class
+ * @author Efe Beydoğan, Arda Önal, Mert Barkın Er, Berke Uçar, Mehmet Alper Çetin
+ * @version 17.05.2020
+ */
 public class CoffeeBreakEast extends FragmentActivity implements OnMapReadyCallback {
     // constants
     private static final float DEFAULT_ZOOM = 18f;
@@ -61,8 +65,13 @@ public class CoffeeBreakEast extends FragmentActivity implements OnMapReadyCallb
     // constructors
 
     // methods
+
+    /**
+     * the method that creates the activity
+     * @param savedInstanceState
+     */
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate( @Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.coffee_break_menu);
 
@@ -71,6 +80,7 @@ public class CoffeeBreakEast extends FragmentActivity implements OnMapReadyCallb
         places = new Places();
         customLabels = new CustomLabels( places);
 
+        // menu button for opening menu
         menu =(ImageView) findViewById(R.id.cbmenubutton);
         menu.setOnClickListener(new View.OnClickListener()
         {

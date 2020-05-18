@@ -10,18 +10,13 @@ import android.os.Bundle;
 import android.os.SystemClock;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
-
-import com.example.ge101.MainActivity;
 import com.example.ge101.R;
 import com.example.ge101.customlabels.CustomLabels;
 import com.example.ge101.locations.PlaceInfo;
@@ -32,7 +27,6 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.GroundOverlay;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MapStyleOptions;
@@ -41,8 +35,11 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
-import java.util.ArrayList;
-
+/**
+ * This is the map class
+ * @author Efe Beydoğan, Arda Önal, Mert Barkın Er, Berke Uçar, Mehmet Alper Çetin
+ * @version 17.05.2020
+ */
 public class CoffeeBreakMain extends FragmentActivity implements OnMapReadyCallback
     {
     // constants
@@ -64,20 +61,26 @@ public class CoffeeBreakMain extends FragmentActivity implements OnMapReadyCallb
     private CustomLabels customLabels;
     private Marker marker;
 
-        // constructors
+    // constructors
 
     // methods
+        /**
+         * the method that creates the activity
+         * @param savedInstanceState
+         */
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.coffee_break_menu);
 
+        // gets location permission
         getLocationPermission();
 
+        // initializes the places and
         places = new Places();
         customLabels = new CustomLabels( places);
 
-
+        // initializes menu button
         menu =(ImageView) findViewById(R.id.cbmenubutton);
         menu.setOnClickListener(new View.OnClickListener()
         {
@@ -117,7 +120,6 @@ public class CoffeeBreakMain extends FragmentActivity implements OnMapReadyCallb
 
     }
 
-
         /**
          * Gets the location permission from the user
          */
@@ -139,7 +141,6 @@ public class CoffeeBreakMain extends FragmentActivity implements OnMapReadyCallb
                 ActivityCompat.requestPermissions(this, permissions, LOCATION_PERMISSION_REQUEST_CODE);
             }
         }
-
 
 
     /**

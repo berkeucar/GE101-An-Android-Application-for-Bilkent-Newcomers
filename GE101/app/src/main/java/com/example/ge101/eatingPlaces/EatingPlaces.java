@@ -24,7 +24,6 @@ import android.widget.Button;
  * @author Efe Beydoğan, Arda Önal, Mert Barkın Er, Berke Uçar, Mehmet Alper Çetin
  * @version 06.05.2020
  */
-
 public class EatingPlaces extends AppCompatActivity {
 
     // properties

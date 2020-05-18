@@ -40,6 +40,11 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
+/**
+ * This is the map class
+ * @author Efe Beydoğan, Arda Önal, Mert Barkın Er, Berke Uçar, Mehmet Alper Çetin
+ * @version 17.05.2020
+ */
 public class MozartCafe extends FragmentActivity implements OnMapReadyCallback {
     // constants
     private static final float DEFAULT_ZOOM = 18f;
@@ -63,13 +68,19 @@ public class MozartCafe extends FragmentActivity implements OnMapReadyCallback {
     // constructors
 
     // methods
+    /**
+     * the method that creates the activity
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mozart_cafe_screen);
 
+        // gets location permission
         getLocationPermission();
 
+        // initializes places and their labels
         places = new Places();
         customLabels = new CustomLabels( places);
 
