@@ -22,7 +22,7 @@ import com.example.ge101.R;
  * @author Efe Beydoğan, Arda Önal, Mert Barkın Er, Berke Uçar, Mehmet Alper Çetin
  * @version 06.05.2020
  */
-public class EastCampusEatings extends Fragment {
+public class EastCampusEatingPlaces extends Fragment {
 
     // properties
     private Button schoolCafeteria;
@@ -30,7 +30,7 @@ public class EastCampusEatings extends Fragment {
     private long mLastClickTime = 0;
 
     // constructor
-    public EastCampusEatings() {
+    public EastCampusEatingPlaces() {
         // Required empty public constructor
     }
 

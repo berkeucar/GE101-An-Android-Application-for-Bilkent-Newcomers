@@ -11,13 +11,13 @@ import androidx.fragment.app.FragmentPagerAdapter;
  * @version 06.05.2020
  */
 
-public class PageAdapterEatings extends FragmentPagerAdapter {
+public class PageAdapterEatingPlaces extends FragmentPagerAdapter {
 
     //properties
     private int numberOfTabs;
 
     // constructors
-    public PageAdapterEatings( FragmentManager fm, int numberOfTabs) {
+    public PageAdapterEatingPlaces( FragmentManager fm, int numberOfTabs) {
         super(fm);
         this.numberOfTabs = numberOfTabs;
     }
@@ -33,9 +33,9 @@ public class PageAdapterEatings extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch ( position) {
             case 0:
-                return new MainCampusEatings(); // opens the eating places menu for main campus (main campus tab)
+                return new MainCampusEatingPlaces(); // opens the eating places menu for main campus (main campus tab)
             case 1:
-                return new EastCampusEatings(); // opens the eating places menu for east campus (east campus tab)
+                return new EastCampusEatingPlaces(); // opens the eating places menu for east campus (east campus tab)
             default:
                 return null;
         }

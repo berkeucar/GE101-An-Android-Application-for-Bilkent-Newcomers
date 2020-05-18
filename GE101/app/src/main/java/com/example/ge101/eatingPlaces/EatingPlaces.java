@@ -30,7 +30,7 @@ public class EatingPlaces extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private TabItem mainCamp, eastCamp;
-    public PageAdapterEatings pagerAdapter;
+    public PageAdapterEatingPlaces pagerAdapter;
 
     // constructors
 
@@ -54,7 +54,7 @@ public class EatingPlaces extends AppCompatActivity {
         viewPager = findViewById(R.id.eatingsViewPager);
 
         // initializes the Page Adapter that we wrote on separate class and sets it to ViewPager
-        pagerAdapter = new PageAdapterEatings(getSupportFragmentManager(), tabLayout.getTabCount());
+        pagerAdapter = new PageAdapterEatingPlaces(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(pagerAdapter);
 
         // adds tab listener to the tab layout
