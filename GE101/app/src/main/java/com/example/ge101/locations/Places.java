@@ -3,6 +3,7 @@ package com.example.ge101.locations;
 import com.example.ge101.R;
 import com.example.ge101.achievement.Achievable;
 import com.example.ge101.achievement.AchievableBag;
+import com.example.ge101.achievement.Answer;
 import com.example.ge101.achievement.Question;
 import com.google.android.gms.maps.model.LatLng;
 
@@ -103,7 +104,7 @@ public class Places implements AchievableBag {
         places.add( new PlaceInfo( "N Building", "School of English Language / Library", new LatLng( 39.872877, 32.763123), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Student Activities Center", "Student Activities Center", new LatLng( 39.872676, 32.750325), R.drawable.noimageavailable));
         places.add( new PlaceInfo("Pharmacy", "Pharmacy in T building", new LatLng(39.867339, 32.749430), R.drawable.t));
-        places.add( new PlaceInfo("Coffee Break ", "Coffee Break in T building", new LatLng(39.868290, 32.749084), R.drawable.t));
+        places.add( new PlaceInfo("Coffee Break", "Coffee Break in T building", new LatLng(39.868290, 32.749084), R.drawable.t));
         places.add( new PlaceInfo("Sözeri", "Sözeri Kebab", new LatLng(39.865496, 32.744361), R.drawable.noimageavailable));
         places.add( new PlaceInfo( "Mozart Cafe (N Building)", "Mozart Cafe in N building", new LatLng( 39.872877, 32.763123), R.drawable.noimageavailable));
         places.add( new PlaceInfo("Mozart Cafe (EE Building)", "Mozart Cafe in EE building", new LatLng(39.872200, 32.750596), R.drawable.ee));
@@ -141,8 +142,17 @@ public class Places implements AchievableBag {
         places.add( new PlaceInfo("Bilkent Center", "to be written" , new LatLng(39.884095, 32.758720), R.drawable.bilkent_center) );
         places.add( new PlaceInfo( "Bus Stop 1 (East Campus)", "to be written", new LatLng(39.871632, 32.762936), R.drawable.buslogoblack));
         places.add( new PlaceInfo( "Bus Stop 2 (East Campus)", "to be written", new LatLng(39.870405, 32.765114), R.drawable.buslogoblack));
-        places.add( new PlaceInfo( "Bus Stop Buffet", "to be written", new LatLng(39.869587, 32.746941), R.drawable.noimageavailable));
+        PlaceInfo placeInfo =  new PlaceInfo( "Bus Stop Buffet", "to be written", new LatLng(39.869587, 32.746941), R.drawable.noimageavailable );
+        places.add( placeInfo );
 
+        // Adding a question for testing
+        Question q;
+        q = new Question( "Just a test question!", "building_c_q1");
+        q.addAnswer( new Answer( "c_q1_a1", "This is not right answer"));
+        q.addAnswer( new Answer("c_q1_a2", "This is more likely to be the right answer"));
+        q.addAnswer( new Answer(" c_q1_a3", "This is the right answer"));
+        q.setRightAnswer( q.getAnswers().get( 2) );
+        findByName( "Starbucks Coffee").addQuestion( q);
     }
 
     // methods

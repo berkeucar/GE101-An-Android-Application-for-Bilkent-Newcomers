@@ -23,15 +23,12 @@ public class Question implements Answerable
     private Answer rightAnswer;
     private int questionStatus;
 
-    public Question( String question, String name, ArrayList<Answer> answers)
+    public Question( String question, String name)
     {
         this.question = question;
         this.name = name;
         questionStatus = NOT_ANSWERED;
-        if( answers != null)
-            this.answers = answers;
-        else
-            answers = new ArrayList<Answer>();
+        answers = new ArrayList<Answer>();
     }
 
     /**

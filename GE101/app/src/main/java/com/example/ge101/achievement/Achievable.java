@@ -13,8 +13,8 @@ public interface Achievable
     public  int getNumCorrectQuestions();
     public int getNumQuestions();
     public Question findQuestion( String name );
-    public void AddQuestion( Question q);
-    public void AddQuestion( ArrayList<Question> l);
+    public void addQuestion( Question q);
+    public void addQuestion( ArrayList<Question> l);
     public int getNumWrongQuestions();
     public String getName();
 }

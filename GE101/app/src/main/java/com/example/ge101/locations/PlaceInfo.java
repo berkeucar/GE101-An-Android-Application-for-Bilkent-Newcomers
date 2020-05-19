@@ -144,12 +144,12 @@ public class PlaceInfo implements Achievable
         return false;
     }
 
-    public void AddQuestion( Question q)
+    public void addQuestion( Question q)
     {
         questions.add( q);
     }
 
-    public void AddQuestion( ArrayList<Question> l)
+    public void addQuestion( ArrayList<Question> l)
     {
         questions.addAll( l);
     }
