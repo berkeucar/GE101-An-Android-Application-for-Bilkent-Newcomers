@@ -10,26 +10,20 @@ import com.example.ge101.locations.Places;
 
 import java.util.ArrayList;
 
-public class AchievementBoard extends AppCompatActivity {
-    // properties
-
-
-
-    protected void onCreate(Bundle savedInstanceState) {
+/**
+ * An activity show achievements current status in terms of accomplishment
+ * @author Efe Beydoğan, Arda Önal, Berke Uçar, Mert Barkın Er, Mehmet Alper Çetin
+ * @version 12/5/2020
+ */
+public class AchievementBoard extends AppCompatActivity
+{
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate( savedInstanceState);
         setContentView(R.layout.activity_achievement_board);
-
-        ArrayList<String> l;
-        String total;
         TextView achievementText;
-
-        l = Places.makePaneString( new Places());
-        total = "";
         achievementText = (TextView) findViewById( R.id.achievement_strings);
-        // Creates the String for to play it on the board
-        for( String s : l )
-            total = total + s + "\n";
-
-        achievementText.setText( total );
+        // getting the text from main activity so that accomplished achievements are displayed
+        achievementText.setText( getIntent().getStringExtra( "ACHIEVEMENTS") );
     }
 }

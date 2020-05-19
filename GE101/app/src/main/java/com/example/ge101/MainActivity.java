@@ -106,19 +106,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
         // initialize the achievement button to open the achievement board
         achievementButton = (ImageView) findViewById( R.id.achievement_button);
-        //// just adding an anonymous class click listener to open the activity
-       // achievementButton.setOnClickListener(new View.OnClickListener() {
-
-         //   @Override
-           // public void onClick(View v) {
-                // Preventing multiple clicks, using threshold of 1 second
-             //   if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
-               //     return;
-                //}
-                //mLastClickTime = SystemClock.elapsedRealtime();
-                //openActivityAchievementBoard();
-            //}
-       // });
 
         // Get the permission from user to receive location information
         getLocationPermission();
@@ -154,9 +141,19 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     // the openActivityAchievementBoard for opening the achievement board
     private void openActivityAchievementBoard()
     {
-        // So apperantly this Intent thing that I need to open a new activity requires a class
+
+        String achievements;
         Intent i;
+        ArrayList<String> achievementStrings;
+
+        // I need to pass the string of the information about achievements so I am using Intent extra to pass
+        achievements = "";
+        achievementStrings = Places.makePaneString( places);
+
+        for( String s : achievementStrings)
+            achievements = achievements + s + "\n";
         i = new Intent( this, AchievementBoard.class);
+        i.putExtra("ACHIEVEMENTS", achievements);
         startActivity( i);
     }
 
@@ -185,11 +182,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
             @Override
             public void onClick(View v) {
-                // Preventing multiple clicks, using threshold of 1 second
-                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
-                    return;
-                }
-                mLastClickTime = SystemClock.elapsedRealtime();
                 openActivityAchievementBoard();
             }
         });
