@@ -1,4 +1,4 @@
-package com.example.ge101.customMarkers;
+package com.example.ge101.custommarkers;
 
 import android.content.Context;
 import android.view.LayoutInflater;

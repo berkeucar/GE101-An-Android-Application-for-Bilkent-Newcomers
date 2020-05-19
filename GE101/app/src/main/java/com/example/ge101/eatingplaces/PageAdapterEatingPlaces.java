@@ -1,4 +1,4 @@
-package com.example.ge101.eatingPlaces;
+package com.example.ge101.eatingplaces;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
