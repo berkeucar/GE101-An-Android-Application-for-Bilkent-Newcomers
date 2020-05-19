@@ -27,7 +27,7 @@ public  class MozartCafeMenu extends AppCompatActivity
         //intializing menu
         menu = "TEA - 3TL \n" +
                 "CHEESECAKE - 10TL \n" +
-                "PASTA WITH TOMATO SAUCE \n";
+                "PASTA WITH TOMATO SAUCE - 20TL \n";
 
         // finds the text view about menu ingredients and sets it to the menu
         menuView = findViewById(R.id.menu_mozart);
