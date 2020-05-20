@@ -28,6 +28,8 @@ import android.widget.Switch;
 import android.widget.Toast;
 
 import com.example.ge101.achievement.AchievementBoard;
+import com.example.ge101.achievement.QrScanActivity;
+import com.example.ge101.achievement.QuestionBoard;
 import com.example.ge101.busSchedule.BusScheduleTab;
 import com.example.ge101.customlabels.CustomLabels;
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -84,6 +86,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private AutoCompleteTextView editText;
     private CustomLabels customLabels;
     private ImageView achievementButton;
+    private ImageView qrButton;
 
     // widgets
     //private EditText mSearchText;
@@ -106,6 +109,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
         // initialize the achievement button to open the achievement board
         achievementButton = (ImageView) findViewById( R.id.achievement_button);
+
+        // initializing the qr button to used in further implementation
+        qrButton = (ImageView) findViewById( R.id.qr_button);
 
         // Get the permission from user to receive location information
         getLocationPermission();
@@ -185,6 +191,22 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 openActivityAchievementBoard();
             }
         });
+
+        // adding yet another anonymous class click listener to open the activity qr
+        qrButton.setOnClickListener( new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                openActivityQrCode();
+            }
+        });
+    }
+
+    private void openActivityQrCode()
+    {
+        Intent i;
+        i = new Intent( this, QrScanActivity.class);
+        startActivity( i);
     }
 
 

@@ -147,10 +147,11 @@ public class Places implements AchievableBag {
 
         // Adding a question for testing
         Question q;
-        q = new Question( "Just a test question!", "building_c_q1");
+        q = new Question( "Just a test question! Please answer the one that makes the most sense!", "Starbucks Coffee Question 1");
         q.addAnswer( new Answer( "c_q1_a1", "This is not right answer"));
         q.addAnswer( new Answer("c_q1_a2", "This is more likely to be the right answer"));
         q.addAnswer( new Answer(" c_q1_a3", "This is the right answer"));
+        q.addAnswer( new Answer(" c_q1_a4", "Why would you want an achievement from starbucks?"));
         q.setRightAnswer( q.getAnswers().get( 2) );
         findByName( "Starbucks Coffee").addQuestion( q);
     }

@@ -111,4 +111,8 @@ public class Question implements Answerable
     public String getName() {
         return name;
     }
+
+    public String getQuestion() {
+        return question;
+    }
 }

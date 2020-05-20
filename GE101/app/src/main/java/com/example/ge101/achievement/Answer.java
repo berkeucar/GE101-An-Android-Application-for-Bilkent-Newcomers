@@ -22,8 +22,11 @@ public class Answer
         return name;
     }
 
+    public String getAnswer() {
+        return answer;
+    }
 
-    public boolean equals( Answer a)
+    public boolean equals(Answer a)
     {
         return answer.equals( a.answer );
     }
