@@ -24,13 +24,12 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.ge101.achievement.AchievementBoard;
-<<<<<<< HEAD
+
 import com.example.ge101.achievement.QrScanActivity;
 import com.example.ge101.achievement.QuestionBoard;
 import com.example.ge101.busSchedule.BusScheduleTab;
-=======
+
 import com.example.ge101.busschedule.BusScheduleTab;
->>>>>>> 69e91b385f958dcb5b3d320e25f6f14517f7b791
 import com.example.ge101.customlabels.CustomLabels;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -83,7 +82,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private ImageView achievementButton;
 
     private ImageView qrButton;
-=======
+
     private ImageView mGps;
 
 
