@@ -29,7 +29,7 @@ import com.example.ge101.achievement.QrScanActivity;
 import com.example.ge101.achievement.QuestionBoard;
 import com.example.ge101.busSchedule.BusScheduleTab;
 
-import com.example.ge101.busschedule.BusScheduleTab;
+import com.example.ge101.busSchedule.BusScheduleTab;
 import com.example.ge101.customlabels.CustomLabels;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;

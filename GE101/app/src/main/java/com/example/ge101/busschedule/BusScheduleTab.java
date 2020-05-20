@@ -1,7 +1,8 @@
-package com.example.ge101.busschedule;
+package com.example.ge101.busSchedule;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
+
 
 import android.os.Bundle;
 

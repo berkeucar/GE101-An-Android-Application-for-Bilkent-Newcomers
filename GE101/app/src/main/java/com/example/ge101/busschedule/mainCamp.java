@@ -1,4 +1,4 @@
-package com.example.ge101.busschedule;
+package com.example.ge101.busSchedule;
 
 import android.os.Bundle;
 
