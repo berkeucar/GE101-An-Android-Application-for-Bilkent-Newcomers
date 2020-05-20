@@ -1,4 +1,4 @@
-package com.example.ge101.eatingPlaces;
+package com.example.ge101.eatingplaces;
 import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;

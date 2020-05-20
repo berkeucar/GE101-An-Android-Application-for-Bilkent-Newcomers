@@ -1,23 +1,13 @@
-package com.example.ge101.eatingPlaces;
+package com.example.ge101.eatingplaces;
 
-import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.ge101.MainActivity;
 import com.example.ge101.R;
-import com.example.ge101.busSchedule.PageAdapter;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
-
-import android.os.SystemClock;
-import android.view.View;
-import android.widget.Button;
 
 /**
  * the class that contains the eating places main screen's display {@link AppCompatActivity}

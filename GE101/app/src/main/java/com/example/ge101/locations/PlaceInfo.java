@@ -15,7 +15,6 @@ public class PlaceInfo implements Achievable
     private ArrayList<Question> questions;
 
     // constructors
-
     public PlaceInfo(String name, String description, LatLng latLng, int imageResource) {
         this.name = name;
         this.latLng = latLng;
@@ -29,7 +28,6 @@ public class PlaceInfo implements Achievable
     }
 
     // methods
-
     public String getDescription()
     {
         return description;

@@ -1,7 +1,6 @@
 package com.example.ge101;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
@@ -13,10 +12,8 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.location.Location;
-import android.media.Image;
 import android.os.Bundle;
 import android.os.SystemClock;
-import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -24,13 +21,16 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.ImageView;
-import android.widget.Switch;
 import android.widget.Toast;
 
 import com.example.ge101.achievement.AchievementBoard;
+<<<<<<< HEAD
 import com.example.ge101.achievement.QrScanActivity;
 import com.example.ge101.achievement.QuestionBoard;
 import com.example.ge101.busSchedule.BusScheduleTab;
+=======
+import com.example.ge101.busschedule.BusScheduleTab;
+>>>>>>> 69e91b385f958dcb5b3d320e25f6f14517f7b791
 import com.example.ge101.customlabels.CustomLabels;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -39,7 +39,6 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.GroundOverlay;
-import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MapStyleOptions;
@@ -48,13 +47,9 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.util.ArrayList;
-import java.util.Scanner;
 
-import com.example.ge101.customMarkers.CustomInfoWindowAdapter;
+import com.example.ge101.custommarkers.CustomInfoWindowAdapter;
 import com.example.ge101.locations.PlaceInfo;
 import com.example.ge101.locations.Places;
 
@@ -86,11 +81,14 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private AutoCompleteTextView editText;
     private CustomLabels customLabels;
     private ImageView achievementButton;
+
     private ImageView qrButton;
+=======
+    private ImageView mGps;
+
 
     // widgets
     //private EditText mSearchText;
-    private ImageView mGps;
 
     // methods
 
@@ -180,9 +178,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         // Sets the bus schedule
         setBusSchedule();
 
-
-
+        // hides the keyboard after a result is clicked
         hideSoftKeyboard();
+
         // just adding an anonymous class click listener to open the activity
         achievementButton.setOnClickListener(new View.OnClickListener() {
 

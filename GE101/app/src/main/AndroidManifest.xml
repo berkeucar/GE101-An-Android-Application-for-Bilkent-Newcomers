@@ -19,10 +19,10 @@
         <activity android:name=".achievement.QuestionBoard" />
         <activity android:name=".achievement.AchievementBoard" />
         <activity
-            android:name=".eatingPlaces.EatingPlaces"
+            android:name=".eatingplaces.EatingPlaces"
             android:label="@string/title_activity_eating_places"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".busSchedule.BusScheduleTab" />
+        <activity android:name=".busschedule.BusScheduleTab" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -47,12 +47,12 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".MainActivity" />
-        <activity android:name=".eatingPlaces.SchoolCafeteria" />
-        <activity android:name=".eatingPlaces.CoffeeBreakMain" />
-        <activity android:name=".eatingPlaces.MozartCafe" />
-        <activity android:name=".eatingPlaces.MozartCafeMenu" />
-        <activity android:name=".eatingPlaces.CoffeeBreakEast" />
-        <activity android:name=".eatingPlaces.CoffeeBreakMenu" />
+        <activity android:name=".eatingplaces.SchoolCafeteria" />
+        <activity android:name=".eatingplaces.CoffeeBreakMain" />
+        <activity android:name=".eatingplaces.MozartCafe" />
+        <activity android:name=".eatingplaces.MozartCafeMenu" />
+        <activity android:name=".eatingplaces.CoffeeBreakEast" />
+        <activity android:name=".eatingplaces.CoffeeBreakMenu" />
     </application>
 
 </manifest>

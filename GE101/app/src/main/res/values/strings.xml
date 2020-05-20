@@ -37,5 +37,9 @@
     <string name="action_settings">Settings</string>
     <string name="east_campus_eatings">East Campus</string>
     <string name="main_campus_eatings">Main Campus</string>
+<<<<<<< HEAD
     <string name="title_activity_what">what</string>
+=======
+    <string name="achievements">ACHIEVEMENTS</string>
+>>>>>>> 69e91b385f958dcb5b3d320e25f6f14517f7b791
 </resources>

@@ -28,9 +28,9 @@ public class Places implements AchievableBag {
         places.add(new PlaceInfo("F - Faculty of Art, Design and Architecture", "Description F", new LatLng(39.866846, 32.749273), R.drawable.f));
         places.add(new PlaceInfo("M - Faculty of Business Administration", "Description M", new LatLng(39.867473, 32.750309), R.drawable.m));
         places.add(new PlaceInfo("V - Lecture Halls", "Description V", new LatLng(39.867073, 32.750264), R.drawable.v));
-        places.add(new PlaceInfo("Dormitories Management", "çok uzak ", new LatLng(39.863249, 32.749570), R.drawable.noimageavailable));
+        places.add(new PlaceInfo("Dormitories Management", "desc ", new LatLng(39.863249, 32.749570), R.drawable.noimageavailable));
         places.add(new PlaceInfo("Health Center (Main Campus)", "health center", new LatLng(39.868403, 32.749116), R.drawable.healthcenter));
-        places.add(new PlaceInfo("T Building", "audi tt", new LatLng(39.868136, 32.749238), R.drawable.t));
+        places.add(new PlaceInfo("T Building", "desc", new LatLng(39.868136, 32.749238), R.drawable.t));
         places.add(new PlaceInfo("Express Cafe (Behind G)", "cafe", new LatLng(39.868626, 32.750389), R.drawable.noimageavailable));
         places.add(new PlaceInfo("Sofa Cafe and Restaurant", "cafe", new LatLng(39.864279, 32.749192), R.drawable.sofa));
         places.add(new PlaceInfo("Mozart Cafe East Campus", "cafe", new LatLng(39.871206, 32.764030), R.drawable.mozarteast));

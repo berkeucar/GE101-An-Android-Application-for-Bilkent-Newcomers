@@ -1,4 +1,4 @@
-package com.example.ge101.eatingPlaces;
+package com.example.ge101.eatingplaces;
 
 import android.Manifest;
 import android.content.Intent;
@@ -7,17 +7,14 @@ import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.location.Location;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.os.SystemClock;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
@@ -45,7 +42,7 @@ import com.google.android.gms.tasks.Task;
  * @author Efe Beydoğan, Arda Önal, Mert Barkın Er, Berke Uçar, Mehmet Alper Çetin
  * @version 17.05.2020
  */
-public class MozartCafe extends FragmentActivity implements OnMapReadyCallback {
+public class CoffeeBreakEast extends FragmentActivity implements OnMapReadyCallback {
     // constants
     private static final float DEFAULT_ZOOM = 18f;
     private static final float MIN_ZOOM = 16f ;
@@ -54,7 +51,7 @@ public class MozartCafe extends FragmentActivity implements OnMapReadyCallback {
     private static final String COARSE_LOCATION = Manifest.permission.ACCESS_COARSE_LOCATION;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;
     private FusedLocationProviderClient mFusedLocationProviderClient;
-    private static final String TAG = "MozartBMapActivity";
+    private static final String TAG = "CBEastMapActivity";
 
     // properties
     private ImageView menu;
@@ -68,24 +65,23 @@ public class MozartCafe extends FragmentActivity implements OnMapReadyCallback {
     // constructors
 
     // methods
+
     /**
      * the method that creates the activity
      * @param savedInstanceState
      */
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate( @Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mozart_cafe_screen);
+        setContentView(R.layout.coffee_break_menu);
 
-        // gets location permission
         getLocationPermission();
 
-        // initializes places and their labels
         places = new Places();
         customLabels = new CustomLabels( places);
 
-        // Button for Mozart Cafe
-        menu =(ImageView) findViewById(R.id.mozart_menu_button);
+        // menu button for opening menu
+        menu =(ImageView) findViewById(R.id.cbmenubutton);
         menu.setOnClickListener(new View.OnClickListener()
         {
             /**
@@ -103,12 +99,11 @@ public class MozartCafe extends FragmentActivity implements OnMapReadyCallback {
                 openMenu();
             }
         });
-
     }
 
     private void openMenu() {
-        // creates intent (action) and opens it (for this Mozart's menu)
-        Intent intent = new Intent(this, MozartCafeMenu.class);
+        // creates intent (action) and opens it (for this condition school cafeteria's menu)
+        Intent intent = new Intent(this, CoffeeBreakMenu.class);
         startActivity(intent);
     }
 
@@ -116,7 +111,7 @@ public class MozartCafe extends FragmentActivity implements OnMapReadyCallback {
      * The method that initializes the map
      */
     private void initMap() {
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map_mozart_cafe);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map_coffee_break);
         mapFragment.getMapAsync(this);
 
     }
@@ -153,8 +148,8 @@ public class MozartCafe extends FragmentActivity implements OnMapReadyCallback {
     @Override
     public void onMapReady( GoogleMap googleMap) {
         map = googleMap;
-        // B Building Mozart
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(39.868760, 32.748059), DEFAULT_ZOOM));
+        // East Coffee Break
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(39.874201, 32.761962), DEFAULT_ZOOM));
 
         // sets the bounds
         Bounds = new LatLngBounds(new LatLng(39.861275, 32.741088), new LatLng(39.885348, 32.764571));
@@ -167,7 +162,7 @@ public class MozartCafe extends FragmentActivity implements OnMapReadyCallback {
         }
 
         // adds marker to the Target
-        PlaceInfo placeInfo = new PlaceInfo("Mozart Cafe (B Building)", "to be written" , new LatLng(39.868760, 32.748059), R.drawable.mozart_cafe);
+        PlaceInfo placeInfo = new PlaceInfo( "Coffee Break (East Campus)", "desc", new LatLng( 39.874201, 32.761962), R.drawable.noimageavailable);
         MarkerOptions markerOptions = new MarkerOptions().position(placeInfo.getLatLng()).title(placeInfo.getName());
 
         marker = map.addMarker(markerOptions);
@@ -277,18 +272,18 @@ public class MozartCafe extends FragmentActivity implements OnMapReadyCallback {
                                     currentLocation.getLongitude() > Bounds.southwest.longitude && currentLocation.getLongitude() < Bounds.northeast.longitude)
                             {
                                 Log.d( TAG, "onComplete: User is in Bilkent");
-                                map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(39.868760, 32.748059), DEFAULT_ZOOM));
+                                map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(39.874201, 32.761962), DEFAULT_ZOOM));
                             }
                             else
                             {
                                 Log.d( TAG, "onComplete: User is not in Bilkent");
-                                Toast.makeText( MozartCafe.this, "You are not in Bilkent.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText( CoffeeBreakEast.this, "You are not in Bilkent.", Toast.LENGTH_SHORT).show();
                             }
 
                         }
                         else {
                             Log.d( TAG, "onComplete: current location is null");
-                            Toast.makeText( MozartCafe.this, "unable to get current location", Toast.LENGTH_SHORT).show();
+                            Toast.makeText( CoffeeBreakEast.this, "unable to get current location", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -311,6 +306,5 @@ public class MozartCafe extends FragmentActivity implements OnMapReadyCallback {
         // Move the cursor to the location
         map.moveCamera( CameraUpdateFactory.newLatLngZoom( latLng, zoom) );
     }
-
 
 }
