@@ -21,7 +21,7 @@ public class BusScheduleTab extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private TabItem mainCamp, eastCamp;
-    public PageAdapter pagerAdapter;
+    public com.example.ge101.busSchedule.PageAdapter pagerAdapter;
 
 
     // methods
@@ -40,7 +40,7 @@ public class BusScheduleTab extends AppCompatActivity {
         eastCamp = (TabItem) findViewById(R.id.eastCampusTab);
         viewPager = findViewById(R.id.busViewPager);
 
-        pagerAdapter = new PageAdapter( getSupportFragmentManager(), tabLayout.getTabCount());
+        pagerAdapter = new com.example.ge101.busSchedule.PageAdapter( getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter( pagerAdapter);
 
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {

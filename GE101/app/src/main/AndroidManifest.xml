@@ -22,7 +22,7 @@
             android:name=".eatingplaces.EatingPlaces"
             android:label="@string/title_activity_eating_places"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".busschedule.BusScheduleTab" />
+        <activity android:name=".busSchedule.BusScheduleTab" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
