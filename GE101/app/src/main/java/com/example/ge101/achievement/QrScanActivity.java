@@ -13,7 +13,10 @@ import com.example.ge101.R;
 
 /**
  * This was suppose to be the QrScanner activity to scan
- * the question name to get the question that we wanted
+ * the question name to get the question that we wanted and find it from the places property that
+ * this class holds.
+ * For now it is just a activity for
+ * informing the user, opening the demo question on next stop and a activity to build on top.
  * @version 20/5/2020
  */
 public class QrScanActivity extends AppCompatActivity
