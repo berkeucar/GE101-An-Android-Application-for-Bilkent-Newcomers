@@ -1,4 +1,4 @@
-package com.example.ge101.busSchedule;
+package com.example.ge101.busschedule;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -33,9 +33,9 @@ public class PageAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch ( position) {
             case 0:
-                return new mainCamp(); // opens the bus schedule menu for main campus (main campus tab)
+                return new MainCamp(); // opens the bus schedule menu for main campus (main campus tab)
             case 1:
-                return new eastCamp(); // opens the bus schedule menu for east campus (east campus tab)
+                return new com.example.ge101.busschedule.EastCamp(); // opens the bus schedule menu for east campus (east campus tab)
             default:
                 return null;
         }

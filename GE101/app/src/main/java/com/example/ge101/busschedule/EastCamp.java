@@ -1,4 +1,4 @@
-package com.example.ge101.busSchedule;
+package com.example.ge101.busschedule;
 
 import android.os.Bundle;
 
@@ -17,9 +17,9 @@ import com.example.ge101.R;
  * @author Efe Beydoğan, Arda Önal, Mert Barkın Er, Berke Uçar, Mehmet Alper Çetin
  * @version 06.05.2020
  */
-public class eastCamp extends Fragment {
+public class EastCamp extends Fragment {
     final int ZOOM_LEVEL = 150;
-    public eastCamp() {
+    public EastCamp() {
         // Required empty public constructor
     }
 

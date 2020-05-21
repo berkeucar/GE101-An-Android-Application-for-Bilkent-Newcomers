@@ -1,4 +1,4 @@
-package com.example.ge101.busSchedule;
+package com.example.ge101.busschedule;
 
 import android.os.Bundle;
 
@@ -18,13 +18,13 @@ import com.example.ge101.R;
  * @version 06.05.2020
  */
 
-public class mainCamp extends Fragment {
+public class MainCamp extends Fragment {
 
     // properties
     final int ZOOM_LEVEL = 150;
 
     // constructors
-    public mainCamp() {
+    public MainCamp() {
         // Required empty public constructor
     }
 
