@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.ge101.busSchedule.BusScheduleTab;
+import com.example.ge101.busschedule.BusScheduleTab;
 import com.example.ge101.eatingplaces.EatingPlaces;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
