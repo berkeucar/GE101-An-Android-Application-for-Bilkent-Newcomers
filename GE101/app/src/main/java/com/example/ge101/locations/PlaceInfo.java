@@ -30,12 +30,12 @@ public class PlaceInfo implements Achievable
     // methods
     public String getDescription()
     {
-        return description;
+		return description;
     }
 
     public void setDescription(String description)
     {
-        this.description = description;
+		this.description = description;
     }
 
     public int getImageResource() {
