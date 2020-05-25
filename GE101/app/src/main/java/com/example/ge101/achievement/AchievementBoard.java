@@ -23,7 +23,6 @@ public class AchievementBoard extends AppCompatActivity
         setContentView(R.layout.activity_achievement_board);
         TextView achievementText;
         achievementText = (TextView) findViewById( R.id.achievement_strings);
-
         // getting the text from main activity so that accomplished achievements are displayed
         achievementText.setText( getIntent().getStringExtra( "ACHIEVEMENTS") );
     }

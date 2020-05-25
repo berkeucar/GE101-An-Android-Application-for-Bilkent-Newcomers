@@ -26,10 +26,11 @@ import android.widget.Toast;
 import com.example.ge101.achievement.AchievementBoard;
 
 import com.example.ge101.achievement.QrScanActivity;
+import com.example.ge101.achievement.QuestionBoard;
 import com.example.ge101.busschedule.BusScheduleTab;
 
+import com.example.ge101.busschedule.BusScheduleTab;
 import com.example.ge101.customlabels.CustomLabels;
-import com.example.ge101.eatingplaces.EatingPlaces;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -79,8 +80,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private AutoCompleteTextView editText;
     private CustomLabels customLabels;
     private ImageView achievementButton;
+
     private ImageView qrButton;
-    private ImageView foodButton;
+
     private ImageView mGps;
 
 
@@ -99,11 +101,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         setContentView(R.layout.activity_main);
         //mSearchText = (EditText) findViewById(R.id.input_search);
 
-        // Initialization of the GPS button that locks on user location when pressed
+        // Initialize the GPS button that locks on user location when pressed
         mGps = (ImageView) findViewById(R.id.ic_gps);
-
-        // initialization of the eating places button
-        foodButton = (ImageView) findViewById( R.id.food_button);
 
         // initialize the achievement button to open the achievement board
         achievementButton = (ImageView) findViewById( R.id.achievement_button);
@@ -175,21 +174,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 getDeviceLocation();
             }
         });
-
-        // addition of click listener of eating places button
-        foodButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Preventing multiple clicks, using threshold of 1 second
-                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
-                    return;
-                }
-                mLastClickTime = SystemClock.elapsedRealtime();
-                Intent intent = new Intent(MainActivity.this, EatingPlaces.class);
-                startActivity(intent);
-            }
-        });
-
         // Sets the bus schedule
         setBusSchedule();
 
