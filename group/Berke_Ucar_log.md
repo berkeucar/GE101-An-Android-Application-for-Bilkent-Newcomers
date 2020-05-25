@@ -63,4 +63,7 @@ Easting Places, Settings and Bus schedule screens' desing renewed.
 ### ~ 18/05/2020 ~
 Naming conventions fixed.
 Comments added/fixed.
+
+### ~ 22/05/2020 ~
+A button that directs the user from main activity to eating places added.
 ****
