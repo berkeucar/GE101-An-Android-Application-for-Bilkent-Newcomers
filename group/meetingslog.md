@@ -57,6 +57,13 @@ We have completed the github logs assignment together and discussed on the progr
 **Discussion:** 
 We have discussed on the video demo, what we have done and what remains to be done.
 
+### Meeting ~ (19.05.2020, 3 hour)
+****
+**Present:** Arda, Alper, Berke, Efe, Mert   _**Absent:**_ -
+
+**Discussion:** 
+We recorded our Project Video Demo.
+
 
 ****
 ### Meeting ~ (date, duration)
