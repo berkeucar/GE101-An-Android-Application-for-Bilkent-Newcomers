@@ -16,7 +16,7 @@ so users can easily find places to eat in Bilkent and we added the bus schedule 
 work without any problems. We wanted to add directions so users could see a path to the building they want
 to go to but we decided not to implement Google's directions API for this purpose because while Google maps
 is accurate in normal roads, it wasn't very accurate inside Bilkent Campus and didn't display the paths correctly
-so we thought it would be useless. We would like to implement it ourselves but couldn't think of a way to do so.
+so we thought it would be useless. We would like to implement our own directions API somehow but couldn't think of a way to do so.
 
 
 Group Members and what they worked on:
