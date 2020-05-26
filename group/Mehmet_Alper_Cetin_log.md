@@ -25,6 +25,10 @@ I kept on writing achievements package added some activities to show the achieve
 and tried to make a code that is buildable. But I didn't manage the time well so
 I couldn't write the code for Qr Scanning. I was planning on using  ZXing for the Qr Scan Activity
 and I was planning to use free Qr Code writers on web. But although I didn't finish the code for
-Qr Scan I think my Achievements package was understandable and buildable.  
+Qr Scan I think my Achievements package was understandable and buildable.
+
+Resources I used was Bilkent Official cite (https://w3.bilkent.edu.tr/bilkent/) and
+FourSquare (https://tr.foursquare.com/) for images and again Bilkent's map to get
+information about buildings. 
 
 ****
