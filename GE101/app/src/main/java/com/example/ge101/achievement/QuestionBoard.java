@@ -20,11 +20,12 @@ import java.util.ArrayList;
  * question. How I planned this code to work was to get the question from QrScanActivity and then
  *
  */
-public class QuestionBoard extends AppCompatActivity {
-
+public class QuestionBoard extends AppCompatActivity
+{
     Question q;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
 
         final TextView questionText = new TextView( this);
@@ -40,6 +41,7 @@ public class QuestionBoard extends AppCompatActivity {
         Achievable a = p.findByName( "Starbucks Coffee");
         ArrayList l = a.getQuestions();
         //***********************
+
         q = (Question) l.get( 0);
         answers = q.getAnswers();
 
@@ -64,7 +66,8 @@ public class QuestionBoard extends AppCompatActivity {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if( q.getQuestionStatus() == Question.NOT_ANSWERED) {
+                    if( q.getQuestionStatus() == Question.NOT_ANSWERED)
+                    {
                         Boolean isCorrect = q.answerQuestion(q.getAnswers().get(button.getId()));
                         if (isCorrect) {
                             informUser.setText("Great Job You found it!!!");

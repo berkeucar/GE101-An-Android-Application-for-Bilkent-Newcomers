@@ -45,7 +45,8 @@ public class Question implements Answerable
             return true;
         }
 
-        else {
+        else
+        {
             questionStatus = ANSWERED_WRONGLY;
             return false;
         }
@@ -112,7 +113,5 @@ public class Question implements Answerable
         return name;
     }
 
-    public String getQuestion() {
-        return question;
-    }
+    public String getQuestion() { return question; }
 }

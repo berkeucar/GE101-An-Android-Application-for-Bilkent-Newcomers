@@ -22,7 +22,8 @@ public class Answer
         return name;
     }
 
-    public String getAnswer() {
+    public String getAnswer()
+    {
         return answer;
     }
 
