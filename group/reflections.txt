@@ -10,5 +10,5 @@ We would try to follow the MVC pattern better and make it more object oriented t
 The project was finished in about a month and we worked on it almost everyday for that duration.
 On the days we worked on it, we spent over 2 hours coding. We are proud of the end product
 because we have achieved a lot of the things we wanted to include in the app. We believe it could
-have been better but we are still content with the way it turned out. There a couple things we'd like
+have been better but we are still content with the way it turned out. There are a couple things we'd like
 to have added but we couldn't because they were too complicated for us to implement.
