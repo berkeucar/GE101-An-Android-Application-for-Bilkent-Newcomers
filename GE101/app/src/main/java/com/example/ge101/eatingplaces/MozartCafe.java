@@ -100,7 +100,6 @@ public class MozartCafe extends FragmentActivity implements OnMapReadyCallback {
                 openMenu();
             }
         });
-
     }
 
     private void openMenu() {
@@ -115,7 +114,6 @@ public class MozartCafe extends FragmentActivity implements OnMapReadyCallback {
     private void initMap() {
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map_mozart_cafe);
         mapFragment.getMapAsync(this);
-
     }
 
 
@@ -308,6 +306,4 @@ public class MozartCafe extends FragmentActivity implements OnMapReadyCallback {
         // Move the cursor to the location
         map.moveCamera( CameraUpdateFactory.newLatLngZoom( latLng, zoom) );
     }
-
-
 }

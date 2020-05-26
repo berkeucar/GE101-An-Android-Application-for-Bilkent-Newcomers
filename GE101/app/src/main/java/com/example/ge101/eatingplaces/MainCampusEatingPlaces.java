@@ -137,8 +137,6 @@ public class MainCampusEatingPlaces extends Fragment {
             }
         });
 
-
-
         // after all buttons it returns v
         return v;
     }

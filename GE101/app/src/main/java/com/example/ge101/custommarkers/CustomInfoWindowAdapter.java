@@ -48,16 +48,18 @@ public class CustomInfoWindowAdapter extends Fragment implements GoogleMap.InfoW
      */
     private void renderWindowText( Marker marker, View view)
     {
-
         TextView tvTitle = (TextView) view.findViewById( R.id.custom_marker_title);
+
         // Gets the title of the place from PlaceInfo class
         tvTitle.setText( placeInfo.getName());
 
         TextView tvSnippet = (TextView) view.findViewById( R.id.custom_marker_snippet);
+
         // Gets the description of the place from PlaceInfo class
         tvSnippet.setText( placeInfo.getDescription());
 
         ImageView imageView = (ImageView) view.findViewById(R.id.busLogoTest);
+
         // Changes the image of every custom info window from PlaceInfo class
         imageView.setImageResource( placeInfo.getImageResource());
     }
