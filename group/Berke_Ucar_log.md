@@ -64,9 +64,13 @@ Easting Places, Settings and Bus schedule screens' desing renewed.
 Naming conventions fixed.
 Comments added/fixed.
 
+### ~ 19/05/2020 ~
+We recorded our project video demo and I edited it and uploaded it to Youtube.
+
 ### ~ 20/05/2020 ~
-The design of achivements screen have made done.
+I designed the achievements screen.
 
 ### ~ 22/05/2020 ~
-A button that directs the user from main activity to eating places added.
+A button that directs the user from main activity to eating places added
+
 ****
