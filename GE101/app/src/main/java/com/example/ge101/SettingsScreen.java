@@ -54,9 +54,6 @@ public class SettingsScreen extends AppCompatActivity
                 editor.commit();
             }
         });
-
-
-
     }
 
     /**
