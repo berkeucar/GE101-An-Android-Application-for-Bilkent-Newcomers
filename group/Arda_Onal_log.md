@@ -65,4 +65,7 @@ Worked on change map theme button.
 
 ### ~ 17/05/2020 ~
 Worked on making the map prettier.
+
+### ~ 19/05/2020 ~
+We recorded our project video demo and I edited it and uploaded it to Youtube.
 ****
