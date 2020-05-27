@@ -76,7 +76,7 @@ public class CoffeeBreakMain extends FragmentActivity implements OnMapReadyCallb
         // gets location permission
         getLocationPermission();
 
-        // initializes the places and
+        // initializes the places and their labels
         places = new Places();
         customLabels = new CustomLabels( places);
 

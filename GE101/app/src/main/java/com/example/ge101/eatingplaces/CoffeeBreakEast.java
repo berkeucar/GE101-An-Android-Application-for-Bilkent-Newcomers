@@ -77,6 +77,7 @@ public class CoffeeBreakEast extends FragmentActivity implements OnMapReadyCallb
 
         getLocationPermission();
 
+        // initialization of the places object and their labels
         places = new Places();
         customLabels = new CustomLabels( places);
 
@@ -116,7 +117,6 @@ public class CoffeeBreakEast extends FragmentActivity implements OnMapReadyCallb
 
     }
 
-
     /**
      * Gets the location permission from the user
      */
@@ -138,8 +138,6 @@ public class CoffeeBreakEast extends FragmentActivity implements OnMapReadyCallb
             ActivityCompat.requestPermissions(this, permissions, LOCATION_PERMISSION_REQUEST_CODE);
         }
     }
-
-
 
     /**
      * The method to get the user location and initialize the map and move the camera, set the map styling
@@ -294,7 +292,6 @@ public class CoffeeBreakEast extends FragmentActivity implements OnMapReadyCallb
         }
     }
 
-    // we can fix to the CB if it doesn't work
     /**
      * Moves camera to a specific latitude and longitude
      * @param latLng

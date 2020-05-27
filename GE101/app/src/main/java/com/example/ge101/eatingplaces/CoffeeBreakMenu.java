@@ -23,7 +23,7 @@ public class CoffeeBreakMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cb_menu);
 
-        //intializing menu
+        //initialization of the  menu
         menu = "TEA - 3TL \n" +
                 "CHEESECAKE - 10TL \n" +
                 "PASTA WITH TOMATO SAUCE - 20TL\n";

@@ -24,7 +24,7 @@ public  class MozartCafeMenu extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mozart_cafe_menu);
 
-        //intializing menu
+        //initialization of the menu
         menu = "TEA - 3TL \n" +
                 "CHEESECAKE - 10TL \n" +
                 "PASTA WITH TOMATO SAUCE - 20TL \n";

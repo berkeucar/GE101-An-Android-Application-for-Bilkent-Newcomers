@@ -77,7 +77,7 @@ public class MozartCafe extends FragmentActivity implements OnMapReadyCallback {
         // gets location permission
         getLocationPermission();
 
-        // initializes places and their labels
+        // initialization of the places and their labels
         places = new Places();
         customLabels = new CustomLabels( places);
 
@@ -138,8 +138,6 @@ public class MozartCafe extends FragmentActivity implements OnMapReadyCallback {
             ActivityCompat.requestPermissions(this, permissions, LOCATION_PERMISSION_REQUEST_CODE);
         }
     }
-
-
 
     /**
      * The method to get the user location and initialize the map and move the camera, set the map styling
