@@ -6,11 +6,10 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.GridLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.ge101.R;
+
 import com.example.ge101.locations.Places;
 
 import java.util.ArrayList;
@@ -18,11 +17,16 @@ import java.util.ArrayList;
 /**
  * This is the QuestionBoard class to show the user question. Right now it is a demo for showing the
  * question. How I planned this code to work was to get the question from QrScanActivity and then
- *
+ * initializing the property q to it and then doing task with them. But for now since I couldn't finish
+ * this class is (for now) just for showing that QuestionBoard works with a question
+ * @version 27/05/2020
+ * @author Efe Beydoğan, Arda Önal, Berke Uçar, Mert Barkın Er, Mehmet Alper Çetin
  */
 public class QuestionBoard extends AppCompatActivity
 {
+    // properties
     Question q;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -36,7 +40,7 @@ public class QuestionBoard extends AppCompatActivity
         LinearLayout layout = new LinearLayout( this);
         layout.setOrientation( LinearLayout.VERTICAL);
 
-        // if QrScanActivity code is built for just delete this part and initialise the q with passed question
+        // if QrScanActivity code was built I would just delete this part and initialise the q with passed question
         Places p = new Places();
         Achievable a = p.findByName( "Starbucks Coffee");
         ArrayList l = a.getQuestions();
@@ -45,13 +49,17 @@ public class QuestionBoard extends AppCompatActivity
         q = (Question) l.get( 0);
         answers = q.getAnswers();
 
-
-
-        informUser.setGravity(Gravity.CENTER_HORIZONTAL);
+        // getting the question and centering it
         questionText.setText( q.getQuestion() );
         questionText.setGravity(Gravity.CENTER_HORIZONTAL);
+
+        informUser.setGravity(Gravity.CENTER_HORIZONTAL);
+
+        // getting the building name and showing it on the Board
         buildingName.setText( q.getName() );
         buildingName.setGravity(Gravity.CENTER_HORIZONTAL);
+
+
         layout.addView( buildingName);
         layout.addView( questionText);
 
@@ -62,7 +70,8 @@ public class QuestionBoard extends AppCompatActivity
             button.setId( i);
             button.setText( answers.get( i).getAnswer() );
             layout.addView( button);
-            // adding the button so that  it changes the status of the question by answering and inform user
+            // adding a click listener to the button so that  it changes the status of
+            // the question by answering and inform user
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -76,11 +85,9 @@ public class QuestionBoard extends AppCompatActivity
                     }
                 }
             });
-
-
         }
+        // adding the informUser text latest so that it is hidden until user answers the question
         layout.addView( informUser);
         setContentView( layout);
-
     }
 }

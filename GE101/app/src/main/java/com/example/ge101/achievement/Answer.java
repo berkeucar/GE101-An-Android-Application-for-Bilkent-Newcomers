@@ -1,7 +1,7 @@
 package com.example.ge101.achievement;
 
 /**
- * A simple class for the answers, no methods are available due to security reasons
+ * A simple class for the answers. name is to find the answer easily or for showing it if necessary
  * @author Efe Beydoğan, Arda Önal, Berke Uçar, Mert Barkın Er, Mehmet Alper Çetin
  * @version 12/5/2020
  */

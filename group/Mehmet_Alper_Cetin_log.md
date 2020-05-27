@@ -29,6 +29,21 @@ Qr Scan I think my Achievements package was understandable and buildable.
 
 Resources I used was Bilkent Official cite (https://w3.bilkent.edu.tr/bilkent/) and
 FourSquare (https://tr.foursquare.com/) for images and again Bilkent's map to get
-information about buildings. 
+information about buildings.
+### ~ 27.05.2020 ~
+My final comments about the package achievement:
 
+My plan for the qr code achievement was using the qr_button for opening the QrScanActivity
+a cam for the user to scan the qr code using ZXing qr code scanner classes to get
+the string name of the question and then finding the question with the
+Places object's method findByQuestion( String questionName) and then using
+Achievable's findQuestion( String name ) method to find the question and then
+passing the Question through QrScanActivity  to the QuestionBoard. Then QuestionBoard
+is ready to show the question and answering it.
+Although Passing objects through activities seems to be a little hard,
+as I search it, I think I could of made it by making the object implement Parcelable.
+But I couldn't manage the time right so I couldn't finish it.
+
+Overall I think the code is buildable and I think a coder
+can come and wrote the code on top of achievement package with ease.
 ****

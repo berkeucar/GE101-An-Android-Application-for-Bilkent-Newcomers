@@ -27,7 +27,12 @@ public class QrScanActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr_scan);
+
+        TextView qrDemoText;
+        String textForDemo;
         ImageView qrDemoButton;
+
+        // adding a button for opening the demo question
         qrDemoButton = (ImageView) findViewById(R.id.qrDemoView );
         qrDemoButton.setOnClickListener(new View.OnClickListener()
         {
@@ -36,20 +41,25 @@ public class QrScanActivity extends AppCompatActivity
                 openActivityQuestionBoard();
             }
         });
-        TextView qrDemoText;
-        String textForDemo;
+
+        // creating a text to show that this part of the program is unfinished and initializing text
+        // of Activity to it
         textForDemo = "This is the demo activity!" +
                 " This was suppose to open a cam and scan the qrCode to scan and pass the " +
                 "question to the next activity. Click the button to see the question. \n" +
                 "If you are a coder that wants to change this Activity to a QrScanner you need to change" +
-                " QrScanActivity. Check README.java for further information";
+                " QrScanActivity. Check the source code and Mehmet Alper Çetin's log for further information";
+
         qrDemoText = (TextView) findViewById( R.id.demoText);
         qrDemoText.setGravity( Gravity.CENTER_HORIZONTAL);
         qrDemoText.setText( textForDemo);
     }
+
+    // opening the QuestionBoard
     private void openActivityQuestionBoard()
     {
         Intent i;
+
         i = new Intent( this, QuestionBoard.class);
         startActivity( i);
     }

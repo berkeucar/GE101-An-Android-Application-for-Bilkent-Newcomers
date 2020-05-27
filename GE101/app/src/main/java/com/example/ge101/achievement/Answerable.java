@@ -3,7 +3,8 @@ package com.example.ge101.achievement;
 import java.util.ArrayList;
 
 /**
- * an interface to show that object is answerable
+ * an interface to show that object is answerable which means has list of questions and can do tasks
+ * with them
  * @author Efe Beydoğan, Arda Önal, Berke Uçar, Mert Barkın Er, Mehmet Alper Çetin
  * @version 12.05.2020
  */

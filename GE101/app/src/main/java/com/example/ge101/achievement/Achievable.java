@@ -3,7 +3,8 @@ package com.example.ge101.achievement;
 import java.util.ArrayList;
 
 /**
- * An interface to show that the object is achievable
+ * An interface to show that the object is achievable by containing questions and doing
+ * task with them
  * @author Efe Beydoğan, Arda Önal, Berke Uçar, Mert Barkın Er, Mehmet Alper Çetin
  * @version 12.05.2020
  */

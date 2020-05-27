@@ -19,11 +19,15 @@ public class AchievementBoard extends AppCompatActivity
 {
     protected void onCreate(Bundle savedInstanceState)
     {
-        super.onCreate( savedInstanceState);
-        setContentView(R.layout.activity_achievement_board);
         TextView achievementText;
+        super.onCreate( savedInstanceState);
+
+        setContentView(R.layout.activity_achievement_board);
+
+        // initializing the text from main activity's main activity so that accomplished achievements are displayed
         achievementText = (TextView) findViewById( R.id.achievement_strings);
-        // getting the text from main activity so that accomplished achievements are displayed
+
+        // getting the String of Achievements from main activity
         achievementText.setText( getIntent().getStringExtra( "ACHIEVEMENTS") );
     }
 }
